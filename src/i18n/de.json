@@ -6,14 +6,15 @@
     "home": "Startseite"
   },
   "hero": {
-    "headline1": "Turn Your Love Into a Passion",
-    "headline2": "and Give it a",
-    "headlineAccent": "solid digital",
-    "headlineEnd": "Foundation",
-    "sub": "Dein Ausdruck, deine Kreation verdient eine Bühne",
-    "cta1": "Individuelle Websiteentwicklung",
-    "cta2": "Zugeschnittene Workflowgestaltung",
+    "headline1": "Let your Digital Processes **Flow**",
+    "headline2": "But... \nDo You have a **Foundation** to Grow?",
+    "headlineAccent": "Bring Deine Online Präsenz zum Strahlen",
+    "headlineEnd": "Erschaffe Dir Dein Fundament zu wachsen",
+    "sub": "Deine Kreation verdient eine Bühne\nDeine Bühne nach Deinen Maßstäben",
+    "cta1": "Deine Website",
+    "cta2": "Dein Workflow",
     "tagline": "So individuell wie der Ausdruck deiner Seele",
+    "service-sub": "Setup Tools Analysis",
     "scrollHint": "Scroll"
   },
   "pain": {
