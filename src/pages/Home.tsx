@@ -10,11 +10,11 @@ export function Home() {
     <>
       <HeroSection />
       <PainSection />
-      <MottoSection />
       <AboutPreviewSection />
       <ServicesPreviewSection />
+      <MottoSection />
       {/* TODO Phase 2: ValuesSection */}
-      <CTASection />
+      {/* <CTASection /> */}
     </>
   )
 }

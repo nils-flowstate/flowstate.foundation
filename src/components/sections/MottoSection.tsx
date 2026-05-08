@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { PhoneInput } from '../ui/PhoneInput'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -36,9 +37,15 @@ export function MottoSection() {
           {t('motto.cta')}
         </motion.p>
 
-        <motion.p variants={fadeUp} className="font-sans text-base sm:text-lg text-white/60 italic">
+        <motion.p variants={fadeUp} className="font-sans text-base sm:text-lg text-white/60 italic mb-12">
           {t('motto.sub')}
         </motion.p>
+
+        {/* Phone CTA */}
+        <motion.div variants={fadeUp} className="max-w-md mx-auto space-y-3">
+          <p className="font-sans font-semibold text-white text-lg">{t('about.interest')}</p>
+          <PhoneInput source="cta" darkMode />
+        </motion.div>
       </motion.div>
     </section>
   )

@@ -1,16 +1,19 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 export function Header() {
   const { t, i18n } = useTranslation()
-  const [scrolled, setScrolled] = useState(false)
+  const [hidden, setHidden] = useState(false)
+  const lastScrollY = useRef(0)
   const location = useLocation()
 
-  const isHomePage = location.pathname === '/'
-
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 20)
+    const handler = () => {
+      const currentY = window.scrollY
+      setHidden(currentY > lastScrollY.current && currentY > 80)
+      lastScrollY.current = currentY
+    }
     window.addEventListener('scroll', handler, { passive: true })
     return () => window.removeEventListener('scroll', handler)
   }, [])
@@ -26,16 +29,10 @@ export function Header() {
     { to: '/about-us', label: t('nav.about') },
   ]
 
-  const darkBg = isHomePage && !scrolled
-
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'backdrop-blur-md bg-white/90 shadow-sm'
-          : isHomePage
-          ? 'bg-transparent'
-          : 'bg-white shadow-sm'
+      className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-transform duration-300 ${
+        hidden ? '-translate-y-full' : 'translate-y-0'
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -47,14 +44,14 @@ export function Header() {
           />
         </Link>
 
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-4">
           {navLinks.map(link => (
             <Link
               key={link.to}
               to={link.to}
-              className={`font-sans font-medium text-sm transition-colors hover:opacity-100 ${
-                darkBg ? 'text-white' : 'text-text'
-              } ${location.pathname === link.to ? 'opacity-100 font-semibold' : 'opacity-70'}`}
+              className={`font-sans font-medium text-sm text-text transition-opacity hover:opacity-100 ${
+                location.pathname === link.to ? 'opacity-100 font-semibold' : 'opacity-60'
+              }`}
             >
               {link.label}
             </Link>
@@ -62,11 +59,7 @@ export function Header() {
 
           <button
             onClick={toggleLanguage}
-            className={`font-sans text-sm font-medium px-3 py-1.5 rounded-lg border transition-colors ${
-              darkBg
-                ? 'border-white/30 text-white hover:bg-white/10'
-                : 'border-gray-200 text-text hover:bg-surface'
-            }`}
+            className="font-sans text-sm font-medium px-2.5 py-1 rounded-lg border border-gray-200 text-text hover:bg-surface transition-colors"
             aria-label="Toggle language"
           >
             {i18n.language === 'de' ? '🇩🇪 DE' : '🇬🇧 EN'}

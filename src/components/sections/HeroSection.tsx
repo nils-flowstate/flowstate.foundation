@@ -28,7 +28,7 @@ export function HeroSection() {
       {/* Green radial glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-96 h-96 rounded-full bg-green/20 blur-3xl animate-pulse-slow pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl mx-auto">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl mx-auto pt-20">
 
         {/* Logo – circular, top */}
         <motion.div
@@ -52,7 +52,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-8"
+          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
         >
           {renderBold(t('hero.headline1'))}
           {renderBold(t('hero.headline2'))}
@@ -63,7 +63,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.55 }}
-          className="font-sans text-lg sm:text-xl text-white/80 mb-8"
+          className="font-sans text-lg sm:text-xl text-white/80 mb-6"
         >
           {t('hero.headlineAccent')}
         </motion.p>
@@ -73,7 +73,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
-          className="flex flex-row gap-2 mb-10"
+          className="flex flex-row gap-2 mb-6"
         >
           <Link to="/services#website" onClick={() => track('cta_click', { element: 'hero_website' })}>
             <Button variant="primary" size="sm">
@@ -86,16 +86,6 @@ export function HeroSection() {
             </Button>
           </Link>
         </motion.div>
-
-        {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.3 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/30 animate-bounce"
-      >
-        <ChevronDown className="w-6 h-6" />
-      </motion.div>
 
         {/* Tagline – flowing display font */}
         <motion.p
@@ -122,13 +112,21 @@ export function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.05 }}
-          className="font-sans text-xs text-white/30 tracking-widest uppercase"
+          className="font-sans text-xs text-white/30 tracking-widest uppercase mb-1"
         >
           {t('hero.service-sub')}
         </motion.p>
       </div>
 
-      
+      {/* Scroll indicator – outside content div, pinned to bottom */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.3 }}
+        className="absolute bottom-3 left-1/2 -translate-x-1/2 text-white/30 animate-bounce"
+      >
+        <ChevronDown className="w-6 h-6" />
+      </motion.div>
     </section>
   )
 }

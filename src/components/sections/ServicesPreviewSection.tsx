@@ -1,11 +1,8 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Globe, Workflow, Video } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { Button } from '../ui/Button'
-import { ServiceDrawer } from '../ui/ServiceDrawer'
-
-type DrawerId = 'website' | 'workflow' | 'social-media'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,11 +15,10 @@ const stagger = {
 
 export function ServicesPreviewSection() {
   const { t } = useTranslation()
-  const [activeDrawer, setActiveDrawer] = useState<DrawerId | null>(null)
 
   const cards = [
     {
-      id: 'website' as DrawerId,
+      id: 'website',
       icon: <Globe className="w-10 h-10 text-green" />,
       title: t('services.card1Title'),
       subs: [t('services.card1Sub1'), t('services.card1Sub2'), t('services.card1Sub3')],
@@ -31,7 +27,7 @@ export function ServicesPreviewSection() {
       border: 'hover:border-green',
     },
     {
-      id: 'workflow' as DrawerId,
+      id: 'workflow',
       icon: <Workflow className="w-10 h-10 text-navy" />,
       title: t('services.card2Title'),
       subs: [t('services.card2Sub1'), t('services.card2Sub2'), t('services.card2Sub3')],
@@ -40,7 +36,7 @@ export function ServicesPreviewSection() {
       border: 'hover:border-navy',
     },
     {
-      id: 'social-media' as DrawerId,
+      id: 'social-media',
       icon: <Video className="w-10 h-10 text-fire" />,
       title: t('services.card3Title'),
       subs: [t('services.card3Sub1'), t('services.card3Sub2'), t('services.card3Sub3')],
@@ -89,20 +85,19 @@ export function ServicesPreviewSection() {
               </ul>
               <p className="font-sans font-semibold text-sm text-navy mb-2">{card.tagline}</p>
               <p className="font-sans text-sm text-muted leading-relaxed mb-5 flex-1">{card.desc}</p>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="w-full border border-gray-200 text-navy hover:bg-surface"
-                onClick={() => setActiveDrawer(card.id)}
-              >
-                {t('services.learnMore')}
-              </Button>
+              <Link to={`/services#${card.id}`}>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="w-full border border-gray-200 text-navy hover:bg-surface"
+                >
+                  {t('services.learnMore')}
+                </Button>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
       </div>
-
-      <ServiceDrawer id={activeDrawer} onClose={() => setActiveDrawer(null)} />
     </section>
   )
 }
