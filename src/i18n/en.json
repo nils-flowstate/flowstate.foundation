@@ -149,13 +149,16 @@
   },
   "herzensprojekte": {
     "title": "Passion Projects",
-    "musicTitle": "Music",
-    "musicDesc": "My music on Spotify – sounds I love.",
+    "musicTitle": "My Playlists",
+    "musicDesc": "Sounds I love – directly on Spotify.",
     "socialTitle": "Social Media",
     "photoTitle": "Moments",
     "photoDesc": "Glimpses into my world.",
     "poemTitle": "Words",
-    "spotifyPlaceholder": "Spotify playlist coming soon"
+    "spotifyPlaceholder": "Spotify playlist coming soon",
+    "galleryTitle": "Gallery",
+    "trackPreviewTitle": "Track Preview",
+    "spotifyArtist": "Artist Profile"
   },
   "growTogether": {
     "title": "Grow Together",
