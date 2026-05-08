@@ -26,7 +26,7 @@ export function HeroSection() {
           style={{ filter: 'drop-shadow(0 0 40px rgba(61,170,69,0.4))' }}
         >
           <img
-            src="/assets/logo.webp"
+            src="/assets/Logo_Flowstate_Foundation-removedbg.webp"
             alt="Flowstate Foundation"
             className="h-28 sm:h-36 w-auto brightness-0 invert"
           />
