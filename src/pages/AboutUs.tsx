@@ -179,61 +179,6 @@ export function AboutUs() {
             {t('herzensprojekte.title')}
           </motion.h2>
 
-          {/* Row 1: Playlists + Instagram */}
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
-            {/* Playlists */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-sm"
-            >
-              <h3 className="font-sans font-semibold text-navy mb-1">{t('herzensprojekte.musicTitle')}</h3>
-              <p className="font-sans text-sm text-muted mb-5">{t('herzensprojekte.musicDesc')}</p>
-              <div className="space-y-3">
-                {playlists.map(p => (
-                  <a
-                    key={p.name}
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface hover:bg-[#1DB954]/10 text-text hover:text-[#1DB954] transition-colors group"
-                  >
-                    <Music2 className="w-4 h-4 shrink-0 text-[#1DB954]" />
-                    <span className="font-sans text-sm font-medium">{p.name}</span>
-                    <ExternalLink className="w-3.5 h-3.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Instagram */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-sm"
-            >
-              <h3 className="font-sans font-semibold text-navy mb-5">{t('herzensprojekte.socialTitle')}</h3>
-              <div className="space-y-3">
-                {igProfiles.map(profile => (
-                  <a
-                    key={profile.handle}
-                    href={profile.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 font-sans text-sm text-ocean hover:text-navy transition-colors"
-                  >
-                    <Instagram className="w-4 h-4 shrink-0" />
-                    @{profile.handle}
-                  </a>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-
           {/* Music Preview */}
           <motion.div
             variants={fadeUp}
@@ -327,6 +272,61 @@ export function AboutUs() {
             </div>
           </motion.div>
 
+          {/* Row 1: Playlists + Instagram */}
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
+            {/* Playlists */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-sm"
+            >
+              <h3 className="font-sans font-semibold text-navy mb-1">{t('herzensprojekte.musicTitle')}</h3>
+              <p className="font-sans text-sm text-muted mb-5">{t('herzensprojekte.musicDesc')}</p>
+              <div className="space-y-3">
+                {playlists.map(p => (
+                  <a
+                    key={p.name}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface hover:bg-[#1DB954]/10 text-text hover:text-[#1DB954] transition-colors group"
+                  >
+                    <Music2 className="w-4 h-4 shrink-0 text-[#1DB954]" />
+                    <span className="font-sans text-sm font-medium">{p.name}</span>
+                    <ExternalLink className="w-3.5 h-3.5 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Instagram */}
+            <motion.div
+              variants={fadeUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="bg-white rounded-2xl p-6 shadow-sm"
+            >
+              <h3 className="font-sans font-semibold text-navy mb-5">{t('herzensprojekte.socialTitle')}</h3>
+              <div className="space-y-3">
+                {igProfiles.map(profile => (
+                  <a
+                    key={profile.handle}
+                    href={profile.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 font-sans text-sm text-ocean hover:text-navy transition-colors"
+                  >
+                    <Instagram className="w-4 h-4 shrink-0" />
+                    @{profile.handle}
+                  </a>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
           {/* Events */}
           <motion.div
             variants={fadeUp}
@@ -361,19 +361,6 @@ export function AboutUs() {
               <ChevronLeft className="w-6 h-6" />
             </button>
 
-            <AnimatePresence mode="wait">
-              <motion.img
-                key={lightboxIndex}
-                src={galleryImages[lightboxIndex]}
-                alt={`Galerie ${lightboxIndex + 1}`}
-                initial={{ opacity: 0, scale: 0.96 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.96 }}
-                transition={{ duration: 0.2 }}
-                onClick={e => e.stopPropagation()}
-                className="max-h-[85vh] max-w-[80vw] object-contain rounded-2xl shadow-2xl"
-              />
-            </AnimatePresence>
 
             <button
               onClick={e => { e.stopPropagation(); setLightboxIndex(i => i !== null ? (i + 1) % GALLERY_COUNT : null) }}
