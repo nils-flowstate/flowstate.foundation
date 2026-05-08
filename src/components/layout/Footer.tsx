@@ -9,11 +9,13 @@ export function Footer() {
     <footer className="bg-navy text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         <div className="flex flex-col items-center gap-8">
-          <img
-            src="/assets/logo.webp"
-            alt="Flowstate Foundation"
-            className="h-10 w-auto brightness-0 invert"
-          />
+          <div className="bg-white rounded-2xl px-4 py-2 shadow-md">
+            <img
+              src="/assets/logo.webp"
+              alt="Flowstate Foundation"
+              className="h-10 w-auto"
+            />
+          </div>
 
           <nav className="flex flex-wrap justify-center gap-6">
             <Link to="/" className="font-sans text-sm text-white/70 hover:text-white transition-colors">
@@ -24,9 +26,6 @@ export function Footer() {
             </Link>
             <Link to="/services" className="font-sans text-sm text-white/70 hover:text-white transition-colors">
               {t('nav.services')}
-            </Link>
-            <Link to="/grow-together" className="font-sans text-sm text-white/70 hover:text-white transition-colors">
-              {t('nav.growTogether')}
             </Link>
           </nav>
 

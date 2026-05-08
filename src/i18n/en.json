@@ -6,14 +6,15 @@
     "home": "Home"
   },
   "hero": {
-    "headline1": "Turn Your Love Into a Passion",
-    "headline2": "and Give it a",
-    "headlineAccent": "solid digital",
-    "headlineEnd": "Foundation",
-    "sub": "Your expression, your creation deserves a stage",
-    "cta1": "Individual Website Development",
-    "cta2": "Tailored Workflow Design",
+    "headline1": "Let your Digital Processes **Flow**",
+    "headline2": "But... \nDo You have a **Foundation** to Grow?",
+    "headlineAccent": "Let Your Online Presence Shine",
+    "headlineEnd": "Create Your Foundation to Grow",
+    "sub": "Your Creation deserves a stage\nYour Stage. Your Standards.",
+    "cta1": "Your Website",
+    "cta2": "Your Workflow",
     "tagline": "As individual as the expression of your soul",
+    "service-sub": "Setup · Tools · Services",
     "scrollHint": "Scroll"
   },
   "pain": {

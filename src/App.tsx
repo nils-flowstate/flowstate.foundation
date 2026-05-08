@@ -46,8 +46,8 @@ export function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/grow-together" element={<GrowTogether />} />
-          <Route path="/grow-together/thank-you" element={<ThankYou />} />
+          {/* <Route path="/grow-together" element={<GrowTogether />} />
+          <Route path="/grow-together/thank-you" element={<ThankYou />} /> */}
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="*" element={<NotFound />} />
