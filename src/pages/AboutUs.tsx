@@ -34,7 +34,7 @@ const playlists = [
 ]
 
 const galleryImages = Array.from({ length: 9 }, (_, i) =>
-  `/assets/about-us/gallery/gal-0${i + 1}.jpg`
+  `/assets/about-us/gallery/gal-0${i + 1}.webp`
 )
 
 const GALLERY_COUNT = galleryImages.length
