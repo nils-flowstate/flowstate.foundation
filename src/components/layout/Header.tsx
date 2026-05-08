@@ -31,7 +31,6 @@ export function Header() {
   const navLinks = [
     { to: '/services', label: t('nav.services') },
     { to: '/about-us', label: t('nav.about') },
-    { to: '/grow-together', label: t('nav.growTogether') },
   ]
 
   const darkBg = isHomePage && !scrolled
@@ -49,7 +48,7 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img
-            src="/assets/Logo_Flowstate_Foundation-removedbg.webp"
+            src="/assets/Logo_Flowstate_Foundation-removedbg.png"
             alt="Flowstate Foundation"
             className="h-9 w-auto"
           />

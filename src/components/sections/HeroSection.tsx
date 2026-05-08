@@ -5,6 +5,18 @@ import { Link } from 'react-router-dom'
 import { Button } from '../ui/Button'
 import { track } from '../../lib/analytics'
 
+function renderBold(text: string) {
+  return text.split('\n').map((line, lineIdx) => (
+    <span key={lineIdx} className="block">
+      {line.split(/\*\*(.+?)\*\*/g).map((part, i) =>
+        i % 2 === 1
+          ? <strong key={i} className="text-orange font-bold">{part}</strong>
+          : part
+      )}
+    </span>
+  ))
+}
+
 export function HeroSection() {
   const { t } = useTranslation()
 
@@ -17,7 +29,7 @@ export function HeroSection() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-96 h-96 rounded-full bg-green/20 blur-3xl animate-pulse-slow pointer-events-none" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl mx-auto">
-        {/* Logo */}
+        {/* Logo – original, centered */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -26,35 +38,39 @@ export function HeroSection() {
           style={{ filter: 'drop-shadow(0 0 40px rgba(61,170,69,0.4))' }}
         >
           <img
-            src="/assets/Logo_Flowstate_Foundation-removedbg.webp"
+            src="/assets/logo.webp"
             alt="Flowstate Foundation"
-            className="h-28 sm:h-36 w-auto brightness-0 invert"
+            className="h-28 sm:h-36 w-auto"
           />
         </motion.div>
 
-        {/* Headline */}
+        {/* Main Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-4"
+          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-3"
         >
-          {t('hero.headline1')}<br />
-          {t('hero.headline2')}{' '}
-          <span className="text-base sm:text-lg font-sans font-normal opacity-70">
-            {t('hero.headlineAccent')}
-          </span>{' '}
-          <span className="text-orange">{t('hero.headlineEnd')}</span>
+          {renderBold(t('hero.headline1'))}
+          {renderBold(t('hero.headline2'))}
         </motion.h1>
 
-        {/* Subheadline */}
+        {/* Subtitle */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-sans text-lg text-white/70 mb-10"
+          className="font-sans text-base sm:text-lg text-white/60 italic mb-2"
         >
-          {t('hero.sub')}
+          {t('hero.headlineAccent')}
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="font-sans text-lg sm:text-xl text-orange font-semibold mb-10"
+        >
+          {t('hero.headlineEnd')}
         </motion.p>
 
         {/* CTA buttons */}
@@ -76,12 +92,22 @@ export function HeroSection() {
           </Link>
         </motion.div>
 
+        {/* Sub text */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.75 }}
+          className="mt-6 font-sans text-sm text-white/50 whitespace-pre-line"
+        >
+          {t('hero.sub')}
+        </motion.p>
+
         {/* Tagline */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.9 }}
-          className="mt-6 font-sans text-sm text-white/40 italic"
+          className="mt-3 font-sans text-xs text-white/30 italic"
         >
           {t('hero.tagline')}
         </motion.p>
