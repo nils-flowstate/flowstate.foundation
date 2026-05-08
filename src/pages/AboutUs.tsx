@@ -108,22 +108,7 @@ export function AboutUs() {
         </div>
       </section>
 
-      {/* Events */}
-      <section className="bg-white py-20 px-4">
-        <div className="max-w-5xl mx-auto">
-          <motion.h2
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="font-display text-2xl sm:text-3xl font-bold text-navy text-center mb-10"
-          >
-            {t('events.title')}
-          </motion.h2>
-          <EventsList />
-        </div>
-      </section>
-
+      
       {/* Herzensprojekte */}
       <section className="bg-surface py-20 px-4">
         <div className="max-w-5xl mx-auto">
@@ -153,6 +138,23 @@ export function AboutUs() {
                 <p className="font-sans text-sm text-muted italic">{t('herzensprojekte.spotifyPlaceholder')}</p>
               </div>
             </motion.div>
+
+            {/* Events */}
+      <section className="bg-white py-20 px-4">
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            variants={fadeUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="font-display text-2xl sm:text-3xl font-bold text-navy text-center mb-10"
+          >
+            {t('events.title')}
+          </motion.h2>
+          <EventsList />
+        </div>
+      </section>
+
 
             {/* Instagram */}
             <motion.div
