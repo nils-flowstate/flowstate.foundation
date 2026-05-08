@@ -18,7 +18,19 @@ const sections = ['website', 'workflow', 'social-media'] as const
 export function Services() {
   const { t } = useTranslation()
   const [activeSection, setActiveSection] = useState<string>('website')
+  const [headerHidden, setHeaderHidden] = useState(false)
   const sectionRefs = useRef<Record<string, HTMLElement | null>>({})
+  const lastScrollY = useRef(0)
+
+  useEffect(() => {
+    const handler = () => {
+      const currentY = window.scrollY
+      setHeaderHidden(currentY > lastScrollY.current && currentY > 80)
+      lastScrollY.current = currentY
+    }
+    window.addEventListener('scroll', handler, { passive: true })
+    return () => window.removeEventListener('scroll', handler)
+  }, [])
 
   useEffect(() => {
     const hash = window.location.hash.replace('#', '')
@@ -67,7 +79,7 @@ export function Services() {
       </section>
 
       {/* Sticky subnav */}
-      <div className="sticky top-0 z-30 bg-white border-b border-gray-100 shadow-sm">
+      <div className={`sticky z-30 bg-white border-b border-gray-100 shadow-sm transition-[top] duration-300 ${headerHidden ? 'top-0' : 'top-16'}`}>
         <div className="max-w-5xl mx-auto px-4 flex items-center gap-1 py-2">
           <Link
             to="/"
