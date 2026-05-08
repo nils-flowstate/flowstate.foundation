@@ -1,13 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 export function Header() {
   const { t, i18n } = useTranslation()
   const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
 
   const isHomePage = location.pathname === '/'
@@ -17,10 +14,6 @@ export function Header() {
     window.addEventListener('scroll', handler, { passive: true })
     return () => window.removeEventListener('scroll', handler)
   }, [])
-
-  useEffect(() => {
-    setMobileOpen(false)
-  }, [location.pathname])
 
   const toggleLanguage = () => {
     const next = i18n.language === 'de' ? 'en' : 'de'
@@ -54,13 +47,12 @@ export function Header() {
           />
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="flex items-center gap-6">
           {navLinks.map(link => (
             <Link
               key={link.to}
               to={link.to}
-              className={`font-sans font-medium text-sm transition-colors hover:opacity-80 ${
+              className={`font-sans font-medium text-sm transition-colors hover:opacity-100 ${
                 darkBg ? 'text-white' : 'text-text'
               } ${location.pathname === link.to ? 'opacity-100 font-semibold' : 'opacity-70'}`}
             >
@@ -80,49 +72,7 @@ export function Header() {
             {i18n.language === 'de' ? '🇩🇪 DE' : '🇬🇧 EN'}
           </button>
         </nav>
-
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setMobileOpen(v => !v)}
-          className={`md:hidden p-2 rounded-lg ${darkBg ? 'text-white' : 'text-text'}`}
-          aria-label="Menu"
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
       </div>
-
-      {/* Mobile drawer */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden bg-white border-t border-gray-100 shadow-lg"
-          >
-            <nav className="max-w-6xl mx-auto px-4 py-4 flex flex-col gap-1">
-              {navLinks.map(link => (
-                <Link
-                  key={link.to}
-                  to={link.to}
-                  className={`font-sans font-medium py-3 px-2 rounded-xl text-text hover:bg-surface transition-colors ${
-                    location.pathname === link.to ? 'text-navy font-semibold bg-surface' : ''
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <button
-                onClick={toggleLanguage}
-                className="mt-2 text-left font-sans text-sm font-medium py-3 px-2 text-muted hover:bg-surface rounded-xl transition-colors"
-              >
-                {i18n.language === 'de' ? '🇩🇪 Deutsch' : '🇬🇧 English'}
-              </button>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </header>
   )
 }
