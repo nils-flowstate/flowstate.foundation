@@ -202,7 +202,7 @@ export function AboutUs() {
 
             <audio
               ref={audioRef}
-              src="/assets/about-us/audio/nordic-thunder.mp4"
+              src="/assets/about-us/audio/nordic-thunder.mp3"
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}
               onEnded={handleEnded}
