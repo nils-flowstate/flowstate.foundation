@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E6FBF"/>
+      <stop offset="60%" style="stop-color:#1A3C6E"/>
+    </linearGradient>
+    <linearGradient id="fireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F07020"/>
+      <stop offset="100%" style="stop-color:#E03515"/>
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2E8B35"/>
+      <stop offset="100%" style="stop-color:#3DAA45"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="#0B1E38"/>
+
+  <!-- Wave body -->
+  <path d="M80 300 C100 220, 160 180, 220 200 C260 215, 280 260, 300 270 C340 290, 380 250, 400 200 C420 155, 420 130, 420 130 C430 110, 440 105, 445 115 C455 135, 450 165, 440 190 C420 240, 390 290, 350 310 C310 330, 270 310, 240 290 C210 270, 190 240, 160 240 C130 240, 100 270, 85 310 Z" fill="url(#waveGrad)"/>
+
+  <!-- Wave crest curl -->
+  <path d="M340 145 C360 120, 390 115, 410 130 C430 145, 435 170, 425 190 C415 200, 400 200, 390 190 C375 175, 380 155, 370 145 C360 138, 345 140, 340 145 Z" fill="url(#waveGrad)" opacity="0.85"/>
+
+  <!-- Fire/energy swirl at base -->
+  <path d="M200 290 C215 310, 230 340, 240 360 C248 375, 250 390, 245 395 C235 405, 215 395, 205 380 C190 360, 185 330, 185 305 Z" fill="url(#fireGrad)"/>
+  <path d="M240 280 C265 305, 280 335, 278 360 C276 378, 265 392, 255 390 C242 388, 235 372, 235 355 C235 330, 242 305, 240 280 Z" fill="url(#fireGrad)" opacity="0.85"/>
+
+  <!-- Leaf stem -->
+  <path d="M295 175 C295 195, 292 215, 285 235" stroke="#3DAA45" stroke-width="10" fill="none" stroke-linecap="round"/>
+
+  <!-- Left leaf -->
+  <path d="M285 235 C270 215, 255 195, 260 175 C265 158, 280 152, 290 160 C300 168, 300 185, 295 195 Z" fill="url(#leafGrad)"/>
+
+  <!-- Right leaf -->
+  <path d="M285 220 C305 200, 325 185, 335 168 C342 155, 338 142, 328 142 C315 142, 302 155, 296 168 C290 182, 288 200, 285 220 Z" fill="url(#leafGrad)" opacity="0.9"/>
+
+  <!-- Top small leaf -->
+  <path d="M290 175 C295 155, 308 140, 320 138 C330 136, 335 145, 330 155 C322 165, 308 168, 290 175 Z" fill="url(#leafGrad)"/>
+</svg>

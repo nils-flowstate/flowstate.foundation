@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy:    #1A3C6E;
+    --ocean:   #2E6FBF;
+    --orange:  #F07020;
+    --fire:    #E03515;
+    --green:   #3DAA45;
+    --surface: #F7F8FA;
+    --text:    #111827;
+    --muted:   #6B7280;
+    --hero-bg: #0B1E38;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-text antialiased;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-slow {
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
+
+  .animate-wave {
+    animation: wave 8s ease-in-out infinite;
+    transform-origin: center bottom;
+  }
+
+  .animate-wave-slow {
+    animation: wave 12s ease-in-out infinite reverse;
+    transform-origin: center bottom;
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes wave {
+  0%, 100% { d: path("M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"); }
+  50% { d: path("M0,80 C240,30 480,90 720,50 C960,20 1200,80 1440,40 L1440,120 L0,120 Z"); }
+}

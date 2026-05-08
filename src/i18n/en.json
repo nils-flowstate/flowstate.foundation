@@ -1,0 +1,207 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "growTogether": "Grow Together",
+    "home": "Home"
+  },
+  "hero": {
+    "headline1": "Turn Your Love Into a Passion",
+    "headline2": "and Give it a",
+    "headlineAccent": "solid digital",
+    "headlineEnd": "Foundation",
+    "sub": "Your expression, your creation deserves a stage",
+    "cta1": "Individual Website Development",
+    "cta2": "Tailored Workflow Design",
+    "tagline": "As individual as the expression of your soul",
+    "scrollHint": "Scroll"
+  },
+  "pain": {
+    "headline": "Today, the sea of information overwhelms everyone.",
+    "body": "I give you a foundation of digital clarity.",
+    "card1Title": "Website",
+    "card1Desc": "Your digital stage – individual, authentic, impactful.",
+    "card2Title": "Workflow Structure",
+    "card2Desc": "Clear processes, more focus, less chaos.",
+    "card3Title": "Social Media",
+    "card3Desc": "Show yourself in your authentic light.",
+    "quote": "Shine in the light you wish to shine in – and share your passion with the world."
+  },
+  "motto": {
+    "body1": "Let your",
+    "body2": "Idea",
+    "body3": "and your",
+    "body4": "Digital Identity",
+    "body5": "merge",
+    "body6": "together",
+    "body7": "and…",
+    "cta": "Reach Your Customers",
+    "sub": "Let us transform your digital presence into a mirror of your soul's expression"
+  },
+  "about": {
+    "greeting": "Hey, I'm Nils,",
+    "subhead1": "Present Yourself",
+    "line1": "I help people bring their true selves to life on the internet.",
+    "subhead2": "Focus on Your Business",
+    "line2": "With me, you can focus on what you love and what your clients love about you.",
+    "subhead3": "Stay in Control",
+    "line3": "I keep you clear in the digital jungle. I clear the path and together we create space for what your clients love about you.",
+    "interest": "Interested?",
+    "orDivider": "or",
+    "waButton": "Write me directly",
+    "moreLink": "More about me",
+    "whoAmI": "Who am I?",
+    "fullBio1": "I'm Nils Tenkotte – founder of Flowstate Foundation, a values-driven web agency from Cologne.",
+    "fullBio2": "My mission is to build an authentic digital home for creatives, coaches, yoga studios and purpose-driven businesses.",
+    "fullBio3": "I believe your digital presence should be as unique as you are – not generic, not corporate, but a true mirror of your soul.",
+    "fullBio4": "From the first idea to the finished website, I guide you through every step. No tech jargon, no chaos – just clarity, creativity and real results."
+  },
+  "services": {
+    "previewTitle": "What I do for you",
+    "learnMore": "Learn More",
+    "card1Title": "Website",
+    "card1Sub1": "Consulting",
+    "card1Sub2": "Concept",
+    "card1Sub3": "Development",
+    "card1Tagline": "Let your clients feel your vision",
+    "card1Desc": "I accompany you through the entire lifecycle from your idea to the first domain to your individual website that embodies your vision.",
+    "card2Title": "Workflow Structure",
+    "card2Sub1": "Clarity",
+    "card2Sub2": "Processes",
+    "card2Sub3": "Structure",
+    "card2Tagline": "Focus on your core competency",
+    "card2Desc": "Together we unify your processes to find your perfect workflow. We analyse your systems, create clear templates for recurring tasks, and make processes up to 90% less error-prone. Save time, money and nerves – and focus fully on what you do best. No duplicate files, no chaos. Only clarity, efficiency and overview.",
+    "card3Title": "Social Media",
+    "card3Sub1": "Consulting",
+    "card3Sub2": "Concept",
+    "card3Sub3": "Production",
+    "card3Tagline": "Show yourself as authentically as you are",
+    "card3Desc": "Understand how social media really works. Learn to position yourself clearly and stand out from the crowd – without pretending to be someone else. Reach the people who truly fit you, build trust instead of just reach. Clear content instead of aimless posting. Social media with strategy instead of chance.",
+    "drawerClose": "Close",
+    "websiteDrawer": {
+      "title": "Website",
+      "body": "End to end – I accompany you through the entire lifecycle from your idea to the first domain to your individual website.",
+      "process": "Process:",
+      "step1": "Prototype → Feedback",
+      "step2": "50% upfront",
+      "step3": "50% after satisfaction in 3 months",
+      "pricing": "Price depends on scope – tell me your budget.",
+      "ctaLabel": "Get in touch"
+    },
+    "workflowDrawer": {
+      "title": "Workflow Structure",
+      "body": "I bring clarity to your digital processes",
+      "body2": "No duplicate files, no chaos – just clarity and overview",
+      "comingSoon": "Coming Soon",
+      "ctaLabel": "Interested? Write me"
+    },
+    "socialDrawer": {
+      "title": "Social Media",
+      "cutOnly": "Editing only:",
+      "cut5": "5 videos – €120",
+      "cut10": "10 videos – €200",
+      "full": "Full program (Scripting → Reel):",
+      "full5": "5 videos – €300",
+      "full10": "10 videos – €500",
+      "promise": "Watch first, then pay.",
+      "free": "First consultation + 1 edit free",
+      "ctaLabel": "Get in touch"
+    },
+    "websitePageTitle": "Website",
+    "workflowPageTitle": "Workflow Structure",
+    "socialPageTitle": "Social Media",
+    "pageIntro": "All services at a glance",
+    "mailLabel": "Send me an email"
+  },
+  "cta": {
+    "headline": "Stay clear in the digital world",
+    "body": "Sign up and I'll get back to you"
+  },
+  "footer": {
+    "tagline": "All data is stored on private EU servers. No sharing with US services.",
+    "copyright": "© 2025 Nils Tenkotte – Flowstate Foundation",
+    "madeWith": "Made with ♥ in Cologne",
+    "impressum": "Legal Notice",
+    "datenschutz": "Privacy Policy"
+  },
+  "forms": {
+    "phonePlaceholder": "+49 ...",
+    "sendButton": "Send",
+    "success": "I'll be in touch!",
+    "alreadySubmitted": "You've already signed up. Please wait {{minutes}} more minutes.",
+    "errorGeneric": "Something went wrong. Please try again."
+  },
+  "events": {
+    "title": "Events & Festivals",
+    "upcomingTab": "Upcoming Events",
+    "pastTab": "Past Events",
+    "emptyState": "You'll find me at festivals soon – check back later 🌿",
+    "ticketButton": "Tickets",
+    "filterAll": "All",
+    "filterMusic": "Music",
+    "filterYoga": "Yoga",
+    "filterWellness": "Wellness",
+    "filterFestival": "Festival",
+    "filterArt": "Art",
+    "locationPlaceholder": "Filter by location...",
+    "meetMe": "Meet me live at one of the next events"
+  },
+  "herzensprojekte": {
+    "title": "Passion Projects",
+    "musicTitle": "Music",
+    "musicDesc": "My music on Spotify – sounds I love.",
+    "socialTitle": "Social Media",
+    "photoTitle": "Moments",
+    "photoDesc": "Glimpses into my world.",
+    "poemTitle": "Words",
+    "spotifyPlaceholder": "Spotify playlist coming soon"
+  },
+  "growTogether": {
+    "title": "Grow Together",
+    "intro": "Want to get more out of your business? Let's grow together!",
+    "calTitle": "Book a call with Nils",
+    "orDivider": "Or write directly:",
+    "waLabel": "Or write directly"
+  },
+  "thankYou": {
+    "title": "Thank you for your trust!",
+    "noWait": "Don't want to wait?",
+    "waLabel": "Write me directly on WhatsApp",
+    "calDivider": "Or pick a time slot:",
+    "eventsTitle": "Meet me live"
+  },
+  "impressum": {
+    "title": "Legal Notice",
+    "angaben": "Information according to § 5 TMG",
+    "kontakt": "Contact:",
+    "steuer": "Tax:",
+    "steuerText": "Small business owner according to § 19 UStG",
+    "steuerNr": "Tax number: 402/9376/4518",
+    "verantwortlich": "Responsible for content according to § 55 Abs. 2 RStV:",
+    "streit": "Dispute Resolution",
+    "streitText": "The European Commission provides a platform for online dispute resolution (OS): https://ec.europa.eu/consumers/odr/\nWe are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "haftung": "Liability for Content",
+    "haftungText": "As a service provider, we are responsible for our own content on these pages in accordance with general law pursuant to § 7 Abs.1 TMG."
+  },
+  "datenschutz": {
+    "title": "Privacy Policy",
+    "lastUpdated": "As of: May 2025"
+  },
+  "404": {
+    "title": "This page doesn't exist yet – but maybe soon 🌱",
+    "backHome": "Back to Home"
+  },
+  "whatsapp": {
+    "defaultLabel": "Write me on WhatsApp"
+  },
+  "quotes": {
+    "q1text": "Let your heart be a mirror of the soul in the world.",
+    "q1author": "Rumi",
+    "q2text": "The only way to do great work is to love what you do.",
+    "q2author": "Steve Jobs",
+    "q3text": "Within you is the strength you seek.",
+    "q3author": "Unknown",
+    "q4text": "Become who you are.",
+    "q4author": "Friedrich Nietzsche"
+  }
+}

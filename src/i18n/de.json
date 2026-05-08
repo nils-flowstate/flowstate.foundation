@@ -1,0 +1,207 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "Über mich",
+    "growTogether": "Grow Together",
+    "home": "Startseite"
+  },
+  "hero": {
+    "headline1": "Turn Your Love Into a Passion",
+    "headline2": "and Give it a",
+    "headlineAccent": "solid digital",
+    "headlineEnd": "Foundation",
+    "sub": "Dein Ausdruck, deine Kreation verdient eine Bühne",
+    "cta1": "Individuelle Websiteentwicklung",
+    "cta2": "Zugeschnittene Workflowgestaltung",
+    "tagline": "So individuell wie der Ausdruck deiner Seele",
+    "scrollHint": "Scroll"
+  },
+  "pain": {
+    "headline": "Heutzutage überschwemmt einen das Meer an Informationen.",
+    "body": "Ich gebe dir ein Fundament aus digitaler Klarheit.",
+    "card1Title": "Website",
+    "card1Desc": "Deine digitale Bühne – individuell, authentisch, wirkungsvoll.",
+    "card2Title": "Workflow Struktur",
+    "card2Desc": "Klare Prozesse, mehr Fokus, weniger Chaos.",
+    "card3Title": "Social Media",
+    "card3Desc": "Zeig dich in deinem authentischen Licht.",
+    "quote": "Erstrahle in dem Licht, in dem du erstrahlen möchtest – und teile deine Passion mit der Welt."
+  },
+  "motto": {
+    "body1": "Lass Deine",
+    "body2": "Idee",
+    "body3": "und Deine",
+    "body4": "Digitale Identität",
+    "body5": "miteinander",
+    "body6": "Verschmelzen",
+    "body7": "und…",
+    "cta": "Erreiche Deine Kundschaft",
+    "sub": "Lass Uns Gemeinsam Deine digitale Präsenz in einen Seelenspiegel Deines Ausdrucks Verwandeln"
+  },
+  "about": {
+    "greeting": "Hey, ich bin Nils,",
+    "subhead1": "Präsentiere Dich",
+    "line1": "Ich mache es Menschen möglich, über das Internet ihr wahres Selbst zur Geltung zu bringen.",
+    "subhead2": "Fokussiere Dich auf Dein Business",
+    "line2": "Durch mich kannst Du dich auf das fokussieren, was du liebst und was deine Kunden an dir lieben.",
+    "subhead3": "Behalte den Durchblick",
+    "line3": "Mit mir behältst du den Durchblick im digitalen Dschungel. Ich mach dir den Weg frei und gemeinsam schaffen wir Freiraum für das, was Deine Kunden an Dir Lieben.",
+    "interest": "Interesse?",
+    "orDivider": "oder",
+    "waButton": "Schreib mir direkt",
+    "moreLink": "Mehr über mich",
+    "whoAmI": "Wer bin ich?",
+    "fullBio1": "Ich bin Nils Tenkotte – Gründer von Flowstate Foundation, einer werteorientierten Web-Agentur aus Köln.",
+    "fullBio2": "Meine Mission ist es, Kreativen, Coaches, Yoga-Studios und purpose-driven Unternehmen eine authentische digitale Heimat zu bauen.",
+    "fullBio3": "Ich glaube daran, dass dein digitaler Auftritt so einzigartig sein sollte wie du selbst – nicht generisch, nicht corporate, sondern ein echter Spiegel deiner Seele.",
+    "fullBio4": "Von der ersten Idee bis zur fertigen Website begleite ich dich durch jeden Schritt. Kein Tech-Kauderwelsch, kein Chaos – nur Klarheit, Kreativität und echte Ergebnisse."
+  },
+  "services": {
+    "previewTitle": "Was ich für dich tue",
+    "learnMore": "Erfahre Mehr",
+    "card1Title": "Website",
+    "card1Sub1": "Beratung",
+    "card1Sub2": "Konzeptionierung",
+    "card1Sub3": "Umsetzung",
+    "card1Tagline": "Lass Deine Kunden Deine Vision spüren",
+    "card1Desc": "Ich begleite dich im gesamten Lebenszyklusprozess von Deiner Idee über die erste Domain bis hin zu Deiner individuellen Website, die deine Vision verkörpert.",
+    "card2Title": "Workflow Struktur",
+    "card2Sub1": "Klarheit",
+    "card2Sub2": "Prozesse",
+    "card2Sub3": "Struktur",
+    "card2Tagline": "Fokussiere dich auf Deine Kompetenz",
+    "card2Desc": "Gemeinsam vereinheitlichen wir Deine Prozesse, um Deinen perfekten Workflow zu finden. Wir analysieren deine Systeme und Arbeitsweisen, erstellen klare Vorlagen für wiederkehrende Abläufe und machen Prozesse dadurch bis zu 90 % weniger fehleranfällig. So sparst du Zeit, Geld und Nerven – und kannst dich voll auf deine Kernkompetenz konzentrieren. Keine doppelten Dateien, kein Chaos. Nur Klarheit, Effizienz und Durchblick.",
+    "card3Title": "Social Media",
+    "card3Sub1": "Beratung",
+    "card3Sub2": "Konzeption",
+    "card3Sub3": "Produktion",
+    "card3Tagline": "Zeige Dich so authentisch wie Du bist",
+    "card3Desc": "Verstehe, wie Social Media wirklich funktioniert. Lerne, Dich klar zu positionieren und aus der Masse herauszustechen – ohne Dich zu verstellen. Erreiche die Menschen, die wirklich zu Dir passen, baue Vertrauen statt nur Reichweite auf. Klare Inhalte statt planlosem Posten. Social Media mit Strategie statt Zufall.",
+    "drawerClose": "Schließen",
+    "websiteDrawer": {
+      "title": "Website",
+      "body": "Ende zu Ende – Ich begleite dich im gesamten Lebenszyklus von Deiner Idee über die erste Domain bis hin zu Deiner individuellen Website.",
+      "process": "Ablauf:",
+      "step1": "Prototyp → Feedback",
+      "step2": "50% upfront",
+      "step3": "50% nach Zufriedenheit in 3 Monaten",
+      "pricing": "Preis je nach Umfang – Gib an was du ausgeben willst.",
+      "ctaLabel": "Jetzt anfragen"
+    },
+    "workflowDrawer": {
+      "title": "Workflow Struktur",
+      "body": "Ich bring Klarheit in deine digitalen Prozesse",
+      "body2": "Keine doppelten Dateien, kein Chaos – nur Klarheit und Durchblick",
+      "comingSoon": "Coming Soon",
+      "ctaLabel": "Interesse? Schreib mir"
+    },
+    "socialDrawer": {
+      "title": "Social Media",
+      "cutOnly": "Nur schneiden:",
+      "cut5": "5 Videos – 120€",
+      "cut10": "10 Videos – 200€",
+      "full": "Komplettprogramm (Scripting → Reel):",
+      "full5": "5 Videos – 300€",
+      "full10": "10 Videos – 500€",
+      "promise": "Erst anschauen, dann zahlen.",
+      "free": "Erstberatung + 1 Edit kostenfrei",
+      "ctaLabel": "Jetzt anfragen"
+    },
+    "websitePageTitle": "Website",
+    "workflowPageTitle": "Workflow Struktur",
+    "socialPageTitle": "Social Media",
+    "pageIntro": "Alle Services auf einen Blick",
+    "mailLabel": "Schreib mir eine Mail"
+  },
+  "cta": {
+    "headline": "Bewahre den digitalen Durchblick",
+    "body": "Trag dich ein und ich melde mich bei dir"
+  },
+  "footer": {
+    "tagline": "Alle Daten liegen auf privaten EU-Servern. Keine Weitergabe an US-Dienste.",
+    "copyright": "© 2025 Nils Tenkotte – Flowstate Foundation",
+    "madeWith": "Made with ♥ in Köln",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz"
+  },
+  "forms": {
+    "phonePlaceholder": "+49 ...",
+    "sendButton": "Senden",
+    "success": "Ich melde mich bei dir!",
+    "alreadySubmitted": "Du hast dich bereits eingetragen. Bitte warte noch {{minutes}} Minuten.",
+    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+  },
+  "events": {
+    "title": "Events & Festivals",
+    "upcomingTab": "Kommende Events",
+    "pastTab": "Vergangene Events",
+    "emptyState": "Bald findet man mich auf Festivals – schau bald wieder vorbei 🌿",
+    "ticketButton": "Tickets",
+    "filterAll": "Alle",
+    "filterMusic": "Musik",
+    "filterYoga": "Yoga",
+    "filterWellness": "Wellness",
+    "filterFestival": "Festival",
+    "filterArt": "Kunst",
+    "locationPlaceholder": "Ort filtern...",
+    "meetMe": "Triff mich live auf einem der nächsten Events"
+  },
+  "herzensprojekte": {
+    "title": "Herzensprojekte",
+    "musicTitle": "Musik",
+    "musicDesc": "Meine Musik auf Spotify – Sounds die ich liebe.",
+    "socialTitle": "Social Media",
+    "photoTitle": "Momente",
+    "photoDesc": "Einblicke in meine Welt.",
+    "poemTitle": "Worte",
+    "spotifyPlaceholder": "Spotify Playlist folgt bald"
+  },
+  "growTogether": {
+    "title": "Grow Together",
+    "intro": "Du hast Bock, Mehr aus Deinem Business zu holen? Lass uns gemeinsam durchstarten!",
+    "calTitle": "Termin buchen mit Nils",
+    "orDivider": "Oder direkt schreiben:",
+    "waLabel": "Oder direkt schreiben"
+  },
+  "thankYou": {
+    "title": "Danke für dein Vertrauen!",
+    "noWait": "Du hast keine Lust zu warten?",
+    "waLabel": "Schreib mir direkt auf WhatsApp",
+    "calDivider": "Oder such dir einen Zeitslot aus:",
+    "eventsTitle": "Triff mich live"
+  },
+  "impressum": {
+    "title": "Impressum",
+    "angaben": "Angaben gemäß § 5 TMG",
+    "kontakt": "Kontakt:",
+    "steuer": "Steuer:",
+    "steuerText": "Kleinunternehmer gemäß § 19 UStG",
+    "steuerNr": "Steuernummer: 402/9376/4518",
+    "verantwortlich": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:",
+    "streit": "Streitschlichtung",
+    "streitText": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/\nWir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+    "haftung": "Haftung für Inhalte",
+    "haftungText": "Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich."
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Stand: Mai 2025"
+  },
+  "404": {
+    "title": "Diese Seite existiert noch nicht – aber vielleicht bald 🌱",
+    "backHome": "Zurück zur Startseite"
+  },
+  "whatsapp": {
+    "defaultLabel": "Schreib mir auf WhatsApp"
+  },
+  "quotes": {
+    "q1text": "Lass dein Herz auf der Welt ein Spiegel der Seele sein.",
+    "q1author": "Rumi",
+    "q2text": "Der einzige Weg, großartige Arbeit zu leisten, ist, zu lieben was du tust.",
+    "q2author": "Steve Jobs",
+    "q3text": "In dir ist die Kraft, die du suchst.",
+    "q3author": "Unbekannt",
+    "q4text": "Werde, der du bist.",
+    "q4author": "Friedrich Nietzsche"
+  }
+}

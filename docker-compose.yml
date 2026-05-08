@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  flowstate-foundation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL}
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY}
+        VITE_CAL_URL: ${VITE_CAL_URL}
+        VITE_WA_URL: ${VITE_WA_URL}
+    container_name: flowstate-foundation
+    restart: unless-stopped
+    ports:
+      - "6666:80"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:80"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
