@@ -156,6 +156,13 @@ export function Services() {
             >
               {t('services.mailLabel')}
             </Button> */}
+            <Button
+              variant="ghost"
+              href="https://cal.com/nils-flowstate/connect?layout=month_view"
+              className="border border-gray-200 text-navy hover:bg-surface"
+            >
+              {t('services.mailLabel')}
+            </Button>
           </motion.div>
         </motion.div>
       </section>
@@ -193,8 +200,15 @@ export function Services() {
               {t('services.workflowDrawer.comingSoon')}
             </span>
           </motion.div> */}
-          <motion.div variants={fadeUp}>
+          <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3">
             <WhatsAppButton label={t('services.workflowDrawer.ctaLabel')} />
+            <Button
+              variant="ghost"
+              href="https://cal.com/nils-flowstate/connect?layout=month_view"
+              className="border border-gray-200 text-navy hover:bg-surface"
+            >
+              {t('services.mailLabel')}
+            </Button>
           </motion.div>
         </motion.div>
       </section>
