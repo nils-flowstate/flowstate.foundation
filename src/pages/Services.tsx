@@ -147,6 +147,9 @@ export function Services() {
           <motion.p variants={fadeUp} className="font-sans text-muted italic mb-8">
             {t('services.websiteDrawer.pricing')}
           </motion.p>
+          <motion.p variants={fadeUp} className="font-sans font-bold text-navy leading-relaxed ml-1 mb-6">
+            {t('services.websitePrice')}
+          </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3">
             <WhatsAppButton label={t('services.websiteDrawer.ctaLabel')} />
             {/* <Button
@@ -192,8 +195,11 @@ export function Services() {
           <motion.p variants={fadeUp} className="font-sans text-text leading-relaxed mb-4">
             {t('services.workflowDrawer.body')}
           </motion.p>
-          <motion.p variants={fadeUp} className="font-sans text-text leading-relaxed mb-6">
+          <motion.p variants={fadeUp} className="font-sans text-text leading-relaxed mb-2">
             {t('services.card2Desc')}
+          </motion.p>
+          <motion.p variants={fadeUp} className="font-sans font-bold text-navy leading-relaxed ml-1 mb-6">
+            {t('services.workflowPrice')}
           </motion.p>
           {/* <motion.div variants={fadeUp} className="mb-8">
             <span className="inline-block bg-orange/10 text-orange font-sans font-semibold px-4 py-1.5 rounded-full text-sm">
