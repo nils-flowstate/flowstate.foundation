@@ -149,13 +149,13 @@ export function Services() {
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3">
             <WhatsAppButton label={t('services.websiteDrawer.ctaLabel')} />
-            <Button
+            {/* <Button
               variant="ghost"
               href="mailto:nils@flowstate.foundation"
               className="border border-gray-200 text-navy hover:bg-surface"
             >
               {t('services.mailLabel')}
-            </Button>
+            </Button> */}
           </motion.div>
         </motion.div>
       </section>
@@ -188,11 +188,11 @@ export function Services() {
           <motion.p variants={fadeUp} className="font-sans text-text leading-relaxed mb-6">
             {t('services.card2Desc')}
           </motion.p>
-          <motion.div variants={fadeUp} className="mb-8">
+          {/* <motion.div variants={fadeUp} className="mb-8">
             <span className="inline-block bg-orange/10 text-orange font-sans font-semibold px-4 py-1.5 rounded-full text-sm">
               {t('services.workflowDrawer.comingSoon')}
             </span>
-          </motion.div>
+          </motion.div> */}
           <motion.div variants={fadeUp}>
             <WhatsAppButton label={t('services.workflowDrawer.ctaLabel')} />
           </motion.div>
