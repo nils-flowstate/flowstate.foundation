@@ -124,7 +124,20 @@ export function Datenschutz() {
           <div id="transfers">
             <h2 className="font-display text-xl font-bold text-navy mb-3">6. Internationale Datentransfers</h2>
             <p className="leading-relaxed text-muted">
-              Einige der von uns eingesetzten Dienste haben ihren Sitz in den USA oder übermitteln Daten dorthin. Für diese Fälle stützen wir uns auf den EU-US Data Privacy Framework (DPF), der seit Juli 2023 als Angemessenheitsbeschluss der EU-Kommission anerkannt ist, sowie auf EU-Standardvertragsklauseln (SCCs) gemäß Art. 46 DSGVO. Die jeweiligen Dienste sind in den nachfolgenden Abschnitten gekennzeichnet.
+              Wir weisen ausdrücklich darauf hin, dass Daten im Rahmen unserer Geschäftstätigkeit <strong className="text-navy">nicht ausschließlich auf Servern innerhalb der EU gespeichert werden</strong>. Folgende von uns eingesetzte Dienste verarbeiten Daten in Drittländern (insbesondere den USA):
+            </p>
+            <ul className="list-disc list-inside space-y-1 text-muted leading-relaxed mt-3">
+              <li>Google Workspace (Drive, Gmail, Calendar) — USA</li>
+              <li>Google Fonts — USA</li>
+              <li>Google Forms — USA</li>
+              <li>Notion — USA</li>
+              <li>Supabase — USA</li>
+              <li>Cal.com — USA</li>
+              <li>Microsoft 365 (Teams, OneDrive, Outlook) — USA</li>
+              <li>Hostinger — internationale Serverstandorte</li>
+            </ul>
+            <p className="leading-relaxed text-muted mt-3">
+              Für Datenübermittlungen in die USA stützen wir uns auf den EU-US Data Privacy Framework (DPF), der seit Juli 2023 als Angemessenheitsbeschluss der EU-Kommission anerkannt ist, sowie ergänzend auf EU-Standardvertragsklauseln (SCCs) gemäß Art. 46 DSGVO. Die jeweiligen Rechtsgrundlagen und Transfermechanismen sind in den Abschnitten der betreffenden Dienste aufgeführt.
             </p>
           </div>
 
@@ -189,6 +202,18 @@ export function Datenschutz() {
             <p className="leading-relaxed text-muted">
               Die DNS-Verwaltung der Domain flowstate.foundation erfolgt über INWX GmbH & Co. KG, Joachimsthaler Str. 12, 10719 Berlin, Deutschland. Bei DNS-Anfragen werden technische Verbindungsdaten (IP-Adresse) verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
             </p>
+
+            <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">Google Fonts</h3>
+            <p className="leading-relaxed text-muted">
+              Für die einheitliche Darstellung von Schriftarten nutzen wir Google Fonts. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Beim Aufruf der Website werden Schriftarten von <code className="text-sm bg-surface px-1 rounded">fonts.googleapis.com</code> geladen, wobei die IP-Adresse des Nutzers an Google übertragen wird. Wir haben keinen Einfluss auf diese Datenverarbeitung. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Grundlage für Drittlandtransfers in die USA: Data Privacy Framework (DPF). Weitere Informationen:{' '}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">policies.google.com/privacy</a>.
+            </p>
+
+            <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">Hostinger</h3>
+            <p className="leading-relaxed text-muted">
+              Für weitere Hosting-Leistungen nutzen wir Hostinger. Anbieter ist Hostinger International Ltd., 61 Lordou Vironos Street, 6023 Larnaca, Zypern. Hostinger betreibt Server an internationalen Standorten, auch außerhalb der EU. Beim Abruf gehosteter Inhalte werden technische Verbindungsdaten (IP-Adresse, Zeitstempel, Browsertyp) verarbeitet. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Grundlage für etwaige Drittlandtransfers: Standardvertragsklauseln gemäß Art. 46 DSGVO. Weitere Informationen:{' '}
+              <a href="https://www.hostinger.de/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">hostinger.de/privacy-policy</a>.
+            </p>
           </div>
 
           {/* 11 */}
@@ -219,6 +244,12 @@ export function Datenschutz() {
             <h2 className="font-display text-xl font-bold text-navy mb-3">12. Kontaktaufnahme und Anfrageverwaltung</h2>
             <p className="leading-relaxed text-muted">
               Wenn Sie uns per E-Mail oder über ein Kontaktformular kontaktieren, werden Ihre Angaben (Name, E-Mail-Adresse, Nachrichteninhalt) zur Bearbeitung Ihrer Anfrage und für eventuelle Rückfragen gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Daten werden gelöscht, sobald die Anfrage abschließend bearbeitet ist, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.
+            </p>
+
+            <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">Google Forms</h3>
+            <p className="leading-relaxed text-muted">
+              Für Kontaktanfragen und Interessentenerfassung setzen wir Google Forms ein. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Die im Formular eingegebenen Daten (z. B. Name, E-Mail-Adresse, Nachricht) werden auf Servern von Google verarbeitet und gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) sowie Art. 6 Abs. 1 lit. f DSGVO. Grundlage für Drittlandtransfers in die USA: Data Privacy Framework (DPF) sowie Standardvertragsklauseln gemäß Art. 46 DSGVO. Weitere Informationen:{' '}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">policies.google.com/privacy</a>.
             </p>
           </div>
 
@@ -271,10 +302,20 @@ export function Datenschutz() {
 
             <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">Google Workspace (Drive, Gmail, Calendar)</h3>
             <p className="leading-relaxed text-muted">
-              Für geschäftliche Kommunikation und Dokumentenverwaltung nutzen wir Google Workspace. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Im Rahmen der Geschäftskorrespondenz und Projektarbeit können Kontaktdaten von Kunden in Google Workspace verarbeitet werden (E-Mails, Dokumente, Kalendereinträge).
+              Für geschäftliche Kommunikation und Dokumentenverwaltung nutzen wir Google Workspace. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Im Rahmen der Geschäftskorrespondenz und Projektarbeit können Kontaktdaten von Kunden in Google Workspace verarbeitet werden (E-Mails, Dokumente, Kalendereinträge). Daten werden auf Servern von Google gespeichert, die sich auch außerhalb der EU befinden können.
             </p>
             <p className="leading-relaxed text-muted mt-2">
-              Google Ireland Limited agiert als Auftragsverarbeiter gemäß einem mit uns abgeschlossenen Auftragsverarbeitungsvertrag. Datenübertragungen in die USA erfolgen auf Basis des EU-US Data Privacy Framework (DPF). Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen: <a href="https://workspace.google.com/intl/de/terms/privacy_terms.html" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">Google Workspace Datenschutz</a>.
+              Google Ireland Limited agiert als Auftragsverarbeiter gemäß einem mit uns abgeschlossenen Auftragsverarbeitungsvertrag. Datenübertragungen in die USA erfolgen auf Basis des EU-US Data Privacy Framework (DPF). Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen:{' '}
+              <a href="https://workspace.google.com/intl/de/terms/privacy_terms.html" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">Google Workspace Datenschutz</a>.
+            </p>
+
+            <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">Microsoft 365 (Teams, OneDrive, Outlook)</h3>
+            <p className="leading-relaxed text-muted">
+              Für interne Kommunikation, Dateiablage und Collaboration nutzen wir Microsoft 365. Anbieter ist Microsoft Ireland Operations Ltd., One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland. Im Rahmen der Geschäftstätigkeit können Kontaktdaten und Kommunikationsinhalte von Kunden in Microsoft 365 verarbeitet werden (z. B. in Outlook, Teams oder OneDrive). Daten werden auf Servern von Microsoft gespeichert, die sich auch außerhalb der EU befinden können.
+            </p>
+            <p className="leading-relaxed text-muted mt-2">
+              Microsoft Ireland Operations Ltd. agiert als Auftragsverarbeiter gemäß dem Microsoft-Datenschutzzusatz. Datenübertragungen in die USA erfolgen auf Basis des EU-US Data Privacy Framework (DPF) sowie Standardvertragsklauseln. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO sowie Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen:{' '}
+              <a href="https://privacy.microsoft.com/de-de/privacystatement" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">privacy.microsoft.com</a>.
             </p>
           </div>
 
@@ -313,10 +354,27 @@ export function Datenschutz() {
           <div id="social">
             <h2 className="font-display text-xl font-bold text-navy mb-3">20. Präsenzen in sozialen Netzwerken</h2>
             <p className="leading-relaxed text-muted">
-              Wir unterhalten Präsenzen auf folgenden sozialen Netzwerken: Instagram (Meta Platforms Ireland Ltd.) und LinkedIn (LinkedIn Ireland Unlimited Company). Wenn Sie unsere Profile besuchen, gelten die jeweiligen Datenschutzrichtlinien der Plattformen. Wir haben als Betreiber der Profile keinen Einfluss auf die Datenverarbeitungen der Plattformbetreiber.
+              Wir unterhalten Präsenzen in sozialen Netzwerken. Wenn Sie unsere Profile besuchen, können Nutzungsdaten (z. B. besuchte Inhalte, Interaktionen) sowie Gerätedaten (z. B. IP-Adresse, Browsertyp) durch die jeweiligen Plattformbetreiber erfasst werden. Wir haben als Profilbetreiber keinen Einfluss auf diese Datenverarbeitungen. Rechtsgrundlage für den Betrieb der Profile: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Öffentlichkeitsarbeit und Kundenkommunikation).
             </p>
-            <p className="leading-relaxed text-muted mt-2">
-              Rechtsgrundlage für den Betrieb der Profile: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an Öffentlichkeitsarbeit und Kundenkommunikation).
+
+            <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">Instagram</h3>
+            <p className="leading-relaxed text-muted">
+              <strong className="text-navy">Dienstanbieter:</strong> Meta Platforms Ireland Limited, Merrion Road, Dublin 4, D04 X2K5, Irland. Verarbeitete Daten: Kontaktdaten, Inhaltsdaten, Nutzungsdaten, Meta- und Kommunikationsdaten. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Grundlage für Drittlandtransfers in die USA: Data Privacy Framework (DPF). Datenschutzerklärung:{' '}
+              <a href="https://privacycenter.instagram.com/policy/" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">privacycenter.instagram.com/policy</a>.
+            </p>
+
+            <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">LinkedIn</h3>
+            <p className="leading-relaxed text-muted">
+              <strong className="text-navy">Dienstanbieter:</strong> LinkedIn Ireland Unlimited Company, Wilton Plaza, Dublin 2, Irland. Verarbeitete Daten: Kontaktdaten, Inhaltsdaten, Nutzungsdaten, Profildaten (Berufsfunktion, Branche, Unternehmensgröße). Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Grundlage für Drittlandtransfers in die USA: Data Privacy Framework (DPF) sowie Standardvertragsklauseln. Datenschutzerklärung:{' '}
+              <a href="https://www.linkedin.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">linkedin.com/legal/privacy-policy</a>. Widerspruch (Opt-Out):{' '}
+              <a href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">linkedin.com/psettings</a>.
+            </p>
+
+            <h3 className="font-sans font-semibold text-navy mb-2 text-base mt-4">YouTube</h3>
+            <p className="leading-relaxed text-muted">
+              <strong className="text-navy">Dienstanbieter:</strong> Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Verarbeitete Daten: Nutzungsdaten, Meta- und Kommunikationsdaten. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Grundlage für Drittlandtransfers in die USA: Data Privacy Framework (DPF). Datenschutzerklärung:{' '}
+              <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">policies.google.com/privacy</a>. Widerspruch (Opt-Out):{' '}
+              <a href="https://myadcenter.google.com/personalizationoff" target="_blank" rel="noopener noreferrer" className="text-ocean hover:underline">myadcenter.google.com</a>.
             </p>
           </div>
 
