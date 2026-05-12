@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Instagram, Music2, ExternalLink, Play, Pause, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { PhoneInput } from '../components/ui/PhoneInput'
+// import { PhoneInput } from '../components/ui/PhoneInput'
 import { WhatsAppButton } from '../components/ui/WhatsAppButton'
 import { EventsList } from '../components/ui/EventsList'
 
@@ -137,7 +137,7 @@ export function AboutUs() {
             ))}
             <motion.div variants={fadeUp} className="pt-4 space-y-3">
               <p className="font-sans font-semibold text-navy">{t('about.interest')}</p>
-              <PhoneInput source="about" />
+              {/* <PhoneInput source="about" /> */}
               <WhatsAppButton className="w-full sm:w-auto" />
             </motion.div>
           </motion.div>

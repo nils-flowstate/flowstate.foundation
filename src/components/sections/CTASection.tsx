@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
-import { PhoneInput } from '../ui/PhoneInput'
+// import { PhoneInput } from '../ui/PhoneInput'
 import { WhatsAppButton } from '../ui/WhatsAppButton'
 
 const fadeUp = {
@@ -30,9 +30,9 @@ export function CTASection() {
         <motion.p variants={fadeUp} className="font-sans text-white/70 mb-8">
           {t('cta.body')}
         </motion.p>
-        <motion.div variants={fadeUp} className="mb-6">
+        {/* <motion.div variants={fadeUp} className="mb-6">
           <PhoneInput source="cta" darkMode />
-        </motion.div>
+        </motion.div> */}
         <motion.div variants={fadeUp} className="flex items-center gap-4 mb-6">
           <div className="flex-1 h-px bg-white/10" />
           <span className="font-sans text-sm text-white/40">{t('about.orDivider')}</span>
