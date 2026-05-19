@@ -198,7 +198,10 @@
     "backHome": "Zurück zur Startseite"
   },
   "whatsapp": {
-    "defaultLabel": "Schreib mir auf WhatsApp"
+    "defaultLabel": "Schreib mir auf WhatsApp",
+    "websiteMessage": "Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über das Erstellen meiner individuellen Website. Freue mich mit dir zu connecten.",
+    "workflowMessage": "Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über deine Workflow-Automatisierung. Freue mich mit dir zu connecten.",
+    "socialMessage": "Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über dein Social Media Angebot. Freue mich mit dir zu connecten."
   },
   "quotes": {
     "q1text": "Lass dein Herz auf der Welt ein Spiegel der Seele sein.",

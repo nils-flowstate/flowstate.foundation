@@ -9,6 +9,7 @@ interface WhatsAppButtonProps {
   label?: string
   variant?: Variant
   className?: string
+  message?: string
 }
 
 const variantClasses: Record<Variant, string> = {
@@ -17,13 +18,16 @@ const variantClasses: Record<Variant, string> = {
   ghost: 'text-green hover:bg-green/10',
 }
 
-export function WhatsAppButton({ label, variant = 'primary', className = '' }: WhatsAppButtonProps) {
+export function WhatsAppButton({ label, variant = 'primary', className = '', message }: WhatsAppButtonProps) {
   const { t } = useTranslation()
   const displayLabel = label || t('whatsapp.defaultLabel')
 
   const handleClick = () => {
     track('cta_click', { element: 'whatsapp_button' })
-    window.open(import.meta.env.VITE_WA_URL, '_blank', 'noopener,noreferrer')
+    const url = message
+      ? `https://wa.me/${import.meta.env.VITE_WA_PHONE}?text=${encodeURIComponent(message)}`
+      : import.meta.env.VITE_WA_URL
+    window.open(url, '_blank', 'noopener,noreferrer')
   }
 
   return (

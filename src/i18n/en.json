@@ -198,7 +198,10 @@
     "backHome": "Back to Home"
   },
   "whatsapp": {
-    "defaultLabel": "Write me on WhatsApp"
+    "defaultLabel": "Write me on WhatsApp",
+    "websiteMessage": "Hey, great to meet you Nils. I'd love to hear more about creating my individual website. Looking forward to connecting with you.",
+    "workflowMessage": "Hey, great to meet you Nils. I'd love to hear more about your workflow automation. Looking forward to connecting with you.",
+    "socialMessage": "Hey, great to meet you Nils. I'd love to hear more about your social media offer. Looking forward to connecting with you."
   },
   "quotes": {
     "q1text": "Let your heart be a mirror of the soul in the world.",

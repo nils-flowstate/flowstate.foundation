@@ -38,7 +38,7 @@ export function Header() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <img
-            src="/assets/Logo_Flowstate_Foundation-removedbg.png"
+            src="/assets/Flowstate-Logo.webp"
             alt="Flowstate Foundation"
             className="h-9 w-auto"
           />

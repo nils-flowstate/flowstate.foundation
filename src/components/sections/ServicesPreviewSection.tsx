@@ -19,21 +19,21 @@ export function ServicesPreviewSection() {
   const cards = [
     {
       id: 'website',
-      icon: <Globe className="w-10 h-10 text-green" />,
+      icon: <Globe className="w-10 h-10 text-navy" />,
       title: t('services.card1Title'),
       subs: [t('services.card1Sub1'), t('services.card1Sub2'), t('services.card1Sub3')],
       tagline: t('services.card1Tagline'),
       desc: t('services.card1Desc'),
-      border: 'hover:border-green',
+      border: 'hover:border-navy',
     },
     {
       id: 'workflow',
-      icon: <Workflow className="w-10 h-10 text-navy" />,
+      icon: <Workflow className="w-10 h-10 text-orange" />,
       title: t('services.card2Title'),
       subs: [t('services.card2Sub1'), t('services.card2Sub2'), t('services.card2Sub3')],
       tagline: t('services.card2Tagline'),
       desc: t('services.card2Desc'),
-      border: 'hover:border-navy',
+      border: 'hover:border-orange',
     },
     {
       id: 'social-media',
