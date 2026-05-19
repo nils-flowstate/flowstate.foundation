@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, Calendar, ExternalLink } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { supabase } from '../../lib/supabase'
+// import { supabase } from '../../lib/supabase'
 
 interface Event {
   id: string
@@ -36,31 +36,9 @@ export function EventsList({ compact = false }: EventsListProps) {
   const [categoryFilter, setCategoryFilter] = useState('all')
 
   useEffect(() => {
-    const fetchEvents = async () => {
-      setLoading(true)
-      const today = new Date().toISOString().split('T')[0]
-      let query = supabase
-        .from('events')
-        .select('*')
-        .eq('is_active', true)
-        .order('event_date', { ascending: !showPast })
-
-      if (showPast) {
-        query = query.lt('event_date', today)
-      } else {
-        query = query.gte('event_date', today)
-      }
-
-      if (compact) {
-        query = query.limit(3)
-      }
-
-      const { data } = await query
-      setEvents(data || [])
-      setLoading(false)
-    }
-
-    fetchEvents()
+    // Supabase paused — restore fetch when backend is ready
+    setEvents([])
+    setLoading(false)
   }, [showPast, compact])
 
   const filtered = categoryFilter === 'all'
