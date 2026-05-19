@@ -378,6 +378,13 @@ export function AboutUs() {
               <X className="w-5 h-5" />
             </button>
 
+            <img
+              src={galleryImages[lightboxIndex]}
+              alt={`Galerie Bild ${lightboxIndex + 1}`}
+              onClick={e => e.stopPropagation()}
+              className="max-h-[85vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+            />
+
             <p className="absolute bottom-5 font-sans text-white/50 text-sm tabular-nums">
               {lightboxIndex + 1} / {GALLERY_COUNT}
             </p>
