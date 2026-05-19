@@ -25,13 +25,13 @@ export function PainSection() {
       icon: <Workflow className="w-8 h-8" />,
       title: t('pain.card2Title'),
       desc: t('pain.card2Desc'),
-      color: 'text-orange border-orange/20 hover:border-orange',
+      color: 'text-orange border-navy/20 hover:border-orange',
     },
     {
       icon: <Video className="w-8 h-8" />,
       title: t('pain.card3Title'),
       desc: t('pain.card3Desc'),
-      color: 'text-ocean border-ocean/20 hover:border-ocean',
+      color: 'text-fire border-navy/20 hover:border-fire',
     },
   ]
 
