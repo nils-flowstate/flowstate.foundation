@@ -41,17 +41,17 @@ Event - Musik, DJ, Ecstatic Dance - https://abc.de/tickets - SAVE10 - Hip-Hop Op
 ### Kategorie-System (neu, ersetzt altes System)
 
 **Hauptkategorien (Slugs für DB):**
-| Slug | Label | Emoji/Thema |
-|------|-------|-------------|
-| `musik` | Musik \| Klang | |
-| `kunst` | Kunst \| Visuell | |
-| `worte` | Dichten & Sprache \| Worte | |
-| `fotografie` | Fotografie \| Visuell | |
-| `video` | Video \| Visuell & Klang | |
-| `ernaehrung` | Ernährung \| Natur | |
-| `sport` | Sport & Tanz \| Körper | |
-| `it` | IT \| Konstrukt | |
-| `business` | Business & Networking | |
+| Slug         | Label                      | Emoji/Thema |
+| ------------ | -------------------------- | ----------- |
+| `musik`      | Musik \| Klang             |             |
+| `kunst`      | Kunst \| Visuell           |             |
+| `worte`      | Dichten & Sprache \| Worte |             |
+| `fotografie` | Fotografie \| Visuell      |             |
+| `video`      | Video \| Visuell & Klang   |             |
+| `ernaehrung` | Ernährung \| Natur         |             |
+| `sport`      | Sport & Tanz \| Körper     |             |
+| `it`         | IT \| Konstrukt            |             |
+| `business`   | Business & Networking      |             |
 
 **Unterkategorien (Beispiele, erweiterbar):**
 - Musik: `mantra`, `konzert`, `band`, `orchester`, `ecstatic-dance`, `dj`, `club`
@@ -128,14 +128,14 @@ Wenn ein Event die Kategorie `dj` hat und `event_type = eigenes-event`, wird aut
 - Songs kommen aus dem verknüpften Google Sheet (manuell gepflegt)
 
 **Google Sheet Struktur (`YYYY-MM-DD-dj`):**
-| Spalte | Inhalt |
-|--------|--------|
-| Song | Titel |
-| Künstler | Name |
-| Mag ich | Anzahl Stimmen |
-| Mag ich nicht | Anzahl Stimmen |
-| Begründungen | Kommagetrennte Kommentare |
-| Letzte Stimme | Timestamp |
+| Spalte        | Inhalt                    |
+| ------------- | ------------------------- |
+| Song          | Titel                     |
+| Künstler      | Name                      |
+| Mag ich       | Anzahl Stimmen            |
+| Mag ich nicht | Anzahl Stimmen            |
+| Begründungen  | Kommagetrennte Kommentare |
+| Letzte Stimme | Timestamp                 |
 
 **Idee:** Das Sheet könnte auch als Setlist-Grundlage genutzt werden — Songs mit hohem "Mag ich"-Anteil oben.
 
@@ -162,18 +162,21 @@ Wenn ein Event die Kategorie `dj` hat und `event_type = eigenes-event`, wird aut
 - Repo: `https://github.com/czlonkowski/n8n-skills`
 - Vorgefertigte Workflow-Templates und Patterns für gängige Integrationen
 
+### supabase Skills (für Claude Code)
+- npx skills add supabase/agent-skills (should be setup already)
+
 ---
 
 ## MCP Connections (in Claude Code aktiv)
 
-| Service | Prefix | Genutzt für |
-|---------|--------|-------------|
+| Service         | Prefix                             | Genutzt für                         |
+| --------------- | ---------------------------------- | ----------------------------------- |
 | Google Calendar | `mcp__claude_ai_Google_Calendar__` | Kalender auslesen, Events erstellen |
-| Google Drive | `mcp__claude_ai_Google_Drive__` | Sheets erstellen, Dateien ablegen |
-| Spotify | `mcp__claude_ai_Spotify__` | (optional) Song-Daten |
-| Gmail | `mcp__claude_ai_Gmail__` | Benachrichtigungen |
-| n8n | `mcp__claude_ai_n8n__` | Workflows direkt bauen |
-| Notion | `mcp__claude_ai_Notion__` | (optional) Content-Management |
+| Google Drive    | `mcp__claude_ai_Google_Drive__`    | Sheets erstellen, Dateien ablegen   |
+| Spotify         | `mcp__claude_ai_Spotify__`         | (optional) Song-Daten               |
+| Gmail           | `mcp__claude_ai_Gmail__`           | Benachrichtigungen                  |
+| n8n             | `mcp__claude_ai_n8n__`             | Workflows direkt bauen              |
+| Notion          | `mcp__claude_ai_Notion__`          | (optional) Content-Management       |
 
 ---
 
