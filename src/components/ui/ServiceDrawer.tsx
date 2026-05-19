@@ -95,7 +95,7 @@ function WebsiteContent({ t }: { t: (key: string) => string }) {
       </div>
       <p className="font-sans text-muted italic">{t('services.websiteDrawer.pricing')}</p>
       <div className="space-y-3 pt-2">
-        <WhatsAppButton label={t('services.websiteDrawer.ctaLabel')} className="w-full" message="Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über das Erstellen meiner individuellen Website. Freue mich mit dir zu connecten." />
+        <WhatsAppButton label={t('services.websiteDrawer.ctaLabel')} className="w-full" message={t('whatsapp.websiteMessage')} />
         <a
           href="mailto:nils@flowstate.foundation"
           className="block text-center font-sans text-sm text-ocean hover:underline"
@@ -117,7 +117,7 @@ function WorkflowContent({ t }: { t: (key: string) => string }) {
         {t('services.workflowDrawer.comingSoon')}
       </span>
       <div className="pt-2">
-        <WhatsAppButton label={t('services.workflowDrawer.ctaLabel')} className="w-full" message="Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über deine Workflow-Automatisierung. Freue mich mit dir zu connecten." />
+        <WhatsAppButton label={t('services.workflowDrawer.ctaLabel')} className="w-full" message={t('whatsapp.workflowMessage')} />
       </div>
     </div>
   )
@@ -140,7 +140,7 @@ function SocialContent({ t }: { t: (key: string) => string }) {
       <p className="font-sans text-ocean font-semibold">{t('services.socialDrawer.promise')}</p>
       <p className="font-sans text-muted text-sm">{t('services.socialDrawer.free')}</p>
       <div className="pt-2">
-        <WhatsAppButton label={t('services.socialDrawer.ctaLabel')} className="w-full" message="Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über dein Social Media Angebot. Freue mich mit dir zu connecten." />
+        <WhatsAppButton label={t('services.socialDrawer.ctaLabel')} className="w-full" message={t('whatsapp.socialMessage')} />
       </div>
     </div>
   )

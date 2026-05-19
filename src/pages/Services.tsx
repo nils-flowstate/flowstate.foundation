@@ -151,7 +151,7 @@ export function Services() {
             {t('services.websitePrice')}
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3">
-            <WhatsAppButton label={t('services.websiteDrawer.ctaLabel')} message="Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über das Erstellen meiner individuellen Website. Freue mich mit dir zu connecten." />
+            <WhatsAppButton label={t('services.websiteDrawer.ctaLabel')} message={t('whatsapp.websiteMessage')} />
             {/* <Button
               variant="ghost"
               href="mailto:nils@flowstate.foundation"
@@ -207,7 +207,7 @@ export function Services() {
             </span>
           </motion.div> */}
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3">
-            <WhatsAppButton label={t('services.workflowDrawer.ctaLabel')} message="Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über deine Workflow-Automatisierung. Freue mich mit dir zu connecten." />
+            <WhatsAppButton label={t('services.workflowDrawer.ctaLabel')} message={t('whatsapp.workflowMessage')} />
             {/* <Button
               variant="ghost"
               href="https://cal.com/nils-flowstate/connect?layout=month_view"
@@ -280,7 +280,7 @@ export function Services() {
                       </div> */}
           
                       <div className="flex flex-col sm:flex-row gap-3">
-                        <WhatsAppButton label={t('about.waButton')} message="Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über dein Social Media Angebot. Freue mich mit dir zu connecten." />
+                        <WhatsAppButton label={t('about.waButton')} message={t('whatsapp.socialMessage')} />
                         <Link to="/about-us">
                           <Button variant="ghost" className="text-navy border border-navy-400 hover-border:bg-navy">
                             {t('about.moreLink')}
