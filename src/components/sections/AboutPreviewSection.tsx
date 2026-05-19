@@ -58,19 +58,19 @@ export function AboutPreviewSection() {
           </motion.div>
 
           <motion.div variants={fadeUp} className="border-t border-gray-100 pt-6 space-y-4">
-            <p className="font-sans font-semibold text-navy">{t('about.interest')}</p>
+            {/* <p className="font-sans font-semibold text-navy">{t('about.interest')}</p> */}
             {/* <PhoneInput source="about" /> */}
 
-            <div className="flex items-center gap-4">
+            {/* <div className="flex items-center gap-4">
               <div className="flex-1 h-px bg-gray-100" />
               <span className="font-sans text-sm text-muted">{t('about.orDivider')}</span>
               <div className="flex-1 h-px bg-gray-100" />
-            </div>
+            </div> */}
 
             <div className="flex flex-col sm:flex-row gap-3">
               <WhatsAppButton label={t('about.waButton')} />
               <Link to="/about-us">
-                <Button variant="ghost" className="text-navy border border-gray-200 hover:bg-surface">
+                <Button variant="ghost" className="text-navy border border-navy-400 hover-border:bg-navy">
                   {t('about.moreLink')}
                 </Button>
               </Link>

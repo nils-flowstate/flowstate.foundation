@@ -159,13 +159,13 @@ export function Services() {
             >
               {t('services.mailLabel')}
             </Button> */}
-            <Button
+            {/* <Button
               variant="ghost"
               href="https://cal.com/nils-flowstate/connect?layout=month_view"
               className="border border-gray-200 text-navy hover:bg-surface"
             >
               {t('services.mailLabel')}
-            </Button>
+            </Button> */}
           </motion.div>
         </motion.div>
       </section>
@@ -266,9 +266,28 @@ export function Services() {
           <motion.p variants={fadeUp} className="font-sans text-muted text-sm mb-8">
             {t('services.socialDrawer.free')}
           </motion.p>
-          <motion.div variants={fadeUp}>
+          {/* <motion.div variants={fadeUp}>
             <WhatsAppButton label={t('services.socialDrawer.ctaLabel')} />
-          </motion.div>
+          </motion.div> */}
+          <motion.div variants={fadeUp} className="border-t border-gray-100 pt-6 space-y-4">
+                      {/* <p className="font-sans font-semibold text-navy">{t('about.interest')}</p> */}
+                      {/* <PhoneInput source="about" /> */}
+          
+                      {/* <div className="flex items-center gap-4">
+                        <div className="flex-1 h-px bg-gray-100" />
+                        <span className="font-sans text-sm text-muted">{t('about.orDivider')}</span>
+                        <div className="flex-1 h-px bg-gray-100" />
+                      </div> */}
+          
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <WhatsAppButton label={t('about.waButton')} />
+                        <Link to="/about-us">
+                          <Button variant="ghost" className="text-navy border border-navy-400 hover-border:bg-navy">
+                            {t('about.moreLink')}
+                          </Button>
+                        </Link>
+                      </div>
+                    </motion.div>
         </motion.div>
       </section>
     </>
