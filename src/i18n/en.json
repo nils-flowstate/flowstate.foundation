@@ -116,6 +116,19 @@
     "pageIntro": "All services at a glance",
     "mailLabel": "Let's connect"
   },
+  "vision": {
+    "label": "My Vision",
+    "s1a": "Dedicating everything to",
+    "s1bold1": "strengthen",
+    "s1b": "communal",
+    "s1bold2": "cohesion",
+    "connector": "and thus",
+    "s2a": "Through my service, clearing paths for",
+    "s2bold1": "spaces",
+    "s2b": "of appreciative",
+    "s2bold2": "experience",
+    "s2c": ""
+  },
   "cta": {
     "headline": "Stay clear in the digital world",
     "body": "Sign up and I'll get back to you"

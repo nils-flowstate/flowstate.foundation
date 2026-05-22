@@ -116,6 +116,19 @@
     "pageIntro": "Alle Services auf einen Blick",
     "mailLabel": "Lass uns quatschen"
   },
+  "vision": {
+    "label": "Meine Vision",
+    "s1a": "Alles dafür zu geben",
+    "s1bold1": "gemeinschaftlichen Zusammenhalt",
+    "s1b": "zu",
+    "s1bold2": "stärken",
+    "connector": "und somit",
+    "s2a": "Mit meinem Dienst Wege für",
+    "s2bold1": "Räume",
+    "s2b": "wertschätzenden",
+    "s2bold2": "Erlebens",
+    "s2c": "frei zu machen"
+  },
   "cta": {
     "headline": "Bewahre den digitalen Durchblick",
     "body": "Trag dich ein und ich melde mich bei dir"
