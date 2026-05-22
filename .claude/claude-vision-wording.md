@@ -24,3 +24,6 @@ Ideen:
 
 2. One-Liner statt zwei Blöcke — die gesamte Vision in einen einzigen Satz komprimieren: "Alles dafür geben, gemeinschaftlichen Zusammenhalt zu stärken – durch Räume, die echtes Erleben ermöglichen." Ein Satz, sofort gescannt, volle Wirkung.
 --> Switch nach 2 Sekunden, der durchgejagt wird wie bei Zitat
+
+Hero Section:
+But... als Interseciton mit Punkten, die sich bewgen oder so
