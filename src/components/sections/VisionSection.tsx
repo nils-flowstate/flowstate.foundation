@@ -14,24 +14,24 @@ export function VisionSection() {
   const { t } = useTranslation()
 
   return (
-    <section className="bg-hero-bg border-t border-white/[0.04] py-28 px-4">
+    <section className="bg-hero-bg border-t border-white/[0.04] py-14 px-4">
       <motion.div
         variants={stagger}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: '-80px' }}
-        className="max-w-2xl mx-auto text-center"
+        viewport={{ once: true, margin: '-60px' }}
+        className="max-w-xl mx-auto text-center"
       >
         <motion.p
           variants={fadeUp}
-          className="font-sans text-xs tracking-[0.2em] uppercase text-green mb-12"
+          className="font-sans text-xs tracking-[0.2em] uppercase text-green mb-7"
         >
           {t('vision.label')}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
-          className="font-display text-2xl sm:text-3xl md:text-4xl text-white/85 leading-relaxed"
+          className="font-display text-xl sm:text-2xl text-white/85 leading-snug"
         >
           {t('vision.s1a')}{' '}
           <span className="text-orange font-bold">{t('vision.s1bold1')}</span>{' '}
@@ -41,14 +41,14 @@ export function VisionSection() {
 
         <motion.p
           variants={fadeUp}
-          className="font-display italic text-white/35 text-base sm:text-lg my-8"
+          className="font-display italic text-white/30 text-sm my-4"
         >
           {t('vision.connector')}
         </motion.p>
 
         <motion.p
           variants={fadeUp}
-          className="font-display text-2xl sm:text-3xl md:text-4xl text-white/85 leading-relaxed"
+          className="font-display text-xl sm:text-2xl text-white/85 leading-snug"
         >
           {t('vision.s2a')}{' '}
           <span className="text-green font-bold">{t('vision.s2bold1')}</span>{' '}
