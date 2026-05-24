@@ -4,7 +4,6 @@ import { PainSection } from '../components/sections/PainSection'
 import { MottoSection } from '../components/sections/MottoSection'
 import { AboutPreviewSection } from '../components/sections/AboutPreviewSection'
 import { ServicesPreviewSection } from '../components/sections/ServicesPreviewSection'
-import { FinalCTASection } from '../components/sections/FinalCTASection'
 // import { CTASection } from '../components/sections/CTASection'
 
 export function Home() {
@@ -18,7 +17,6 @@ export function Home() {
       <MottoSection />
       {/* TODO Phase 2: ValuesSection */}
       {/* <CTASection /> */}
-      <FinalCTASection />
     </>
   )
 }

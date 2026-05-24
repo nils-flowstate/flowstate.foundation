@@ -68,7 +68,7 @@ export function AboutPreviewSection() {
             </div> */}
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <WhatsAppButton label={t('about.waButton')} />
+              <WhatsAppButton label={t('about.waButton')} message="Liebe in den Äther <3" />
               <Link to="/about-us">
                 <Button variant="ghost" className="text-navy border border-navy-400 hover-border:bg-navy">
                   {t('about.moreLink')}

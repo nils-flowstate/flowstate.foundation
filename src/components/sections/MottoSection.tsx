@@ -44,15 +44,13 @@ export function MottoSection() {
           {t('motto.sub')}
         </motion.p>
 
-        <motion.div variants={fadeUp}>
+        <motion.div variants={fadeUp} className="flex flex-col items-center gap-6">
           <WhatsAppButton
             label="Lass uns gemeinsam durchstarten!"
             message="Ich habe Bock loszulegen. Wie fang ich direkt an?"
             className="text-base sm:text-lg px-8 py-4"
           />
-        </motion.div>
 
-        <motion.div variants={fadeUp}>
           <Link
             to="/about-us"
             className="inline-flex items-center gap-2 font-sans font-semibold text-white/60 hover:text-white transition-colors group"
