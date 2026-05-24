@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Globe, Workflow, Video } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 const fadeUp = {
@@ -19,19 +20,25 @@ export function PainSection() {
       icon: <Globe className="w-8 h-8" />,
       title: t('pain.card1Title'),
       desc: t('pain.card1Desc'),
-      color: 'text-navy border-navy/20 hover:border-navy',
+      href: '/services#website',
+      borderColor: 'border-navy/20 hover:border-navy/40',
+      gradientStyle: 'linear-gradient(135deg, rgba(26,60,110,0.07) 0%, transparent 65%)',
     },
     {
       icon: <Workflow className="w-8 h-8" />,
       title: t('pain.card2Title'),
       desc: t('pain.card2Desc'),
-      color: 'text-orange border-navy/20 hover:border-orange',
+      href: '/services#workflow',
+      borderColor: 'border-navy/20 hover:border-orange/40',
+      gradientStyle: 'linear-gradient(135deg, rgba(240,112,32,0.08) 0%, transparent 65%)',
     },
     {
       icon: <Video className="w-8 h-8" />,
       title: t('pain.card3Title'),
       desc: t('pain.card3Desc'),
-      color: 'text-fire border-navy/20 hover:border-fire',
+      href: '/services#social-media',
+      borderColor: 'border-navy/20 hover:border-fire/40',
+      gradientStyle: 'linear-gradient(135deg, rgba(224,53,21,0.08) 0%, transparent 65%)',
     },
   ]
 
@@ -65,11 +72,21 @@ export function PainSection() {
               key={card.title}
               variants={fadeUp}
               whileHover={{ scale: 1.01 }}
-              className={`bg-white rounded-2xl p-6 border-2 transition-colors duration-200 ${card.color}`}
+              className="group"
             >
-              <div className="mb-4">{card.icon}</div>
-              <h3 className="font-sans font-semibold text-lg text-text mb-2">{card.title}</h3>
-              <p className="font-sans text-muted text-sm leading-relaxed">{card.desc}</p>
+              <Link
+                to={card.href}
+                className={`relative block overflow-hidden bg-white rounded-2xl p-6 border-2 transition-all duration-300 cursor-pointer h-full ${card.borderColor}`}
+              >
+                {/* Sanfter Gradient-Overlay in Icon-Farbe */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"
+                  style={{ background: card.gradientStyle }}
+                />
+                <div className="relative mb-4">{card.icon}</div>
+                <h3 className="relative font-sans font-semibold text-lg text-text mb-2">{card.title}</h3>
+                <p className="relative font-sans text-muted text-sm leading-relaxed">{card.desc}</p>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
