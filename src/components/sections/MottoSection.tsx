@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { WhatsAppButton } from '../ui/WhatsAppButton'
+import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 // import { PhoneInput } from '../ui/PhoneInput'
 
 const fadeUp = {
@@ -41,6 +44,23 @@ export function MottoSection() {
           {t('motto.sub')}
         </motion.p>
 
+        <motion.div variants={fadeUp}>
+          <WhatsAppButton
+            label="Lass uns gemeinsam durchstarten!"
+            message="Ich habe Bock loszulegen. Wie fang ich direkt an?"
+            className="text-base sm:text-lg px-8 py-4"
+          />
+        </motion.div>
+
+        <motion.div variants={fadeUp}>
+          <Link
+            to="/about-us"
+            className="inline-flex items-center gap-2 font-sans font-semibold text-white/60 hover:text-white transition-colors group"
+          >
+            Erfahre mehr über meine Passion
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </motion.div>
         {/* Phone CTA */}
         {/* <motion.div variants={fadeUp} className="max-w-md mx-auto space-y-3">
           <p className="font-sans font-semibold text-white text-lg">{t('about.interest')}</p>
