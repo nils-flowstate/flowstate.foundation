@@ -17,7 +17,7 @@ export function PainSection() {
 
   const cards = [
     {
-      icon: <Globe className="w-8 h-8" />,
+      icon: <Globe className="w-10 h-10 text-navy" />,
       title: t('pain.card1Title'),
       desc: t('pain.card1Desc'),
       href: '/services#website',
@@ -25,7 +25,7 @@ export function PainSection() {
       gradientStyle: 'linear-gradient(135deg, rgba(26,60,110,0.07) 0%, transparent 65%)',
     },
     {
-      icon: <Workflow className="w-8 h-8" />,
+      icon: <Workflow className="w-10 h-10 text-orange" />,
       title: t('pain.card2Title'),
       desc: t('pain.card2Desc'),
       href: '/services#workflow',
@@ -33,7 +33,7 @@ export function PainSection() {
       gradientStyle: 'linear-gradient(135deg, rgba(240,112,32,0.08) 0%, transparent 65%)',
     },
     {
-      icon: <Video className="w-8 h-8" />,
+      icon: <Video className="w-10 h-10 text-fire" />,
       title: t('pain.card3Title'),
       desc: t('pain.card3Desc'),
       href: '/services#social-media',
