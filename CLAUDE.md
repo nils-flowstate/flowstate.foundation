@@ -201,6 +201,29 @@ const stagger = {
 
 ---
 
+## 📋 Arbeitsweise & Changelog-Regel
+
+Nach **jeder Codeänderung** muss eine `changelog.json` im **selben Ordner** wie die geänderte Datei erstellt bzw. aktualisiert werden.
+
+**Format:**
+```json
+[
+  {
+    "date": "2026-05-24",
+    "file": "PainSection.tsx",
+    "description": "Icons auf w-10 h-10 text-navy/orange/fire angeglichen (wie ServicesPreviewSection)"
+  }
+]
+```
+
+**Regeln:**
+- Neue Einträge werden **vorne** eingefügt (neueste zuerst)
+- `date` = ISO-Datum des Änderungstags (`YYYY-MM-DD`)
+- `file` = nur der Dateiname, kein Pfad
+- `description` = kurze, präzise Beschreibung auf Deutsch – was wurde geändert und warum
+
+---
+
 ## 🔒 Was nicht angefasst werden soll (ohne Rückfrage)
 
 - Kommentierter Code (`{/* TODO Phase 2: ... */}`) – bewusst deaktiviert
