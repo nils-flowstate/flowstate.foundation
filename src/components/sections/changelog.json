@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-05-26",
+    "file": "HeroSection.tsx",
+    "description": "headerConnector als eigenständiges Element zwischen headline1 und headline2 gerendert – kleiner gestylt (text-base sm:text-lg, italic, text-white/50) als Brücke zwischen den beiden Headlines; headline1 in <h1>, headline2 in <h2> getrennt"
+  },
+  {
     "date": "2026-05-24",
     "file": "PainSection.tsx",
     "description": "Icons auf w-10 h-10 mit Brandfarben text-navy / text-orange / text-fire angeglichen (konsistent mit ServicesPreviewSection)"

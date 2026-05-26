@@ -47,16 +47,35 @@ export function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Main Headline */}
+        {/* Headline 1 */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
+          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-3"
         >
           {renderBold(t('hero.headline1'))}
-          {renderBold(t('hero.headline2'))}
         </motion.h1>
+
+        {/* Connector – same style as headlines, one step smaller */}
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-3"
+        >
+          {t('hero.headerConnector')}
+        </motion.p>
+
+        {/* Headline 2 */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.55 }}
+          className="font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
+        >
+          {renderBold(t('hero.headline2'))}
+        </motion.h2>
 
         {/* Subtitle – headlineAccent */}
         <motion.p
