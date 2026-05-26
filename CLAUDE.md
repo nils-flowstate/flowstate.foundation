@@ -4,16 +4,26 @@
 
 ---
 
-## 🧭 Mission & Ziel
+## 🧭 Mission & Seele
 
 **Flowstate Foundation** – *The foundation for your digital flow*
 Gründer: **Nils Tenkotte**, Köln | flowstate.foundation
 
-**Kernziel:** Positive Impact & Mutual Appreciation. Menschen und Unternehmen, die das Bewusstsein der breiten Masse erhöhen wollen, sollen sich hier zuhause fühlen. Kunst, Ausdruck, menschliches und gemeinschaftliches Erleben stehen im Mittelpunkt.
+**Die Essenz – das trägt alles:**
+Bei Flowstate Foundation geht es einzig und allein um den individuellen Ausdruck einer Seele – oder einer Seelengemeinschaft (Brand). Alles entspringt dem Gefühl. Das Fühlen und Spüren steht im Vordergrund, vor allem anderen.
 
-**Zielgruppe:** Purpose-driven Solopreneure, Kreative, Künstler, spirituelle Communitys, NGOs und Herzensunternehmen – alle, die eine echte Vision haben und sie digital sichtbar machen wollen. Kein Corporate. Kein Bullshit.
+**Was das bedeutet:**
+Jede Website, jeder Workflow, jeder Content ist Ausdruck dieser Seele. Keine Strategie zuerst. Kein Markt zuerst. Erst das Fühlen. Erst der echte Ausdruck. Daraus entsteht alles andere.
+
+**Kernziel:** Räume des Spürens schaffen – digital. Menschen und Unternehmen, die das Bewusstsein der breiten Masse erhöhen wollen, bekommen eine digitale Bühne, die ihren Ausdruck trägt. Nicht anpasst. Nicht glättet. Nicht optimiert um des Optimierens willen.
+
+**Zielgruppe:** Purpose-driven Solopreneure, Kreative, Künstler, spirituelle Communitys, NGOs und Herzensunternehmen – alle, die eine echte Vision haben und sie digital spürbar machen wollen. Kein Corporate. Kein Bullshit.
 
 **Nils' persönliche Mission:** Menschen, die ihre Vision mit ebenso viel Leidenschaft und Feuer angehen, den Weg frei zu machen, ihre einzigartige Vision mit anderen zu teilen.
+
+**Leitfrage für alle Texte & Designs:**
+> Spürt man es? Landet es im Körper? Löst es etwas aus?
+> Das ist der Maßstab – nicht ob es „professionell" klingt.
 
 ---
 
