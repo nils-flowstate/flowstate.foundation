@@ -7,7 +7,8 @@
   },
   "hero": {
     "headline1": "Let your Digital Processes **Flow**",
-    "headline2": "But... \nDo You have a **Foundation** to Grow?",
+    "headerConnector": "But...",
+    "headline2": " \nDo You have a **Foundation** to Grow...",
     "headlineAccent": "Bring Deine Online Präsenz zum Strahlen",
     "headlineEnd": "Erschaffe Dir Dein Fundament zu wachsen",
     "sub": "Deine Kreation verdient eine Bühne \nDeine Bühne nach Deinen Maßstäben",
@@ -96,7 +97,7 @@
       "body": "Ich bring Klarheit in deine digitalen Prozesse",
       "body2": "Keine doppelten Dateien, kein Chaos – nur Klarheit und Durchblick",
       "comingSoon": "Coming Soon",
-      "ctaLabel": "Interesse? Schreib mir"
+      "ctaLabel": "Lass uns Verbinden"
     },
     "socialDrawer": {
       "title": "Social Media",
