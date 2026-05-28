@@ -24,7 +24,7 @@ const igProfiles = [
   { handle: 'nils.back.to.nature', url: 'https://instagram.com/nils.back.to.nature' },
   { handle: 'Nils | Light.Child', url: 'https://instagram.com' },
   { handle: 'flowstate.foundation', url: 'https://instagram.com/flowstate.foundation' },
-  { handle: 'flowstate.express', url: 'https://instagram.com/flowstate.express' },
+  // { handle: 'flowstate.express', url: 'https://instagram.com/flowstate.express' },
 ]
 
 const playlists = [

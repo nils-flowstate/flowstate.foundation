@@ -7,7 +7,8 @@
   },
   "hero": {
     "headline1": "Let your Digital Processes **Flow**",
-    "headline2": "But... \nDo You have a **Foundation** to Grow?",
+    "headerConnector": "But...",
+    "headline2": "Do You have a **Foundation** to Grow?",
     "headlineAccent": "Let Your Online Presence Shine",
     "headlineEnd": "Create Your Foundation to Grow",
     "sub": "Your Creation deserves a stage\nYour Stage. Your Standards.",
@@ -115,6 +116,19 @@
     "socialPageTitle": "Social Media",
     "pageIntro": "All services at a glance",
     "mailLabel": "Let's connect"
+  },
+  "vision": {
+    "label": "My Vision",
+    "s1a": "Dedicating everything to",
+    "s1bold1": "strengthen",
+    "s1b": "communal",
+    "s1bold2": "cohesion",
+    "connector": "and thus",
+    "s2a": "Through my service, clearing paths for",
+    "s2bold1": "spaces",
+    "s2b": "of appreciative",
+    "s2bold2": "experience",
+    "s2c": ""
   },
   "cta": {
     "headline": "Stay clear in the digital world",

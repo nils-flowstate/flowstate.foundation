@@ -1,4 +1,5 @@
 import { HeroSection } from '../components/sections/HeroSection'
+import { VisionSection } from '../components/sections/VisionSection'
 import { PainSection } from '../components/sections/PainSection'
 import { MottoSection } from '../components/sections/MottoSection'
 import { AboutPreviewSection } from '../components/sections/AboutPreviewSection'
@@ -9,6 +10,7 @@ export function Home() {
   return (
     <>
       <HeroSection />
+      <VisionSection />
       <PainSection />
       <AboutPreviewSection />
       <ServicesPreviewSection />

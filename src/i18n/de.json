@@ -7,7 +7,8 @@
   },
   "hero": {
     "headline1": "Let your Digital Processes **Flow**",
-    "headline2": "But... \nDo You have a **Foundation** to Grow?",
+    "headerConnector": "But...",
+    "headline2": "Do You have a **Foundation** to Grow...",
     "headlineAccent": "Bring Deine Online Präsenz zum Strahlen",
     "headlineEnd": "Erschaffe Dir Dein Fundament zu wachsen",
     "sub": "Deine Kreation verdient eine Bühne \nDeine Bühne nach Deinen Maßstäben",
@@ -41,15 +42,15 @@
   },
   "about": {
     "greeting": "Hey, ich bin Nils,",
-    "subhead1": "Präsentiere Dich",
-    "line1": "Ich mache es Menschen und Unternehmen möglich, über das Internet Ihr Wahres Selbst | Ihre Einzigartige Brand Identity zur Geltung zu bringen.",
+    "subhead1": "Lass andere Menschen Deine Einzigartigkeit spüren",
+    "line1": "Ich mache es Menschen und Unternehmen möglich, Ihre wahre Seelenmission in die digitale Welt zu tragen.",
     "subhead2": "Fokussiere Dich auf Dein Business",
-    "line2": "Durch mich kannst Du Dich auf das fokussieren, was Dich weiter bringt und was Deine Kunden an dir lieben und schätzen.",
+    "line2": "Durch mich kannst Du Dich voll auf das fokussieren was deine Kunden an dich lieben und dich im Kern ausmacht.",
     "subhead3": "Behalte den Durchblick",
-    "line3": "Mit mir behältst du den Durchblick im digitalen Dschungel. Gemeinsam finden wir Deinen individuellen Weg - auf Dich zugeschnitten.",
-    "interest": "Interesse?",
+    "line3": "Mit mir behältst du den Durchblick im digitalen Dschungel. Gemeinsam finden wir Deinen individuellen Weg - Deine Liebe in die Welt zu tragen.",
+    "interest": "Lass uns verbinden",
     "orDivider": "oder",
-    "waButton": "Schreib mir direkt",
+    "waButton": "Eine Portion Mitgefühl",
     "moreLink": "Mehr über mich",
     "whoAmI": "Wer bin ich?",
     "fullBio1": "Ich bin Nils Tenkotte – Gründer von Flowstate Foundation. \nIch habe mich in die Vielseitigkeit der menschlichen Erfahrung verliebt. \nSei es zu musizieren, Gedichte zu schreiben, ausgelassen zu tanzen oder in der Natur Fotos zu knipsen.",
@@ -96,7 +97,7 @@
       "body": "Ich bring Klarheit in deine digitalen Prozesse",
       "body2": "Keine doppelten Dateien, kein Chaos – nur Klarheit und Durchblick",
       "comingSoon": "Coming Soon",
-      "ctaLabel": "Interesse? Schreib mir"
+      "ctaLabel": "Lass uns Verbinden"
     },
     "socialDrawer": {
       "title": "Social Media",
@@ -115,6 +116,19 @@
     "socialPageTitle": "Social Media",
     "pageIntro": "Alle Services auf einen Blick",
     "mailLabel": "Lass uns quatschen"
+  },
+  "vision": {
+    "label": "Meine Vision",
+    "s1a": "Alles dafür zu geben",
+    "s1bold1": "gemeinschaftliches Erleben und Spüren",
+    "s1b": "zu",
+    "s1bold2": "befeuern",
+    "connector": "und somit",
+    "s2a": "Mit meiner Arbeit Wege für",
+    "s2bold1": "Räume des Fühlens",
+    "s2b": "und",
+    "s2bold2": "wertschätzendes Miteinander",
+    "s2c": "frei zu machen"
   },
   "cta": {
     "headline": "Bewahre den digitalen Durchblick",
