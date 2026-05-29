@@ -25,6 +25,11 @@ Jede Website, jeder Workflow, jeder Content ist Ausdruck dieser Seele. Keine Str
 > Spürt man es? Landet es im Körper? Löst es etwas aus?
 > Das ist der Maßstab – nicht ob es „professionell" klingt.
 
+**Das Kernversprechen – Herzenspassion in künstlerische Form:**
+Nils versteht die Herzenspassion seiner Kunden – nicht oberflächlich, sondern bis in den Kern. Dieses Verstehen gießt er in eine künstlerische Form, die die Seele des Kunden widerspiegelt. Nicht interpretiert. Nicht vereinfacht. Gespiegelt – in höchster Qualität.
+
+**Qualität ist das wichtigste Gut.** Es geht darum die Vision des Kunden zu Ehren und zu tragen. Den Rücken frei zu halten. Aus der höchsten Qualität in der Umsetzung erwächst vollumfängliche Souveränität im technischen Umfeld. Er muss nichts verstehen, nichts kontrollieren, nichts fürchten. Er ist frei – weil das Fundament trägt.
+
 **Die tiefere Verbindung – Herz zu Herz:**
 Nils spürt, was in seinen Kunden vorgeht. Nicht analysiert – gefühlt. Daraus entsteht eine Sprache, die keine Übersetzung braucht: kein Austausch von Worten, sondern eine Verbindung von Herz zu Herz. Er erkennt das IT-technische Potential des Kunden und setzt es um – direkt, ohne Umwege.
 
@@ -35,17 +40,17 @@ Alles ist bildhaft. Der Ton hüpft, singt, atmet. Er ist lebendig wie ein Kind, 
 
 ## 🎨 Color System
 
-| Token | HEX | Semantische Bedeutung |
-|-------|-----|-----------------------|
-| `navy` | `#1A3C6E` | Tiefe · Headlines · Backgrounds |
-| `ocean` | `#2E6FBF` | Fluss · Sekundär-Akzente |
-| `orange` | `#F07020` | **Energie · Primary CTA · Highlight** |
-| `fire` | `#E03515` | Passion · sehr sparsam einsetzen |
-| `green` | `#3DAA45` | **Wachstum · Erfolg · WhatsApp · Trust** |
-| `hero-bg` | `#0B1E38` | Nacht · Hero- & Vision-Sektion |
-| `text` | `#111827` | Fließtext · UI |
-| `muted` | `#6B7280` | Sekundär · Labels |
-| `surface` | `#F7F8FA` | Heller Hintergrund (z.B. AboutSection) |
+| Token     | HEX       | Semantische Bedeutung                    |
+| --------- | --------- | ---------------------------------------- |
+| `navy`    | `#1A3C6E` | Tiefe · Headlines · Backgrounds          |
+| `ocean`   | `#2E6FBF` | Fluss · Sekundär-Akzente                 |
+| `orange`  | `#F07020` | **Energie · Primary CTA · Highlight**    |
+| `fire`    | `#E03515` | Passion · sehr sparsam einsetzen         |
+| `green`   | `#3DAA45` | **Wachstum · Erfolg · WhatsApp · Trust** |
+| `hero-bg` | `#0B1E38` | Nacht · Hero- & Vision-Sektion           |
+| `text`    | `#111827` | Fließtext · UI                           |
+| `muted`   | `#6B7280` | Sekundär · Labels                        |
+| `surface` | `#F7F8FA` | Heller Hintergrund (z.B. AboutSection)   |
 
 **Signature Gradient:** Navy → Ocean → Orange → Fire → Green (die Wiedererkennungsspur)
 
@@ -59,11 +64,11 @@ Alles ist bildhaft. Der Ton hüpft, singt, atmet. Er ist lebendig wie ein Kind, 
 
 ## ✍️ Typografie – Three Voices
 
-| Klasse | Font | Verwendung |
-|--------|------|-----------|
-| `font-display` | **Playfair Display** (Serif) | Titles, Hero-Headlines, Section-Marker, emotionale Texte |
-| `font-sans` | **DM Sans** (Sans-Serif) | Fließtext, Buttons, Navigation, UI-Elemente, Labels |
-| `font-accent` *(selten)* | **Caveat** (Handschrift) | Nur für Zitate, Signaturen, emotionale Anker – sehr sparsam |
+| Klasse                   | Font                         | Verwendung                                                  |
+| ------------------------ | ---------------------------- | ----------------------------------------------------------- |
+| `font-display`           | **Playfair Display** (Serif) | Titles, Hero-Headlines, Section-Marker, emotionale Texte    |
+| `font-sans`              | **DM Sans** (Sans-Serif)     | Fließtext, Buttons, Navigation, UI-Elemente, Labels         |
+| `font-accent` *(selten)* | **Caveat** (Handschrift)     | Nur für Zitate, Signaturen, emotionale Anker – sehr sparsam |
 
 **Typografie-Hierarchie:**
 - Hero/Section-Titles: `font-display text-3xl sm:text-4xl md:text-5xl font-bold`
@@ -83,14 +88,14 @@ Alles ist bildhaft. Der Ton hüpft, singt, atmet. Er ist lebendig wie ein Kind, 
 - **Einladend** – Immer Du. Persönlich, auf Augenhöhe. Nie hierarchisch.
 
 ### Signature Wordings (immer verwenden)
-| Wort | Bedeutung |
-|------|-----------|
-| **Flow** | Bewegung, Leichtigkeit, Prozess – immer fett, nie übersetzen |
-| **Foundation** | Grundlage, Fundament, Stabilität – Gegengewicht zu Flow |
-| **Herzensunternehmen** | Statt „Unternehmen", „Business", „Firma" |
-| **Bühne** | Für digitale Präsenz – nie „Plattform" oder „Auftritt" |
-| **Seelenspiegel** | Was die Website sein soll – sparsam, gezielt |
-| **Durchblick** | Was bei Workflows geliefert wird |
+| Wort                   | Bedeutung                                                    |
+| ---------------------- | ------------------------------------------------------------ |
+| **Flow**               | Bewegung, Leichtigkeit, Prozess – immer fett, nie übersetzen |
+| **Foundation**         | Grundlage, Fundament, Stabilität – Gegengewicht zu Flow      |
+| **Herzensunternehmen** | Statt „Unternehmen", „Business", „Firma"                     |
+| **Bühne**              | Für digitale Präsenz – nie „Plattform" oder „Auftritt"       |
+| **Seelenspiegel**      | Was die Website sein soll – sparsam, gezielt                 |
+| **Durchblick**         | Was bei Workflows geliefert wird                             |
 
 ### ✅ Do's
 - Du-Form – immer, ohne Ausnahme
@@ -147,14 +152,14 @@ Footer            → Logo + Nav + Legal
 - Phone via `VITE_WA_PHONE`, Fallback-URL via `VITE_WA_URL`
 
 ### Aktuelle WhatsApp-Messages (wichtige Stellen)
-| Sektion | Message |
-|---------|---------|
-| VisionSection | „Ich fühle deine Mission, aber wie möchtest du das erreichen?" |
-| AboutPreviewSection | „Liebe in den Äther <3" |
-| MottoSection | „Ich habe Bock loszulegen. Wie fang ich direkt an?" |
-| Services → Website | aus `whatsapp.websiteMessage` (i18n) |
-| Services → Workflow | aus `whatsapp.workflowMessage` (i18n) |
-| Services → Social | aus `whatsapp.socialMessage` (i18n) |
+| Sektion             | Message                                                        |
+| ------------------- | -------------------------------------------------------------- |
+| VisionSection       | „Ich fühle deine Mission, aber wie möchtest du das erreichen?" |
+| AboutPreviewSection | „Liebe in den Äther <3"                                        |
+| MottoSection        | „Ich habe Bock loszulegen. Wie fang ich direkt an?"            |
+| Services → Website  | aus `whatsapp.websiteMessage` (i18n)                           |
+| Services → Workflow | aus `whatsapp.workflowMessage` (i18n)                          |
+| Services → Social   | aus `whatsapp.socialMessage` (i18n)                            |
 
 ### Animations-Pattern (Framer Motion)
 ```tsx
@@ -183,27 +188,27 @@ const stagger = {
 
 ## 🛠️ Tech Stack
 
-| Tool | Verwendung |
-|------|-----------|
-| React + TypeScript | Frontend |
-| Vite | Build-Tool |
-| Tailwind CSS | Styling (Utility-First) |
-| Framer Motion | Animationen |
-| react-i18next | Übersetzungen |
-| react-router-dom | Routing |
-| Supabase | Backend (Phone-Leads, Analytics) |
-| Lucide React | Icons |
+| Tool               | Verwendung                       |
+| ------------------ | -------------------------------- |
+| React + TypeScript | Frontend                         |
+| Vite               | Build-Tool                       |
+| Tailwind CSS       | Styling (Utility-First)          |
+| Framer Motion      | Animationen                      |
+| react-i18next      | Übersetzungen                    |
+| react-router-dom   | Routing                          |
+| Supabase           | Backend (Phone-Leads, Analytics) |
+| Lucide React       | Icons                            |
 
 ---
 
 ## ⚙️ Env Vars (ohne Werte)
 
-| Variable | Verwendung |
-|----------|-----------|
-| `VITE_WA_PHONE` | WhatsApp-Nummer für wa.me Links |
-| `VITE_WA_URL` | Fallback-URL wenn keine Message übergeben |
-| `VITE_SUPABASE_URL` | Supabase Projekt-URL |
-| `VITE_SUPABASE_ANON_KEY` | Supabase Anon Key |
+| Variable                 | Verwendung                                |
+| ------------------------ | ----------------------------------------- |
+| `VITE_WA_PHONE`          | WhatsApp-Nummer für wa.me Links           |
+| `VITE_WA_URL`            | Fallback-URL wenn keine Message übergeben |
+| `VITE_SUPABASE_URL`      | Supabase Projekt-URL                      |
+| `VITE_SUPABASE_ANON_KEY` | Supabase Anon Key                         |
 
 ---
 
