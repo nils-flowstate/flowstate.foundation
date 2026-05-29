@@ -18,6 +18,7 @@ export default {
       fontFamily: {
         display: ['"Playfair Display"', 'serif'],
         sans: ['"DM Sans"', 'sans-serif'],
+        accent: ['"Caveat"', 'cursive'],
       },
     },
   },

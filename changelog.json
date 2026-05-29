@@ -1,6 +1,21 @@
 [
   {
     "date": "2026-05-29",
+    "file": "VisionSection.tsx",
+    "description": "Manifest-Block überarbeitet: Caveat aktiv (font-accent), grüne Highlights auf Kernwörtern, Text zentriert, oranger Hover-Gradient auf Toggle-Button, mt-8 unter Block"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "tailwind.config.ts",
+    "description": "font-accent (Caveat) als dritte Schriftfamilie registriert"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "index.html",
+    "description": "Caveat:wght@400;600 in Google Fonts Import ergänzt"
+  },
+  {
+    "date": "2026-05-29",
     "file": "CLAUDE.md",
     "description": "Kernversprechen ergänzt: Herzenspassion in künstlerische Form gießen, Qualität als höchstes Gut, technische Souveränität des Kunden als Ergebnis"
   },
