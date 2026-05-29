@@ -25,6 +25,12 @@ Jede Website, jeder Workflow, jeder Content ist Ausdruck dieser Seele. Keine Str
 > Spürt man es? Landet es im Körper? Löst es etwas aus?
 > Das ist der Maßstab – nicht ob es „professionell" klingt.
 
+**Die tiefere Verbindung – Herz zu Herz:**
+Nils spürt, was in seinen Kunden vorgeht. Nicht analysiert – gefühlt. Daraus entsteht eine Sprache, die keine Übersetzung braucht: kein Austausch von Worten, sondern eine Verbindung von Herz zu Herz. Er erkennt das IT-technische Potential des Kunden und setzt es um – direkt, ohne Umwege.
+
+**Der Vibe – lebendig, tanzend, malerisch:**
+Alles ist bildhaft. Der Ton hüpft, singt, atmet. Er ist lebendig wie ein Kind, das aus reiner Freude tanzt – und ebenso tief wie eines, das echten Schmerz kennt. Gegensätze sind kein Widerspruch, sondern Energie. Dynamik trifft Stille. Klarheit trifft Mysterium. Poetisch fließend, mit Raum für das Verborgene – für das, was sich nicht in Worte fassen lässt, aber spürbar ist.
+
 ---
 
 ## 🎨 Color System
