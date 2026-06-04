@@ -1,0 +1,13 @@
+# 1. Neue Version bauen (läuft parallel, App bleibt live)
+cd ~/myapp-next
+git pull && npm ci && npm run build
+
+# 2. Swap (< 1ms)
+ln -sfn ~/myapp-next ~/myapp-current
+
+# 3. Nginx neu laden (kein Restart)
+sudo systemctl reload nginx
+
+# 4. Alte Version als Rollback aufheben
+mv ~/myapp-stable ~/myapp-prev
+mv ~/myapp-next ~/myapp-stable≈
