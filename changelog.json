@@ -1,5 +1,15 @@
 [
   {
+    "date": "2026-06-04",
+    "file": "App.tsx",
+    "description": "/welcome Route hinzugefügt, Header + Footer für /welcome ausgeblendet (NO_HEADER_ROUTES/NO_FOOTER_ROUTES)"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "Welcome.tsx",
+    "description": "Neue Seite /welcome: fullscreen navy, Caveat-Text in 4 Zeilen, Blur-Out-Animation nach 4s, Redirect zu /, track('business_card_scan')"
+  },
+  {
     "date": "2026-05-29",
     "file": "VisionSection.tsx",
     "description": "Manifest-Block auf i18n umgestellt: renderGreen() für **Highlights**, group/manifest-Gradient deckt Button + expandierten Text gemeinsam ab"
