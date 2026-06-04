@@ -9,11 +9,13 @@ import { Services } from './pages/Services'
 // import { ThankYou } from './pages/ThankYou'
 import { Impressum } from './pages/Impressum'
 import { Datenschutz } from './pages/Datenschutz'
+import { Welcome } from './pages/Welcome'
 import { NotFound } from './pages/NotFound'
 import { track } from './lib/analytics'
 import { useScrollDepth } from './hooks/useScrollDepth'
 
-const NO_FOOTER_ROUTES = ['/grow-together/thank-you']
+const NO_FOOTER_ROUTES = ['/grow-together/thank-you', '/welcome']
+const NO_HEADER_ROUTES = ['/welcome']
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -33,14 +35,15 @@ export function App() {
   const location = useLocation()
   useScrollDepth()
 
-  const is404 = !['/', '/about-us', '/services', '/grow-together', '/grow-together/thank-you', '/impressum', '/datenschutz'].includes(location.pathname)
+  const is404 = !['/', '/about-us', '/services', '/grow-together', '/grow-together/thank-you', '/welcome', '/impressum', '/datenschutz'].includes(location.pathname)
   const showFooter = !is404 && !NO_FOOTER_ROUTES.includes(location.pathname)
+  const showHeader = !is404 && !NO_HEADER_ROUTES.includes(location.pathname)
 
   return (
     <>
       <ScrollToTop />
       <PageTracker />
-      {!is404 && <Header />}
+      {showHeader && <Header />}
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -50,6 +53,7 @@ export function App() {
           <Route path="/grow-together/thank-you" element={<ThankYou />} /> */}
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/welcome" element={<Welcome />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

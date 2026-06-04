@@ -128,7 +128,13 @@
     "s2bold1": "spaces",
     "s2b": "of appreciative",
     "s2bold2": "experience",
-    "s2c": ""
+    "s2c": "",
+    "manifest": {
+      "hook": "My deepest **wish** is to let the **nature** of each and every **soul** **radiate**.",
+      "p1": "**Nature** flows through our unique expression – through every fellow human being and all creatures.",
+      "p2": "Let others feel the artistically beautiful expression of your **heart**. To not only cherish this wondrous planet, but to **preserve** it.",
+      "p3": "Let us together enchant **frozen hearts** with the **compassion** of our **soul** – and meet our fellow human beings with **loving openness**."
+    }
   },
   "cta": {
     "headline": "Stay clear in the digital world",

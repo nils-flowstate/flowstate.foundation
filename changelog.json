@@ -1,0 +1,47 @@
+[
+  {
+    "date": "2026-06-04",
+    "file": "App.tsx",
+    "description": "/welcome Route hinzugefügt, Header + Footer für /welcome ausgeblendet (NO_HEADER_ROUTES/NO_FOOTER_ROUTES)"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "Welcome.tsx",
+    "description": "Neue Seite /welcome: fullscreen navy, Caveat-Text in 4 Zeilen, Blur-Out-Animation nach 4s, Redirect zu /, track('business_card_scan')"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "VisionSection.tsx",
+    "description": "Manifest-Block auf i18n umgestellt: renderGreen() für **Highlights**, group/manifest-Gradient deckt Button + expandierten Text gemeinsam ab"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "de.json",
+    "description": "vision.manifest.hook/p1/p2/p3 hinzugefügt mit **grün**-Markierungen für Natur/Seele/Herz-Begriffe"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "en.json",
+    "description": "vision.manifest.hook/p1/p2/p3 hinzugefügt (englische Übersetzung des Manifests)"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "tailwind.config.ts",
+    "description": "font-accent (Caveat) als dritte Schriftfamilie registriert"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "index.html",
+    "description": "Caveat:wght@400;600 in Google Fonts Import ergänzt"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "CLAUDE.md",
+    "description": "Kernversprechen ergänzt: Herzenspassion in künstlerische Form gießen, Qualität als höchstes Gut, technische Souveränität des Kunden als Ergebnis"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "CLAUDE.md",
+    "description": "Brand Identity erweitert: Herz-zu-Herz-Verbindung, kindlich tanzender Vibe, poetisch-malerischer Ton mit Gegensätzen und Raum für Mysterium ergänzt"
+  }
+]

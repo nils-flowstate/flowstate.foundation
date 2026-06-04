@@ -1,6 +1,14 @@
-import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
+import { ChevronDown } from 'lucide-react'
 import { WhatsAppButton } from '../ui/WhatsAppButton'
+
+function renderGreen(text: string) {
+  return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
+    i % 2 === 1 ? <span key={i} className="text-green">{part}</span> : part
+  )
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -13,6 +21,7 @@ const stagger = {
 
 export function VisionSection() {
   const { t } = useTranslation()
+  const [manifestOpen, setManifestOpen] = useState(false)
 
   return (
     <section className="bg-hero-bg border-t border-white/[0.04] py-20 px-4">
@@ -58,7 +67,46 @@ export function VisionSection() {
           {t('vision.s2c') && <>{' '}{t('vision.s2c')}</>}
         </motion.p>
 
-        <motion.div variants={fadeUp} className="mt-10">
+        <motion.div variants={fadeUp} className="mt-10 border-t border-white/10 pt-8">
+          <div className="relative group/manifest rounded-xl overflow-hidden">
+            <div className={`absolute inset-0 bg-gradient-to-b from-orange/10 to-orange/[0.03] pointer-events-none transition-opacity duration-300 ${
+              manifestOpen ? 'opacity-100' : 'opacity-0 group-hover/manifest:opacity-100'
+            }`} />
+
+            <button
+              onClick={() => setManifestOpen(prev => !prev)}
+              className="relative w-full px-4 py-4 text-center"
+              aria-expanded={manifestOpen}
+            >
+              <p className="font-accent text-xl sm:text-2xl text-white/85 leading-relaxed">
+                {renderGreen(t('vision.manifest.hook'))}
+              </p>
+              <ChevronDown
+                className={`mt-3 mx-auto w-5 h-5 text-white/40 transition-transform duration-300 ${manifestOpen ? 'rotate-180' : ''}`}
+              />
+            </button>
+
+            <AnimatePresence>
+              {manifestOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                  className="relative overflow-hidden"
+                >
+                  <div className="px-4 pb-5 space-y-4 font-accent text-xl sm:text-2xl text-white/75 leading-relaxed text-center">
+                    <p>{renderGreen(t('vision.manifest.p1'))}</p>
+                    <p>{renderGreen(t('vision.manifest.p2'))}</p>
+                    <p>{renderGreen(t('vision.manifest.p3'))}</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        </motion.div>
+
+        <motion.div variants={fadeUp} className="mt-8">
           <WhatsAppButton
             label="Wie möchtest du das erreichen?"
             message="Ich fühle deine Mission, aber wie möchtest du das erreichen?"
