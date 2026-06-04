@@ -2,7 +2,17 @@
   {
     "date": "2026-05-29",
     "file": "VisionSection.tsx",
-    "description": "Manifest-Block überarbeitet: Caveat aktiv (font-accent), grüne Highlights auf Kernwörtern, Text zentriert, oranger Hover-Gradient auf Toggle-Button, mt-8 unter Block"
+    "description": "Manifest-Block auf i18n umgestellt: renderGreen() für **Highlights**, group/manifest-Gradient deckt Button + expandierten Text gemeinsam ab"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "de.json",
+    "description": "vision.manifest.hook/p1/p2/p3 hinzugefügt mit **grün**-Markierungen für Natur/Seele/Herz-Begriffe"
+  },
+  {
+    "date": "2026-05-29",
+    "file": "en.json",
+    "description": "vision.manifest.hook/p1/p2/p3 hinzugefügt (englische Übersetzung des Manifests)"
   },
   {
     "date": "2026-05-29",

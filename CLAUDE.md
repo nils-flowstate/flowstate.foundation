@@ -28,7 +28,7 @@ Jede Website, jeder Workflow, jeder Content ist Ausdruck dieser Seele. Keine Str
 **Das Kernversprechen – Herzenspassion in künstlerische Form:**
 Nils versteht die Herzenspassion seiner Kunden – nicht oberflächlich, sondern bis in den Kern. Dieses Verstehen gießt er in eine künstlerische Form, die die Seele des Kunden widerspiegelt. Nicht interpretiert. Nicht vereinfacht. Gespiegelt – in höchster Qualität.
 
-**Qualität ist das wichtigste Gut.** Es geht darum die Vision des Kunden zu Ehren und zu tragen. Den Rücken frei zu halten. Aus der höchsten Qualität in der Umsetzung erwächst vollumfängliche Souveränität im technischen Umfeld. Er muss nichts verstehen, nichts kontrollieren, nichts fürchten. Er ist frei – weil das Fundament trägt.
+**Qualität ist das wichtigste Gut.** Es geht darum die Vision des Kunden zu Ehren und zu tragen. Den Rücken frei zu halten. Aus der höchsten Qualität in der Umsetzung erwächst vollumfängliche Souveränität im technischen Umfeld. Er muss nichts verstehen, nichts kontrollieren, nichts fürchten. Er ist frei – weil das Fundament trägt./
 
 **Die tiefere Verbindung – Herz zu Herz:**
 Nils spürt, was in seinen Kunden vorgeht. Nicht analysiert – gefühlt. Daraus entsteht eine Sprache, die keine Übersetzung braucht: kein Austausch von Worten, sondern eine Verbindung von Herz zu Herz. Er erkennt das IT-technische Potential des Kunden und setzt es um – direkt, ohne Umwege.

@@ -4,6 +4,12 @@ import { useTranslation } from 'react-i18next'
 import { ChevronDown } from 'lucide-react'
 import { WhatsAppButton } from '../ui/WhatsAppButton'
 
+function renderGreen(text: string) {
+  return text.split(/\*\*(.+?)\*\*/g).map((part, i) =>
+    i % 2 === 1 ? <span key={i} className="text-green">{part}</span> : part
+  )
+}
+
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: 'easeOut' } },
@@ -62,51 +68,42 @@ export function VisionSection() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-10 border-t border-white/10 pt-8">
-          <button
-            onClick={() => setManifestOpen(prev => !prev)}
-            className="relative w-full group rounded-xl px-4 py-4 overflow-hidden transition-all duration-300"
-            aria-expanded={manifestOpen}
-          >
-            <div className="absolute inset-0 bg-gradient-to-b from-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-            <div className="relative text-center">
+          <div className="relative group/manifest rounded-xl overflow-hidden">
+            <div className={`absolute inset-0 bg-gradient-to-b from-orange/10 to-orange/[0.03] pointer-events-none transition-opacity duration-300 ${
+              manifestOpen ? 'opacity-100' : 'opacity-0 group-hover/manifest:opacity-100'
+            }`} />
+
+            <button
+              onClick={() => setManifestOpen(prev => !prev)}
+              className="relative w-full px-4 py-4 text-center"
+              aria-expanded={manifestOpen}
+            >
               <p className="font-accent text-xl sm:text-2xl text-white/85 leading-relaxed">
-                Mein <span className="text-green">Herzenswunsch</span> ist es, die Natur jeder einzelnen unserer <span className="text-green">Seelen</span> zum Strahlen zu bringen.
+                {renderGreen(t('vision.manifest.hook'))}
               </p>
               <ChevronDown
                 className={`mt-3 mx-auto w-5 h-5 text-white/40 transition-transform duration-300 ${manifestOpen ? 'rotate-180' : ''}`}
               />
-            </div>
-          </button>
+            </button>
 
-          <AnimatePresence>
-            {manifestOpen && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-                className="overflow-hidden"
-              >
-                <div className="pt-5 space-y-4 font-accent text-xl sm:text-2xl text-white/75 leading-relaxed text-center">
-                  <p>
-                    Die Natur fließt durch unseren <span className="text-green">einzigartigen Ausdruck</span> –<br />
-                    durch jeden unserer Mitmenschen und <span className="text-green">allen Wesen</span>.
-                  </p>
-                  <p>
-                    Lass andere Menschen den künstlerisch schönen Ausdruck<br />
-                    deines Herzens <span className="text-green">spüren</span>.<br />
-                    Um diesen wunderschönen Planeten<br />
-                    nicht nur zu schätzen, sondern zu <span className="text-green">bewahren</span>.
-                  </p>
-                  <p>
-                    Lass uns gemeinsam <span className="text-green">gefrorene Herzen</span><br />
-                    mit dem Mitgefühl unserer Seele verzaubern –<br />
-                    und unseren Mitmenschen mit <span className="text-green">liebevoller Offenheit</span> begegnen.
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+            <AnimatePresence>
+              {manifestOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                  className="relative overflow-hidden"
+                >
+                  <div className="px-4 pb-5 space-y-4 font-accent text-xl sm:text-2xl text-white/75 leading-relaxed text-center">
+                    <p>{renderGreen(t('vision.manifest.p1'))}</p>
+                    <p>{renderGreen(t('vision.manifest.p2'))}</p>
+                    <p>{renderGreen(t('vision.manifest.p3'))}</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </motion.div>
 
         <motion.div variants={fadeUp} className="mt-8">
