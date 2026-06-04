@@ -11,6 +11,7 @@ import { Impressum } from './pages/Impressum'
 import { Datenschutz } from './pages/Datenschutz'
 import { Welcome } from './pages/Welcome'
 import { NotFound } from './pages/NotFound'
+import { CookieBanner } from './components/CookieBanner'
 import { track } from './lib/analytics'
 import { useScrollDepth } from './hooks/useScrollDepth'
 
@@ -27,6 +28,7 @@ function PageTracker() {
   const { pathname } = useLocation()
   useEffect(() => {
     track('pageview')
+    window.dataLayer?.push({ event: 'page_view', page_path: pathname })
   }, [pathname])
   return null
 }
@@ -58,6 +60,7 @@ export function App() {
         </Routes>
       </main>
       {showFooter && <Footer />}
+      <CookieBanner />
     </>
   )
 }
