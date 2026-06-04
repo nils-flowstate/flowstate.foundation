@@ -1,6 +1,11 @@
 [
   {
     "date": "2026-06-04",
+    "file": "VisionSection.tsx",
+    "description": "Manifest-Text von font-accent auf font-display italic (Playfair Display) angepasst – konsistent mit Hero-Tagline"
+  },
+  {
+    "date": "2026-06-04",
     "file": "tailwind.config.ts",
     "description": "Caveat aus font-accent entfernt – font-accent verwendet jetzt Browser-eigenes cursive"
   },

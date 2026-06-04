@@ -78,7 +78,7 @@ export function VisionSection() {
               className="relative w-full px-4 py-4 text-center"
               aria-expanded={manifestOpen}
             >
-              <p className="font-accent text-xl sm:text-2xl text-white/85 leading-relaxed">
+              <p className="font-display italic text-xl sm:text-2xl text-white/85 leading-relaxed">
                 {renderGreen(t('vision.manifest.hook'))}
               </p>
               <ChevronDown
@@ -95,7 +95,7 @@ export function VisionSection() {
                   transition={{ duration: 0.4, ease: 'easeOut' }}
                   className="relative overflow-hidden"
                 >
-                  <div className="px-4 pb-5 space-y-4 font-accent text-xl sm:text-2xl text-white/75 leading-relaxed text-center">
+                  <div className="px-4 pb-5 space-y-4 font-display italic text-xl sm:text-2xl text-white/75 leading-relaxed text-center">
                     <p>{renderGreen(t('vision.manifest.p1'))}</p>
                     <p>{renderGreen(t('vision.manifest.p2'))}</p>
                     <p>{renderGreen(t('vision.manifest.p3'))}</p>
