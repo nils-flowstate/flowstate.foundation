@@ -1,6 +1,46 @@
 [
   {
     "date": "2026-06-04",
+    "file": "VisionSection.tsx",
+    "description": "Manifest-Text von font-accent auf font-display italic (Playfair Display) angepasst – konsistent mit Hero-Tagline"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "tailwind.config.ts",
+    "description": "Caveat aus font-accent entfernt – font-accent verwendet jetzt Browser-eigenes cursive"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "CookieBanner.tsx",
+    "description": "Neuer DSGVO-konformer Cookie-Banner: navy Hintergrund, orange/outline-Buttons, kein Banner auf /welcome, Framer Motion Slide-up"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "consent.ts",
+    "description": "Neu: Consent Mode v2 Logik – initConsent(), updateConsent(), hasUserDecided() für GTM/GA4 DSGVO-Compliance"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "gtag.d.ts",
+    "description": "Neu: TypeScript-Types für window.dataLayer und window.gtag"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "main.tsx",
+    "description": "initConsent() als allererstes aufgerufen – setzt GTM Consent Default vor React-Render"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "App.tsx",
+    "description": "CookieBanner eingebunden; PageTracker pusht page_view-Event in dataLayer für SPA-Tracking in GTM"
+  },
+  {
+    "date": "2026-06-04",
+    "file": "index.html",
+    "description": "GTM Consent Default Init + GTM Script (GTM-P3MBJ9XQ) + noscript eingefügt; Caveat aus Google Fonts entfernt"
+  },
+  {
+    "date": "2026-06-04",
     "file": "App.tsx",
     "description": "/welcome Route hinzugefügt, Header + Footer für /welcome ausgeblendet (NO_HEADER_ROUTES/NO_FOOTER_ROUTES)"
   },
