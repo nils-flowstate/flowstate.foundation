@@ -5,14 +5,19 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, CheckCircle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-// import { supabase } from '../../lib/supabase'
 import { canSubmitPhone, markPhoneSubmitted, getPhoneCooldownMinutes } from '../../lib/rateLimit'
 import { track } from '../../lib/analytics'
+import { getSessionId } from '../../lib/session'
+import { isGranted, CONSENT_TEXT_ID } from '../../lib/consentLog'
+import { openConsentManager } from '../../lib/klaro'
 
 type Source = 'hero' | 'about' | 'grow-together' | 'cta'
 
 const PHONE_REGEX = /^(\+49|0)[1-9][0-9]{9,12}$/
-const LEADS_KEY = 'ff_phone_leads'
+
+const FN = import.meta.env.VITE_SUPABASE_FN_URL
+const SOURCE_APP = import.meta.env.VITE_FLOWSTATE_APP ?? 'foundation'
+const ANON = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 interface PhoneInputProps {
   source: Source
@@ -22,7 +27,7 @@ interface PhoneInputProps {
 export function PhoneInput({ source, darkMode = false }: PhoneInputProps) {
   const { t, i18n } = useTranslation()
   const [value, setValue] = useState('')
-  const [status, setStatus] = useState<'idle' | 'success' | 'error' | 'ratelimit'>('idle')
+  const [status, setStatus] = useState<'idle' | 'success' | 'error' | 'ratelimit' | 'consent'>('idle')
   const [loading, setLoading] = useState(false)
 
   const isValid = PHONE_REGEX.test(value.replace(/\s/g, ''))
@@ -36,23 +41,32 @@ export function PhoneInput({ source, darkMode = false }: PhoneInputProps) {
       return
     }
 
+    // DSGVO Art. 7 / Spec §6.3: ohne lead_capture-Einwilligung keine PII-Erfassung.
+    if (!isGranted('lead_capture')) {
+      openConsentManager()
+      setStatus('consent')
+      return
+    }
+
     setLoading(true)
     try {
-      const lead = {
-        phone: value.trim(),
-        source,
-        language: i18n.language,
-        created_at: new Date().toISOString(),
-      }
-
-      // LOCAL STORAGE — swap to Supabase when backend is ready
-      const existing = JSON.parse(localStorage.getItem(LEADS_KEY) || '[]') as unknown[]
-      existing.push(lead)
-      localStorage.setItem(LEADS_KEY, JSON.stringify(existing))
-
-      // SUPABASE (enable when ready):
-      // const { error } = await supabase.from('phone_leads').insert(lead)
-      // if (error) throw error
+      const res = await fetch(`${FN}/capture-lead`, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+          'x-flowstate-app': SOURCE_APP,
+          ...(ANON ? { apikey: ANON, authorization: `Bearer ${ANON}` } : {}),
+        },
+        body: JSON.stringify({
+          phone: value.trim(),
+          source_app: SOURCE_APP,
+          source_detail: `${source}_form`,
+          session_id: getSessionId(),
+          consent_text_id: CONSENT_TEXT_ID,
+          language: i18n.language,
+        }),
+      })
+      if (!res.ok) throw new Error(`capture-lead ${res.status}`)
 
       markPhoneSubmitted()
       track('form_submit', { element: `phone_form_${source}` })
@@ -82,6 +96,18 @@ export function PhoneInput({ source, darkMode = false }: PhoneInputProps) {
           {t('forms.success')}
         </span>
       </motion.div>
+    )
+  }
+
+  if (status === 'consent') {
+    return (
+      <button
+        type="button"
+        onClick={() => { openConsentManager(); setStatus('idle') }}
+        className={`text-sm py-3 text-left underline underline-offset-2 ${darkMode ? 'text-white/80 hover:text-white' : 'text-muted hover:text-text'}`}
+      >
+        Magst du mir kurz erlauben, dich zu kontaktieren? Tippe oben auf „Annehmen" – dann fliegt deine Nummer direkt zu mir.
+      </button>
     )
   }
 
