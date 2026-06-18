@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 // import { PhoneInput } from '../ui/PhoneInput'
 import { WhatsAppButton } from '../ui/WhatsAppButton'
 import { Button } from '../ui/Button'
+import { PhoneInput } from '../ui/PhoneInput'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -58,8 +59,8 @@ export function AboutPreviewSection() {
           </motion.div>
 
           <motion.div variants={fadeUp} className="border-t border-gray-100 pt-6 space-y-4">
-            {/* <p className="font-sans font-semibold text-navy">{t('about.interest')}</p> */}
-            {/* <PhoneInput source="about" /> */}
+            <p className="font-sans font-semibold text-navy">{t('about.interest')}</p>
+            <PhoneInput source="about" />
 
             {/* <div className="flex items-center gap-4">
               <div className="flex-1 h-px bg-gray-100" />

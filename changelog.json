@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-06-12",
+    "file": "analytics.ts",
+    "description": "Data Hub Phase 0: Schreibpfad von localStorage auf Edge Function /track-event umgestellt; event_type-Mapping (404→error_404, unbekannt→custom), TTDSG-Consent-Gating, Offline-Queue. Signatur track() unverändert"
+  },
+  {
+    "date": "2026-06-12",
+    "file": "klaro.ts",
+    "description": "Klaro! als zentrale Consent-Quelle integriert (Purposes analytics/lead_capture/marketing); steuert Google Consent Mode und schreibt consent_log via Edge Function /log-consent (grant/withdraw)"
+  },
+  {
+    "date": "2026-06-12",
+    "file": "PhoneInput.tsx",
+    "description": "Vor Submit lead_capture-Consent geprüft (sonst Consent-Dialog); Lead-Anlage über Edge Function /capture-lead inkl. consent_text_id statt localStorage"
+  },
+  {
+    "date": "2026-06-12",
+    "file": "CookieBanner.tsx",
+    "description": "Entfernt — durch Klaro! ersetzt (Klaro steuert gtag + consent_log). Init via main.tsx initKlaro()"
+  },
+  {
+    "date": "2026-06-12",
+    "file": "20260523_001_init_core.sql",
+    "description": "Neues Core-Schema (Identity-Hub, PII-Satellite SCD2, Sessions, partitionierte Events, consent_log, leads, audit_log + Trigger/Views/RLS). Ersetzt 001_initial.sql"
+  },
+  {
+    "date": "2026-06-12",
+    "file": "20260523_002_grants.sql",
+    "description": "Standard-Rollen-Grants (anon/authenticated/service_role) nachgezogen — fehlen bei Tabellenanlage über Management-API/MCP, sonst 'permission denied for table'"
+  },
+  {
     "date": "2026-06-04",
     "file": "VisionSection.tsx",
     "description": "Manifest-Text von font-accent auf font-display italic (Playfair Display) angepasst – konsistent mit Hero-Tagline"

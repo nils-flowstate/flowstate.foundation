@@ -1,0 +1,7 @@
+[
+  {
+    "date": "2026-06-18",
+    "file": "index.ts",
+    "description": "CORS von '*' auf Allowlist umgestellt (corsHeaders(origin) + ALLOWED_ORIGINS: Prod-Domains + localhost), Vary: Origin ergänzt. apikey/authorization bleiben in Allow-Headers (Spec §2), sonst scheitert der Browser-Preflight."
+  }
+]

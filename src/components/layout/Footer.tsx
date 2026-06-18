@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { ShieldCheck } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { openConsentManager } from '../../lib/klaro'
 
 export function Footer() {
   const { t } = useTranslation()
@@ -53,6 +54,13 @@ export function Footer() {
               <Link to="/datenschutz" className="font-sans text-xs text-white/40 hover:text-white/70 transition-colors">
                 {t('footer.datenschutz')}
               </Link>
+              <button
+                type="button"
+                onClick={() => openConsentManager()}
+                className="font-sans text-xs text-white/40 hover:text-white/70 transition-colors"
+              >
+                {t('footer.cookieSettings')}
+              </button>
             </nav>
             <p className="font-sans text-xs text-white/40">{t('footer.copyright')}</p>
             <p className="font-sans text-xs text-white/30">{t('footer.madeWith')}</p>

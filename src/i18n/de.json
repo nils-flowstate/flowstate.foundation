@@ -145,7 +145,8 @@
     "copyright": "© 2026 Nils Tenkotte – Flowstate Foundation",
     "madeWith": "Made with ♥ in Köln",
     "impressum": "Impressum",
-    "datenschutz": "Datenschutz"
+    "datenschutz": "Datenschutz",
+    "cookieSettings": "Cookie-Einstellungen"
   },
   "forms": {
     "phonePlaceholder": "+49 ...",

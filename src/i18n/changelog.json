@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-06-18",
+    "file": "de.json / en.json",
+    "description": "footer.cookieSettings ergänzt ('Cookie-Einstellungen' / 'Cookie Settings') für den neuen Consent-Manager-Link im Footer (Klaro, Acceptance §207)"
+  },
+  {
     "date": "2026-05-26",
     "file": "de.json / en.json",
     "description": "hero.headline2 in de.json von führendem ' \\n' bereinigt; hero.headerConnector in en.json als eigener Key extrahiert (war zuvor in headline2 eingebettet) – Connector ist jetzt in beiden Sprachen konsistent getrennt"
