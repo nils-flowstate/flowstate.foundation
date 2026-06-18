@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-06-18",
+    "file": "README.md",
+    "description": "Menschen-Einstieg für die docs/-Bibliothek: Tabelle 'Datei → Inhalt → wann lesen', Onboarding-Reihenfolge, Konventionen"
+  },
+  {
+    "date": "2026-06-18",
+    "file": "integrations.md",
+    "description": "Neu: Supabase Edge Functions (track-event/log-consent/capture-lead), n8n-Automation (Event + DJ-Booking), GA4/GTM Consent Mode (Container GTM-P3MBJ9XQ), Resend/Cal.com. Inhalt aus .claude/claude-n8n.md, ga4-gtm- und gtm-consent-Prompts überführt"
+  },
+  {
+    "date": "2026-06-18",
+    "file": "analytics-consent.md",
+    "description": "Neu: 4-Schichten-Stack (Consent Mode, Klaro, Consent-Logging/Gating, Tracking) inkl. erlaubter event_type-Werte, localStorage-Keys, Querverweis-Warnungen. Quelle: src/lib/* + alter gtm-consent-Prompt"
+  },
+  {
+    "date": "2026-06-18",
+    "file": "data-hub.md",
+    "description": "Kanonische Data-Hub-Spec (aus flowstate-data-hub-setup.spec.md umbenannt, ersetzt 3 byte-identische Kopien); Navi-Header ergänzt + Deploy-Spec Phase 0.5 als Abschnitt angehängt"
+  },
+  {
+    "date": "2026-06-18",
+    "file": "architecture.md",
+    "description": "Neu: Tech-Stack, src/-Struktur, Routing-Tabelle, Patterns (WhatsAppButton, Framer Motion), i18n, Build/Deploy (Dockerfile/Coolify), Env-Var-Tabelle"
+  },
+  {
+    "date": "2026-06-18",
+    "file": "brand.md",
+    "description": "Neu: Brand-Teil aus CLAUDE.md ausgelagert (Mission/Seele, Color System, Typografie, Brand Voice, Design-Prinzipien) + Vision-Section-Copy-Brief aus .claude/claude-vision-wording.md"
+  }
+]

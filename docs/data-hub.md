@@ -1,9 +1,18 @@
-# Flowstate Data Hub — Initial Setup Specification
+# 🗄️ Data Hub — Flowstate Foundation
+
+> **Wann lesen?** Wenn du am DB-Schema, an Migrationen, RLS, oder am Deploy des Data-Hubs arbeitest.
+> **Kanonische Spec** (Phase 0). Diese Datei ersetzt die früheren Kopien in `.claude/data-hub-phase*`.
+> Client-Seite (Tracking/Consent): [analytics-consent.md](analytics-consent.md) · Edge Functions: [integrations.md](integrations.md).
+> Live-Schema: [supabase/migrations/20260523_001_init_core.sql](../supabase/migrations/20260523_001_init_core.sql) + `…_002_grants.sql`. Deploy-Anleitung: ganz unten („Deployment (Phase 0.5)").
+
+---
+
+## Flowstate Data Hub — Initial Setup Specification
 
 > **Adressat:** Claude Code (Implementierung im Repo)
 > **Autor:** Schema-Entwurf abgestimmt mit Nils (Founder)
 > **Stand:** Mai 2026, Phase 0 (Fundament)
-> **Reichweite:** Multi-Property (`foundation`, `express`, `how`, `stoic`) auf einer Supabase-Instanz
+> **Reichweite:** Multi-Property (`foundation`, `express`, `how`, `stoic`, `systeme_io`) auf einer Supabase-Instanz
 > **Compliance-Ziel:** DSGVO Art. 5/7/17/30, TTDSG, GoBD-Nachweispflicht
 
 ---
@@ -865,3 +874,87 @@ Diese Punkte sind im Diagramm vorgesehen, gehören aber nicht in den ersten Schn
 ---
 
 **Ende der Spezifikation.** Bei Rückfragen während der Implementierung: Frage Nils, ändere nichts ohne Update dieser Datei.
+
+---
+---
+
+# Deployment (Phase 0.5) — Production
+
+> **Adressat:** Claude Code (Foundation-Repo, Branch `feature/data-hub-phase-0`)
+> **Voraussetzung:** Phase 0 umgesetzt (Commit `518c863`), API-Smoke grün.
+> **Ziel:** Foundation-Website mit aktivem Data-Hub auf Production (Hetzner/Coolify).
+> **Risikoklasse:** mittel — berührt Live-Traffic. Strikt sequentiell ausführen.
+
+## 0. Vorbedingungen
+- [ ] `IP_HASH_SALT` in **Supabase Secrets** gesetzt (Dashboard → Edge Functions → Secrets), gespiegelt in **Infisical** als `FLOWSTATE_IP_HASH_SALT`.
+- [ ] Supabase-Projekt `flowstate-data-hub` (Ref `nlyhexxyophudymgrrrc`) erreichbar.
+- [ ] Branch `feature/data-hub-phase-0` gepusht.
+- [ ] Coolify-Zugang funktioniert; Foundation-App konfiguriert.
+- [ ] DNS für `flowstate.foundation` + `www` zeigt auf VPS.
+
+## 1. Lokaler Smoke-Test (Pflicht)
+`.env.local` im Repo-Root (via `.gitignore` ausgeschlossen — verifizieren):
+```env
+VITE_SUPABASE_FN_URL=https://nlyhexxyophudymgrrrc.supabase.co/functions/v1
+VITE_SUPABASE_ANON_KEY=<Supabase Dashboard → API → anon public>
+VITE_FLOWSTATE_APP=foundation
+```
+`npm install && npm run dev` → Browser: Klaro-Banner „Alles annehmen" → Pageview/CTA/Phone-Form auslösen.
+**Studio-Gegenprüfung** (mind. je eine neue Zeile): `sessions` (`ip_hash` ist Hex), `events` (≥4: pageview, cta_click, form_submit, lead_captured), `consent_log` (granted analytics + lead_capture), `identities` (`first_seen_app='foundation'`), `identity_traits` (`phone` gefüllt, `valid_to=NULL`), `leads` (`status='new'`), `audit_log` (Trigger-Einträge).
+Bei Fehler: stoppen, `supabase functions logs track-event --project-ref nlyhexxyophudymgrrrc`, an Nils melden.
+Aufräumen: `truncate sessions, events, consent_log, identities, identity_traits, leads, audit_log restart identity cascade;` (Service Role).
+
+## 2. CORS auf Production-Domains einschränken
+In **allen drei** Functions (`track-event`, `capture-lead`, `log-consent`) den CORS-Block ersetzen:
+```ts
+const ALLOWED_ORIGINS = [
+  "https://flowstate.foundation",
+  "https://www.flowstate.foundation",
+  "http://localhost:5173",
+  "http://localhost:4321",
+];
+function corsHeaders(origin: string | null) {
+  const allow = origin && ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    "Access-Control-Allow-Origin": allow,
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "content-type, x-flowstate-app",
+    "Vary": "Origin",
+  };
+}
+```
+Im `serve`-Handler `origin` aus dem Request lesen und `corsHeaders(origin)` nutzen.
+Deploy: `supabase functions deploy track-event capture-lead log-consent --project-ref nlyhexxyophudymgrrrc`
+Verifikation: `curl -i -X OPTIONS …/track-event -H "Origin: https://flowstate.foundation"` → 200; fremder Origin bekommt ersten ALLOWED zurück (Browser blockt).
+
+## 3. Production-Env in Coolify
+**Coolify → Application „Foundation" → Environment Variables** (alle Build-Time):
+| Key | Value |
+| --- | --- |
+| `VITE_SUPABASE_FN_URL` | `https://nlyhexxyophudymgrrrc.supabase.co/functions/v1` |
+| `VITE_SUPABASE_ANON_KEY` | Anon-Key aus Supabase |
+| `VITE_FLOWSTATE_APP` | `foundation` |
+
+`VITE_*` werden zur Build-Zeit kompiliert (ggf. Build-Args statt Runtime-Env). **Niemals** `IP_HASH_SALT` hier — das ist server-side in Supabase.
+
+## 4. PR mergen
+`git push origin feature/data-hub-phase-0` → PR `→ main`, Titel `feat(data-hub): Phase 0 — core schema + analytics migration`, Self-Review, Squash-Merge.
+
+## 5. Server-Deploy via Coolify
+Auto-Deploy auf `main` (Merge triggert Build) oder manuell **Deploy**. Build-Logs prüfen (`npm run build` darf nicht failen), Health-Check grün, Cert gültig (kein 502/504).
+**Rollback:** vorigen Deploy redeployen. Schema bleibt (additiv) — kein DB-Rollback nötig.
+
+## 6. Live-Smoke-Test (`https://flowstate.foundation`)
+Klaro „Alles annehmen" → Pageview/CTA/Phone → Studio-Gegenprüfung (Zeilen mit `source_app='foundation'`, kein localhost) → DevTools Network: Edge-Calls 200, `Access-Control-Allow-Origin` matched echte Domain → Banner zurücksetzen, „Ablehnen" → **kein** Event in `events`, aber `consent_log`-Eintrag `state='denied'`. Alle 5 grün ⇒ **Phase 0 live**.
+
+## 7. Aufräumen
+Testdaten aus Prod-DB entfernen · Branch lokal+remote löschen · ADR-004 im Vault auf `aktiv` setzen · Nils informieren.
+
+## 8. Acceptance Criteria (Phase 0.5)
+- [ ] Live-Seite mit aktivem Klaro-Banner · Behavior-Events mit korrekter `source_app` · Lead-Capture end-to-end inkl. `consent_log` · CORS blockt fremde Origins (kein `*`) · keine Secrets im Bundle (`grep -i salt dist/` leer) · AVV Supabase+Resend dokumentiert · DS-Erklärung als HTML live verlinkt (Footer + Klaro-Link).
+- ⚠️ Letzter Punkt nicht-blockierend fürs Deploy, aber **rechtlich vor Tracking-Aktivierung** nötig. Sonst Klaro auf „nur essentielle" voreinstellen, bis verlinkt.
+
+## 9. Bewusst NICHT in Phase 0.5
+Sentry/Logflare · nächtlicher `pg_dump` auf NAS · Edge-Performance-Tuning · Multi-Property-Rollout (Express/How/Stoic) · Rate-Limiting auf Edge Functions → alles Phase 1.
+
+**Ende der Deploy-Spezifikation.** Bei Abweichungen: an Nils melden, nicht eigenmächtig korrigieren.

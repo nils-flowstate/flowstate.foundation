@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-06-18",
+    "file": "CLAUDE.md",
+    "description": "Doku-Struktur v2.0: CLAUDE.md zu schlankem Router umgebaut (Seele-Kurzfassung + Doku-Index + verbindliche Wartungsregeln-Tabelle, die Auto-Update der docs/ bei Codeänderungen steuert). Detailwissen ausgelagert nach docs/{brand,architecture,data-hub,analytics-consent,integrations,README}.md"
+  },
+  {
     "date": "2026-06-12",
     "file": "analytics.ts",
     "description": "Data Hub Phase 0: Schreibpfad von localStorage auf Edge Function /track-event umgestellt; event_type-Mapping (404→error_404, unbekannt→custom), TTDSG-Consent-Gating, Offline-Queue. Signatur track() unverändert"
