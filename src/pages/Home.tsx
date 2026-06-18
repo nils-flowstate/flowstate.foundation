@@ -10,8 +10,8 @@ export function Home() {
   return (
     <>
       <HeroSection />
-      <VisionSection />
       <PainSection />
+      <VisionSection />
       <AboutPreviewSection />
       <ServicesPreviewSection />
       <MottoSection />
