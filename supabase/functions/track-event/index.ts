@@ -1,13 +1,28 @@
 import { serve } from "https://deno.land/std@0.224.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const cors = {
-  "Access-Control-Allow-Origin": "*", // in Prod auf Domain einschränken
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Access-Control-Allow-Headers": "content-type, x-flowstate-app, apikey, authorization",
-};
+// Nur erlaubte Origins dürfen die Function aufrufen (Prod-Domains + lokaler Dev).
+// Hinweis: apikey/authorization bleiben in den Allow-Headers, da der Browser sie
+// (anon key) mitschickt — ohne sie scheitert der Preflight.
+const ALLOWED_ORIGINS = [
+  "https://flowstate.foundation",
+  "https://www.flowstate.foundation",
+  "http://localhost:5173",
+  "http://localhost:4321",
+];
+
+function corsHeaders(origin: string | null) {
+  const allow = origin && ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    "Access-Control-Allow-Origin": allow,
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "content-type, x-flowstate-app, apikey, authorization",
+    "Vary": "Origin",
+  };
+}
 
 serve(async (req) => {
+  const cors = corsHeaders(req.headers.get("origin"));
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   if (req.method !== "POST") return new Response("only POST", { status: 405, headers: cors });
 

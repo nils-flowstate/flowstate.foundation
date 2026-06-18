@@ -3,13 +3,27 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 // CORS ergänzt ggü. Spec §6.3, da capture-lead direkt aus dem Browser
 // (PhoneInput) per fetch gerufen wird und sonst am Preflight scheitert.
-const cors = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "POST, OPTIONS",
-  "Access-Control-Allow-Headers": "content-type, x-flowstate-app, apikey, authorization",
-};
+// Nur erlaubte Origins (Prod-Domains + lokaler Dev); apikey/authorization
+// bleiben in den Allow-Headers, sonst blockt der Preflight die echten Requests.
+const ALLOWED_ORIGINS = [
+  "https://flowstate.foundation",
+  "https://www.flowstate.foundation",
+  "http://localhost:5173",
+  "http://localhost:4321",
+];
+
+function corsHeaders(origin: string | null) {
+  const allow = origin && ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
+  return {
+    "Access-Control-Allow-Origin": allow,
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "content-type, x-flowstate-app, apikey, authorization",
+    "Vary": "Origin",
+  };
+}
 
 serve(async (req) => {
+  const cors = corsHeaders(req.headers.get("origin"));
   if (req.method === "OPTIONS") return new Response("ok", { headers: cors });
   if (req.method !== "POST") return new Response("only POST", { status: 405, headers: cors });
 
