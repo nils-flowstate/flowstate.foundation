@@ -1,7 +1,7 @@
 {
   "nav": {
     "services": "Services",
-    "about": "Über mich",
+	    "about": "Über mich",
     "growTogether": "Grow Together",
     "home": "Startseite"
   },
@@ -20,7 +20,7 @@
   },
   "pain": {
     "headline": "Ich bringe dich in die technische Souveranität",
-    "body": "Ich halte dir den Rücken frei, dass du mir Klarheit deine Passion in die Welt tragen kannst.",
+    "body": "Ich halte dir den Rücken frei, dass du mit Klarheit deine Passion in die Welt tragen kannst.",
     "card1Title": "Website",
     "card1Desc": "Deine digitale Bühne – individuell, authentisch, wirkungsvoll.",
     "card2Title": "Workflow Automatisierung",
@@ -42,10 +42,10 @@
   },
   "about": {
     "greeting": "Hey, ich bin Nils,",
-    "subhead1": "Lass andere Menschen Deine Einzigartigkeit spüren",
+    "subhead1": "lass andere Menschen Deine Einzigartigkeit spüren.",
     "line1": "Ich mache es Menschen und Unternehmen möglich, Ihre wahre Seelenmission mit der digitalen Welt verschmelzen zu lassen",
-    "subhead2": "Fokussiere Dich auf Dein Business",
-    "line2": "Durch mich kannst Du Dich auf das fokussieren was deine Kunden an dir lieben.",
+    "subhead2": "Fokussiere dich auf Dein Business",
+    "line2": "Durch mich kannst du dich auf das fokussieren, was deine Kunden an dir lieben.",
     "subhead3": "Behalte den Durchblick",
     "line3": "Mit mir behältst du den Durchblick im digitalen Dschungel. Gemeinsam automatisieren wir deine Arbeit, sodass du deine Liebe in die Welt tragen kannst.",
     "interest": "Lass uns verbinden",
@@ -203,7 +203,7 @@
     "kontakt": "Kontakt:",
     "steuer": "Steuer:",
     "steuerText": "Kleinunternehmer gemäß § 19 UStG",
-    "steuerNr": "Steuernummer: 402/9376/4518",
+    "steuerNr": "Steuernummer: 223/5296/5078",
     "verantwortlich": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:",
     "streit": "Streitschlichtung",
     "streitText": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/\nWir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
