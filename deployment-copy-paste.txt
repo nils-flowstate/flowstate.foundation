@@ -1,2 +1,1 @@
-docker compose build
-docker compose up -d --no-deps --build flowstate-foundation
+docker compose --env-file .env up -d --build flowstate-foundation-web

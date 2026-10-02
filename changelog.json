@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-10-02",
+    "file": "index.html",
+    "description": "Google-Fonts-Links (fonts.googleapis.com) entfernt, Fonts kommen jetzt aus dem eigenen Bundle"
+  },
+  {
+    "date": "2026-10-02",
+    "file": "Dockerfile",
+    "description": "Hetzner-Migration: nginx-unprivileged auf Port 3001, alle öffentlichen VITE_-Variablen als Build-Args (Supabase fehlte bisher), unnötige Cairo/Pango-Pakete entfernt"
+  },
+  {
+    "date": "2026-10-02",
+    "file": "docker-compose.yml",
+    "description": "Hetzner-Migration: Container flowstate-foundation-web im proxy-Netz, kein öffentlicher Port mehr (vorher 6666), read_only/cap_drop gehärtet"
+  },
+  {
+    "date": "2026-10-02",
+    "file": "nginx.conf",
+    "description": "Bug: add_header in location-Blöcken hat die Sicherheits-Header überschrieben – jetzt als Snippet in jedem Block; index.html no-cache, nur gehashte Bundles immutable"
+  },
+  {
+    "date": "2026-10-02",
+    "file": "security-headers.inc",
+    "description": "Neu: gemeinsame Sicherheits-Header für nginx"
+  },
+  {
+    "date": "2026-10-02",
+    "file": ".dockerignore",
+    "description": "Neu: .env und Projektballast bleiben aus dem Build-Kontext"
+  },
+  {
+    "date": "2026-10-02",
+    "file": "deploy.sh",
+    "description": "Rsync-Deploy zum Hostinger-VPS ersetzt durch lokales docker compose auf dem Hetzner-Server"
+  },
+  {
+    "date": "2026-10-02",
+    "file": "package.json",
+    "description": "@fontsource/playfair-display und @fontsource/dm-sans ergänzt (Fonts selbst gehostet)"
+  },
+  {
     "date": "2026-06-12",
     "file": "analytics.ts",
     "description": "Data Hub Phase 0: Schreibpfad von localStorage auf Edge Function /track-event umgestellt; event_type-Mapping (404→error_404, unbekannt→custom), TTDSG-Consent-Gating, Offline-Queue. Signatur track() unverändert"

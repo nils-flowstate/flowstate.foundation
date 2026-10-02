@@ -1,15 +1,8 @@
 #!/bin/bash
-set -e
+# Deployment auf dem Hetzner-Server (läuft direkt dort, hinter dem zentralen Caddy).
+set -euo pipefail
+cd "$(dirname "$0")"
 
-VPS_USER="root"
-VPS_IP="72.60.91.67"
-VPS_PATH="~/docker/website/flowstate/foundation"
-
-echo "📦 Syncing project to VPS..."
-rsync -avz --exclude node_modules --exclude dist --exclude .git \
-  ./ $VPS_USER@$VPS_IP:$VPS_PATH/
-
-echo "🐳 Rebuilding and restarting container..."
-ssh $VPS_USER@$VPS_IP "cd $VPS_PATH && docker compose down && docker compose up -d --build"
-
-echo "✅ Deployed to flowstate.foundation (port 6666)"
+docker compose --env-file .env up -d --build flowstate-foundation-web
+docker compose ps
+echo "✅ flowstate-foundation-web läuft (Caddy: flowstate.foundation → flowstate-foundation-web:3001)"
