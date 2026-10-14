@@ -1,0 +1,17 @@
+---
+import Basis from '../layouts/Basis.astro';
+import Sektion from '../components/Sektion.astro';
+---
+<Basis titel="Seite nicht gefunden — Flowstate Foundation" noindex>
+  <Sektion nr="1–2" typ="text · liste">
+    <div style="padding-block:2rem">
+      <h1 style="font-size:clamp(2rem,5vw,3.25rem)">Diese Seite gibt es nicht (mehr).</h1>
+      <p style="margin-top:1rem;font-size:1.2rem">Vielleicht suchst du das hier:</p>
+      <ul style="margin-top:1rem;display:grid;gap:0.25rem;font-weight:700;font-size:1.15rem">
+        <li><a href="/" data-testid="nav-start">Startseite</a></li>
+        <li><a href="/#check" data-testid="nav-check-404">Web &amp; Brand Check</a></li>
+        <li><a href="/#kontakt" data-testid="nav-kontakt-404">Kontakt</a></li>
+      </ul>
+    </div>
+  </Sektion>
+</Basis>

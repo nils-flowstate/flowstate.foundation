@@ -1,0 +1,5 @@
+---
+interface Props { text: string; }
+const { text } = Astro.props;
+---
+<span class="luecke" data-testid="luecke" data-stand-stelle><span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Lücke: </span>{text}</span>

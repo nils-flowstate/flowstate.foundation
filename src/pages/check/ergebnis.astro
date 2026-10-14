@@ -1,0 +1,17 @@
+---
+import Basis from '../../layouts/Basis.astro';
+import Sektion from '../../components/Sektion.astro';
+import Kontaktlink from '../../components/Kontaktlink.astro';
+import Luecke from '../../components/Luecke.astro';
+import Ergebnis from '../../components/islands/Ergebnis.tsx';
+---
+<Basis titel="Dein Web & Brand Check — Flowstate Foundation" noindex>
+  <Sektion nr="1–4" typ="ergebnis" stand="UNGEKLAERT" hinweis="Fehlerzustände E2, Lead-Tracker V9 offen">
+    <div style="padding-block:2rem"><Ergebnis client:load /></div>
+  </Sektion>
+  <Sektion nr="5" typ="cta" klasse="flaeche">
+    <p style="font-size:1.25rem;font-weight:700;max-width:34rem">Fragen zu deiner Einschätzung? Schreib uns – Nils ruft an, ohne Termin.</p>
+    <div style="margin-top:1.25rem"><Kontaktlink kennung="ext-whatsapp-ergebnis" text="Auf WhatsApp schreiben" /></div>
+    <p class="klein" style="margin-top:0.75rem"><Luecke text="WhatsApp-Nummer F10 UNGEKLAERT – Link führt auf /#kontakt" /> <Luecke text="Fehlerzustände (E2), Treffer im Lead-Tracker (E3/V9): UNGEKLAERT" /></p>
+  </Sektion>
+</Basis>

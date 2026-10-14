@@ -1,0 +1,22 @@
+---
+import Basis from '../layouts/Basis.astro';
+import Sektion from '../components/Sektion.astro';
+import Luecke from '../components/Luecke.astro';
+---
+<Basis titel="Impressum — Flowstate Foundation" beschreibung="Angaben zum Anbieter von flowstate.foundation.">
+  <Sektion nr="1–4" typ="text" stand="UNGEKLAERT" hinweis="Werte aus 90-legal fehlen, Freigabe durch Nils">
+    <div class="prosa" style="padding-block:2rem">
+      <h1 style="font-size:clamp(2rem,5vw,3.25rem)">Impressum</h1>
+      <p class="muted klein">Keine Werte abgeschrieben: Anschrift und Steuerangaben gehen erst mit Nils' „was, wohin, wann“ auf eine Seite. Quelle der Felder: 90-legal.</p>
+      <h2>Angaben nach § 5 DDG</h2>
+      <p data-testid="impressum-angaben"><Luecke text="Name des Einzelunternehmers" /> <Luecke text="Ladungsfähige Anschrift" /> <Luecke text="E-Mail" /> <Luecke text="Telefon" /></p>
+      <h2>Umsatzsteuer</h2>
+      <p>Kleinunternehmer nach § 19 UStG: Es wird keine Umsatzsteuer ausgewiesen. <Luecke text="Geltung laut Bauplan F13 UNGEKLAERT (Widerspruch 00-gewerbe ↔ 00-produkt P10)" /></p>
+      <h2>Verantwortlich für den Inhalt · Verbraucherstreitbeilegung</h2>
+      <p><Luecke text="Wortlaut aus 90-legal: UNGEKLAERT" /></p>
+      <h2>Ohne dunkle Muster</h2>
+      <p>Wir gestalten diese Seite ohne dunkle Muster: keine falschen Fristen, keine erfundene Knappheit, Ablehnen so leicht wie Zustimmen.</p>
+      <p class="klein"><Luecke text="Ort des Satzes (Impressum oder Fusszeile): V18 UNGEKLAERT – hier und in der Fusszeile vorgesehen" /></p>
+    </div>
+  </Sektion>
+</Basis>

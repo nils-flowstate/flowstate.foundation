@@ -1,0 +1,21 @@
+---
+import Basis from '../layouts/Basis.astro';
+import Sektion from '../components/Sektion.astro';
+import Kontaktlink from '../components/Kontaktlink.astro';
+import Luecke from '../components/Luecke.astro';
+---
+<Basis titel="Danke — Flowstate Foundation" noindex>
+  <Sektion nr="1–2" typ="text · cta" stand="UNGEKLAERT" hinweis="Zeitangabe bis zum Anruf UNGEKLAERT">
+    <div style="padding-block:2rem;max-width:42rem">
+      <h1 style="font-size:clamp(2rem,5vw,3.25rem)">Danke – deine Anfrage ist da.</h1>
+      <p style="margin-top:1.25rem;font-size:1.2rem">Nils ruft dich an, wenn es passt. Passt es dir gerade nicht, macht ihr am Telefon einen Zeitpunkt aus. Rund 30 Minuten, kostenlos.</p>
+      <p class="klein" style="margin-top:0.5rem"><Luecke text="Bis wann er anruft: UNGEKLAERT, steht nicht da" /></p>
+      <p style="margin-top:2rem;font-weight:700;font-size:1.2rem">Schneller geht's auf WhatsApp.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-top:1rem">
+        <Kontaktlink kennung="ext-whatsapp-danke" text="Auf WhatsApp schreiben" />
+        <a href="/" class="link-text" data-testid="nav-start">Zurück zur Startseite</a>
+      </div>
+      <p class="klein" style="margin-top:0.75rem"><Luecke text="WhatsApp-Nummer F10 UNGEKLAERT – Link führt auf /#kontakt" /></p>
+    </div>
+  </Sektion>
+</Basis>

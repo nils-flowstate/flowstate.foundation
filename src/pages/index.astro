@@ -1,0 +1,155 @@
+---
+import Basis from '../layouts/Basis.astro';
+import Sektion from '../components/Sektion.astro';
+import Luecke from '../components/Luecke.astro';
+import Kontaktlink from '../components/Kontaktlink.astro';
+import SwipeCard from '../components/islands/SwipeCard.tsx';
+import Check from '../components/islands/Check.tsx';
+import Funktionsschau from '../components/islands/Funktionsschau.tsx';
+import Anfrage from '../components/islands/Anfrage.tsx';
+import { getCollection } from 'astro:content';
+
+// Abschnitte 7 bis 9: nur mit freigegebenem Eintrag (Bauplan 6.0, 8, 14). Heute keiner.
+const kunden = (await getCollection('kundenwebsites')).filter((k) => k.data.cloudflare && k.data.freigegeben);
+const schritte = [
+  'Schreib uns – WhatsApp oder Formular',
+  'Nils ruft an – rund 30 Minuten, kostenlos, ohne Termin',
+  'Anzahlung 30 % per Link',
+  'Du lädst deine Inhalte hoch',
+  'Vorschau auf einer geschützten Adresse',
+  'Abnahme',
+  'Restzahlung',
+  'Livegang – bei dir oder bei uns gehostet',
+];
+---
+<Basis titel="Flowstate Foundation — Brand und Website als ein System" beschreibung="Brand und Website für KMU und Solo-Selbstständige. Prüf in 8 Karten, wo deine Marke steht, und hol dir den kostenlosen Web & Brand Check.">
+  <Sektion nr="1" typ="hero" hinweis="Variante der Überschrift offen (S1)" klasse="einblenden" id="hero">
+    <div class="held">
+      <div>
+        <p class="ueberzeile">Brand &amp; Website für KMU und Solo-Selbstständige</p>
+        <h1>Damit deine Kunden nicht mehr fragen, wie – <span class="akzent">sondern wann.</span></h1>
+        <p class="unter">Flowstate Foundation baut Brand und Website als ein System. Prüf in 8 Karten, wo deine Marke heute steht – kostenlos, ohne Mail.</p>
+        <div class="aktionen">
+          <a class="btn btn-haupt" href="#swipe" data-testid="cta-swipe-start" id="cta-swipe-start">In 8 Karten prüfen <span aria-hidden="true">→</span></a>
+          <Kontaktlink kennung="ext-whatsapp-hero" text="Schreib uns auf WhatsApp" auf="start" klasse="link-text" />
+        </div>
+        <p class="klein" style="margin-top:0.75rem"><Luecke text="WhatsApp-Nummer F10 UNGEKLAERT – Link führt auf #kontakt" /> <Luecke text="Überschrift: S1 offen (Varianten 1, 1a B, 1a C)" /></p>
+      </div>
+      <div class="motiv" aria-hidden="true"><div class="a"></div><div class="b"></div><div class="c"></div><span>wann?</span></div>
+    </div>
+  </Sektion>
+
+  <Sektion nr="2" typ="swipecard" id="swipe" klasse="flaeche einblenden" hinweis="Fragenkatalog K1–K8 und Regeln: von Nils UNGEKLAERT (S2)">
+    <div class="swipe-buehne">
+      <div>
+        <p class="ueberzeile">Selbst prüfen · 8 Karten</p>
+        <h2>Ist deine Marke bereit?</h2>
+        <p class="muted" style="font-size:1.15rem;margin-top:1rem">Wisch nach rechts für ja, nach links für nein – oder nimm die Buttons.</p>
+        <p class="klein muted" style="margin-top:1rem">Deine Antworten bleiben in deinem Browser.</p>
+        <p class="klein" style="margin-top:0.75rem"><Luecke text="Fragenkatalog K1–K8 ist ein Entwurf (S2)" /></p>
+      </div>
+      <div><SwipeCard client:visible /></div>
+    </div>
+  </Sektion>
+
+  <Sektion nr="3" typ="check" id="check" klasse="einblenden" stand="UNGEKLAERT" hinweis="Löschsatz S4/V8, Bot-Prüfung, Dateigröße offen">
+    <div class="check-kopf">
+      <p class="ueberzeile">Kostenlos · als PDF</p>
+      <h2>Web &amp; Brand Check</h2>
+      <p class="muted" style="font-size:1.15rem">Ein echtes Ergebnis statt eines Versprechens – kostenlos, einmal je Mail, als PDF.</p>
+    </div>
+    <Check client:visible />
+  </Sektion>
+
+  <Sektion nr="4" typ="pakete" id="pakete" klasse="flaeche einblenden" stand="UNGEKLAERT" hinweis="Darstellung des Aktionspreises: Lauterkeitsrecht UNGEKLAERT">
+    <p class="ueberzeile">Pakete</p>
+    <h2>Drei Pakete. Offen, zum Vergleichen.</h2>
+    <p class="muted" style="margin-top:1rem;font-size:1.1rem" data-testid="preis-einfuehrung">Einführungspreis bis 31.12.2026.</p>
+    <div class="paket-raster">
+      <article class="karte paket" data-testid="paket-1">
+        <h3>Stufe 1</h3>
+        <p class="preis" data-testid="preis-1">800 €</p>
+        <p class="preis-zeile">Einführungspreis bis 31.12.2026</p>
+        <ul><li>2 Seiten</li><li>Mail-Formular</li></ul>
+        <a class="btn btn-linie" href="#kontakt" data-paket="1" data-testid="cta-paket-1">Mit Stufe 1 starten</a>
+      </article>
+      <article class="karte paket" data-testid="paket-2">
+        <h3>Stufe 2</h3>
+        <p class="preis" data-testid="preis-2">1.600 €</p>
+        <p class="preis-zeile">Einführungspreis bis 31.12.2026</p>
+        <ul><li>3 Seiten</li><li>Mail-Formular und 2 Funktionen aus der Funktionsschau</li><li><code>llms.txt</code> für GEO</li></ul>
+        <a class="btn btn-linie" href="#kontakt" data-paket="2" data-testid="cta-paket-2">Mit Stufe 2 starten</a>
+      </article>
+      <article class="karte paket" data-testid="paket-3">
+        <h3>Stufe 3</h3>
+        <p class="preis" data-testid="preis-3">3.200 €</p>
+        <p class="preis-zeile">Einführungspreis bis 31.12.2026</p>
+        <ul><li>bis 6 Seiten</li><li>5 Funktionen</li><li>Anbindung an deine Software</li></ul>
+        <a class="btn btn-linie" href="#kontakt" data-paket="3" data-testid="cta-paket-3">Mit Stufe 3 starten</a>
+      </article>
+    </div>
+    <div style="margin-top:2rem;display:grid;gap:0.75rem;max-width:46rem">
+      <p data-testid="preis-danach" data-stand-stelle><strong>Danach 1.600 / 3.200 / 6.400 EUR.</strong> <Luecke text="UNGEKLAERT: Lauterkeitsrecht – ob Einführungspreis und Vollpreis so genannt werden dürfen, ist ungeprüft (90-legal)" /></p>
+      <p><strong>In jedem Paket frei:</strong> Google-Rezensionen · WhatsApp-Button · Hero-Video oder -Bild · Nachweise wie Zertifikate.</p>
+      <p><strong>In jeder Stufe:</strong> eine Nachbearbeitung zu Brand und Positionierung, im Gespräch mit Nils.</p>
+      <p>Anzahlung 30 % nach dem Telefonat, Rest bei der Abnahme. <Luecke text="Basis der 30 % (Aktions- oder Vollpreis): UNGEKLAERT (P9)" /></p>
+      <p data-testid="preis-hosting">Hosting bei uns: 20 € pro Monat. <Luecke text="Gilt der Einführungspreis auch fürs Hosting: UNGEKLAERT (P7)" /></p>
+      <p data-testid="preis-ust">Preise ohne Umsatzsteuer: Kleinunternehmer nach § 19 UStG. <Luecke text="Geltung laut Bauplan F13 noch UNGEKLAERT" /></p>
+    </div>
+  </Sektion>
+
+  <Sektion nr="5" typ="funktionsschau" id="funktionen" klasse="einblenden" hinweis="Zuordnung Funktion zu Paket offen (P1, P2)">
+    <p class="ueberzeile">Funktionen</p>
+    <h2>Alles, was deine Seite können kann.</h2>
+    <p class="muted" style="margin-top:1rem">Filter nach Zweck. Jede Kachel sagt, ab welchem Paket sie drin ist.</p>
+    <Funktionsschau client:visible />
+  </Sektion>
+
+  <Sektion nr="6" typ="liste" id="ablauf" klasse="flaeche einblenden" stand="UNGEKLAERT" hinweis="Dauer je Schritt UNGEKLAERT">
+    <p class="ueberzeile">Ablauf</p>
+    <h2>So läuft es – und darum weißt du, wann.</h2>
+    <ol class="schritte" data-testid="ablauf-liste">
+      {schritte.map((s) => <li>{s}</li>)}
+    </ol>
+    <p class="klein" style="margin-top:1.5rem"><Luecke text="Dauer je Schritt: UNGEKLAERT – wird nicht angezeigt, bis sie gemessen ist" /></p>
+  </Sektion>
+
+  {kunden.length > 0
+    ? <Sektion nr="7" typ="kundenwebsites" id="kunden"><h2>Gebaut für</h2><ul>{kunden.map((k) => <li>{k.data.name}</li>)}</ul></Sektion>
+    : <div class="wrap entfaellt" data-stand="UNGEKLAERT" data-testid="entfaellt-kunden"><span class="stand-chip" aria-hidden="true">7 · kundenwebsites · vorschlag</span>Abschnitt „Gebaut für“ entfällt: kein Eintrag mit cloudflare und freigegeben (F4 UNGEKLAERT).</div>}
+  <div class="wrap entfaellt" data-stand="UNGEKLAERT" data-testid="entfaellt-reviews"><span class="stand-chip" aria-hidden="true">8 · reviews · vorschlag</span>Abschnitt „Was Kunden sagen“ entfällt: kein freigegebener Eintrag; Google-Profil F6, Hinweiswortlaut § 5b UWG UNGEKLAERT.</div>
+  <div class="wrap entfaellt" data-stand="vorschlag" data-testid="entfaellt-nachweise"><span class="stand-chip" aria-hidden="true">9 · nachweise · vorschlag</span>Abschnitt „Nachweise“ entfällt: kein Eintrag.</div>
+
+  <Sektion nr="10" typ="werkzeuge" id="werkzeuge" ink klasse="einblenden auf-ink" hinweis="Widerspruch Tailwind ↔ Sass offen">
+    <p class="ueberzeile">Werkzeuge</p>
+    <h2>Werkzeuge und eigene Websites</h2>
+    <p class="muted" style="margin-top:1rem">Womit wir bauen – und warum.</p>
+    <dl style="display:grid;gap:1.25rem;margin-top:2rem;grid-template-columns:repeat(auto-fit,minmax(14rem,1fr))">
+      <div><dt style="font-weight:800">Astro</dt><dd style="margin:0" class="muted">schnelle Seiten, wenig JavaScript</dd></div>
+      <div><dt style="font-weight:800">Tailwind</dt><dd style="margin:0" class="muted">eine Gestaltung, überall gleich</dd></div>
+      <div><dt style="font-weight:800">React-Inseln</dt><dd style="margin:0" class="muted">Bewegung nur dort, wo sie hilft</dd></div>
+      <div><dt style="font-weight:800">Brevo</dt><dd style="margin:0" class="muted">Kontakt und Mails aus der EU</dd></div>
+      <div><dt style="font-weight:800">Cloudflare</dt><dd style="margin:0" class="muted">Auslieferung und Schutz</dd></div>
+    </dl>
+    <h3 style="margin-top:2.5rem">Eigene Websites</h3>
+    <ul style="display:flex;flex-wrap:wrap;gap:0.75rem;list-style:none;padding:0;margin:1rem 0 0">
+      <li class="chip" style="border-color:rgb(251 251 250 / .6);color:var(--color-bg);cursor:default">nils-tenkotte.de</li>
+      <li class="chip" style="border-color:rgb(251 251 250 / .6);color:var(--color-bg);cursor:default">Flowstate Watch</li>
+      <li class="chip" style="border-color:rgb(251 251 250 / .6);color:var(--color-bg);cursor:default">Flowstate Systems</li>
+    </ul>
+    <p class="klein muted" style="margin-top:0.75rem">Link erst, wenn die Seite live ist.</p>
+  </Sektion>
+
+  <Sektion nr="11" typ="kontakt" id="kontakt" klasse="einblenden" stand="UNGEKLAERT" hinweis="WhatsApp-Nummer F10, Formular-Empfang V11">
+    <div class="zwei" style="align-items:start">
+      <div>
+        <p class="ueberzeile">Kontakt</p>
+        <h2>Wann können wir starten?</h2>
+        <p class="muted" style="margin:1rem 0 1.5rem;font-size:1.15rem">Schreib uns – Nils ruft an, ohne Termin. Rund 30 Minuten, kostenlos.</p>
+        <Kontaktlink kennung="ext-whatsapp-kontakt" text="Auf WhatsApp schreiben" auf="start" />
+        <p class="klein" style="margin-top:0.75rem"><Luecke text="WhatsApp-Nummer F10 UNGEKLAERT – Link führt auf #kontakt" /></p>
+      </div>
+      <Anfrage client:visible />
+    </div>
+  </Sektion>
+</Basis>

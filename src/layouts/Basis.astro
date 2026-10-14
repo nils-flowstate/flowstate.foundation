@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+interface Props { titel: string; beschreibung?: string; noindex?: boolean; }
+const { titel, beschreibung, noindex = false } = Astro.props;
+---
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titel}</title>
+    {beschreibung && <meta name="description" content={beschreibung} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+    <header class="kopf">
+      <div class="wrap">
+        <a href="/" aria-label="Flowstate Foundation, zur Startseite"><img src="/brand/lockup-positiv.svg" alt="Flowstate Foundation" width="1128" height="158" /></a>
+        <nav aria-label="Hauptnavigation" class="kopf-rechts">
+          <ul class="nav-desktop">
+            <li><a href="/#check" data-testid="nav-check">Check</a></li>
+            <li><a href="/#pakete" data-testid="nav-pakete">Pakete</a></li>
+            <li><a href="/#ablauf" data-testid="nav-ablauf">Ablauf</a></li>
+          </ul>
+          <a class="btn btn-linie" href="/#kontakt" data-testid="nav-kontakt">Schreib uns</a>
+          <details class="menue">
+            <summary data-testid="menue-mobil">Menü</summary>
+            <ul>
+              <li><a href="/#check" data-testid="nav-check-mobil">Check</a></li>
+              <li><a href="/#pakete" data-testid="nav-pakete-mobil">Pakete</a></li>
+              <li><a href="/#ablauf" data-testid="nav-ablauf-mobil">Ablauf</a></li>
+            </ul>
+          </details>
+        </nav>
+      </div>
+    </header>
+    <main id="inhalt" tabindex="-1">
+      <slot />
+    </main>
+    <footer class="fuss">
+      <div class="wrap">
+        <div>
+          <img src="/brand/lockup-positiv.svg" alt="Flowstate Foundation" width="1128" height="158" />
+          <p class="muted klein" style="max-width:30rem" data-testid="satz-dunkle-muster">Wir gestalten diese Seite ohne dunkle Muster: keine falschen Fristen, keine erfundene Knappheit, Ablehnen so leicht wie Zustimmen.</p>
+          <p class="klein"><span class="luecke">Ort des Satzes (Fusszeile oder Impressum): V18 UNGEKLAERT</span></p>
+        </div>
+        <nav aria-label="Rechtliches">
+          <ul>
+            <li><a href="/impressum" data-testid="nav-impressum">Impressum</a></li>
+            <li><a href="/datenschutz" data-testid="nav-datenschutz">Datenschutz</a></li>
+            <li>© Flowstate Foundation</li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <button type="button" class="stand-knopf" id="stand-knopf" aria-pressed="false" data-testid="stand-zeigen">
+      <span id="stand-text">Vorschau · Entwurf aus vorschlag · nicht freigegeben — Stand zeigen</span>
+    </button>
+    <script is:inline>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('js');
+        var knopf = document.getElementById('stand-knopf');
+        var text = document.getElementById('stand-text');
+        if (knopf) knopf.addEventListener('click', function () {
+          var an = root.classList.toggle('stand-an');
+          knopf.setAttribute('aria-pressed', String(an));
+          text.textContent = an ? 'Stand wird gezeigt · vorschlag violett, UNGEKLAERT rot — ausblenden' : 'Vorschau · Entwurf aus vorschlag · nicht freigegeben — Stand zeigen';
+        });
+        var els = document.querySelectorAll('.einblenden');
+        if ('IntersectionObserver' in window) {
+          var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('ein'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -8% 0px' });
+          els.forEach(function (el) { io.observe(el); });
+        } else { els.forEach(function (el) { el.classList.add('ein'); }); }
+        document.addEventListener('click', function (e) {
+          var a = e.target.closest && e.target.closest('[data-paket]');
+          if (a) { window.__paket = a.getAttribute('data-paket'); window.dispatchEvent(new CustomEvent('ff-paket', { detail: window.__paket })); }
+        });
+      })();
+    </script>
+  </body>
+</html>

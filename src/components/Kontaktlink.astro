@@ -1,0 +1,7 @@
+---
+// WhatsApp: Nummer fehlt (Bauplan F10). Der Link fuehrt auf #kontakt, nichts wird erfunden.
+interface Props { kennung: string; text: string; auf?: 'start' | 'andere'; klasse?: string; }
+const { kennung, text, auf = 'andere', klasse = 'btn btn-linie' } = Astro.props;
+const href = auf === 'start' ? '#kontakt' : '/#kontakt';
+---
+<a href={href} class={klasse} data-testid={kennung} data-ziel="fehlt">{text}</a>

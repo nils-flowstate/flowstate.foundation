@@ -1,0 +1,14 @@
+---
+import Basis from '../layouts/Basis.astro';
+import Sektion from '../components/Sektion.astro';
+import Luecke from '../components/Luecke.astro';
+import Eingaben from '../components/islands/Eingaben.tsx';
+---
+<Basis titel="Deine Inhalte — Flowstate Foundation" noindex>
+  <Sektion nr="1" typ="text" hinweis="Zugang und Route UNGEKLAERT (G1)" stand="UNGEKLAERT">
+    <h1 style="font-size:clamp(2rem,5vw,3.25rem)">Deine Inhalte für deine Website</h1>
+    <p class="muted" style="margin-top:1rem;font-size:1.15rem;max-width:40rem">Füll aus, was du hast. Was fehlt, klären wir am Telefon. Hinter jedem ? steht, wo du es findest – am Handy oder am Computer.</p>
+    <p class="klein" style="margin-top:0.75rem"><Luecke text="Zugang (persönlicher Link je Kunde) und Route: UNGEKLAERT (G1) – in der Vorschau ohne Link erreichbar" /></p>
+    <div style="margin-top:2.5rem"><Eingaben client:load /></div>
+  </Sektion>
+</Basis>

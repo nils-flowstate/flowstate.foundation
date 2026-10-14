@@ -1,0 +1,31 @@
+---
+import Basis from '../layouts/Basis.astro';
+import Sektion from '../components/Sektion.astro';
+import Luecke from '../components/Luecke.astro';
+const offen = [
+  ['Verantwortlicher', 'Angaben wie im Impressum'],
+  ['Hosting und Auslieferung', 'Anbieter je nach Entscheidung zu Hosting (Hetzner-VPS, Cloudflare), F5'],
+  ['Anfrageformular und WhatsApp', 'Name, Nummer oder Mail; WhatsApp über Meta, USA'],
+  ['Web & Brand Check', 'Mail, URL oder Brand-Dokumente, Bot-Prüfung, Lead-Tracker, Double-Opt-in und Versand über Brevo, Modell-Anbieter während der Einschätzung'],
+] as const;
+const offen2 = [
+  ['Eingaben und Uploads', 'Mail, Website, Tools, Brand-Dokumente, Bilder und Videos (NAS)'],
+  ['Reichweitenmessung', 'cookielos, Anbieter offen'],
+  ['Rechte der Betroffenen, Beschwerderecht', 'Wortlaut aus 90-legal'],
+] as const;
+---
+<Basis titel="Datenschutz — Flowstate Foundation" beschreibung="Wie flowstate.foundation mit deinen Daten umgeht.">
+  <Sektion nr="1–9" typ="text" stand="UNGEKLAERT" hinweis="Löschfristen und Anbieterangaben fehlen, Prüfung mit dsgvo-website-audit offen">
+    <div class="prosa" style="padding-block:2rem">
+      <h1 style="font-size:clamp(2rem,5vw,3.25rem)">Datenschutz</h1>
+      <p class="muted klein">Diese Erklärung ist nicht fertig: Löschfristen sind im Datenplan durchgehend UNGEKLAERT, und die Prüfung mit dsgvo-website-audit steht aus.</p>
+      {offen.map(([t, k]) => <><h2>{t}</h2><p><Luecke text={`UNGEKLAERT – ${k}`} /></p></>)}
+      <h2>Swipe Card</h2>
+      <p data-testid="ds-swipe">Deine Antworten in der Swipe Card bleiben in deinem Browser. Auf dem Server wird dazu nichts verarbeitet.</p>
+      {offen2.slice(0, 2).map(([t, k]) => <><h2>{t}</h2><p><Luecke text={`UNGEKLAERT – ${k}`} /></p></>)}
+      <h2>Google-Rezensionen</h2>
+      <p>Rezensionen werden beim Bau der Seite abgerufen. Im Browser lädt dafür kein Inhalt von Google.</p>
+      {offen2.slice(2).map(([t, k]) => <><h2>{t}</h2><p><Luecke text={`UNGEKLAERT – ${k}`} /></p></>)}
+    </div>
+  </Sektion>
+</Basis>

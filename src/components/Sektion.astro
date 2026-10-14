@@ -1,0 +1,8 @@
+---
+interface Props { id?: string; nr: string; typ: string; stand?: 'vorschlag' | 'UNGEKLAERT' | 'entschieden'; hinweis?: string; klasse?: string; ink?: boolean; }
+const { id, nr, typ, stand = 'vorschlag', hinweis, klasse = '', ink = false } = Astro.props;
+---
+<section id={id} class:list={['sektion', klasse, { 'auf-ink': ink }]} data-stand={stand} data-testid={id ? `sektion-${id}` : undefined}>
+  <span class="stand-chip" aria-hidden="true">{nr} · {typ} · {stand}{hinweis ? ` · ${hinweis}` : ''}</span>
+  <div class="wrap"><slot /></div>
+</section>
