@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Datenschutz from '../components/legal/Datenschutz'
+import { useTranslations, type Lang } from '../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+<BaseLayout lang={lang} title={t('datenschutz.title')}>
+  <Datenschutz />
+</BaseLayout>

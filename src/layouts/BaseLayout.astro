@@ -1,0 +1,130 @@
+---
+import '../styles/global.css'
+import Header from '../components/layout/Header.astro'
+import Footer from '../components/layout/Footer.astro'
+import { alternatePath, useTranslations, type Lang } from '../i18n/utils'
+
+interface Props {
+  lang: Lang
+  title?: string
+  description?: string
+  showHeader?: boolean
+  showFooter?: boolean
+  noindex?: boolean
+}
+
+const { lang, title, description, showHeader = true, showFooter = true, noindex = false } = Astro.props
+const t = useTranslations(lang)
+
+const site = Astro.site ?? new URL('https://flowstate.foundation')
+const pageTitle = title ? `${title} – Flowstate Foundation` : t('meta.title')
+const pageDescription = description ?? t('meta.description')
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', site).href
+const altDe = new URL(alternatePath(Astro.url.pathname, 'de'), site).href
+const altEn = new URL(alternatePath(Astro.url.pathname, 'en'), site).href
+const ogImage = new URL('/assets/og-image.png', site).href
+---
+<!doctype html>
+<html lang={lang} class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <script is:inline>document.documentElement.classList.replace('no-js', 'js')</script>
+
+    <!-- GTM Consent Default – muss VOR GTM-Script stehen -->
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        region: ['DE', 'AT', 'CH', 'BE', 'FR', 'IT', 'ES', 'NL', 'PL', 'SE', 'DK', 'FI', 'NO'],
+        wait_for_update: 500
+      });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P3MBJ9XQ');</script>
+    <!-- End Google Tag Manager -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    <meta name="author" content="Nils Tenkotte" />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="de" href={altDe} />
+    <link rel="alternate" hreflang="en" href={altEn} />
+    <link rel="alternate" hreflang="x-default" href={altDe} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title ?? 'Flowstate Foundation'} />
+    <meta property="og:description" content={t('meta.ogDescription')} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
+    <meta property="og:locale:alternate" content={lang === 'de' ? 'en_US' : 'de_DE'} />
+
+    <!-- Twitter/X Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title ?? 'Flowstate Foundation'} />
+    <meta name="twitter:description" content={t('meta.ogDescription')} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3MBJ9XQ"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    {showHeader && <Header lang={lang} />}
+    <main>
+      <slot />
+    </main>
+    {showFooter && <Footer lang={lang} />}
+
+    <script>
+      import { initConsent } from '../lib/consent'
+      import { initKlaro, openConsentManager } from '../lib/klaro'
+      import { track, initScrollTracking } from '../lib/analytics'
+      import { initReveal } from '../scripts/reveal'
+
+      // gtag-Defaults (denied) setzen, dann Klaro als zentrale Consent-Quelle starten.
+      initConsent()
+      initKlaro()
+      initReveal()
+
+      // Pageview pro Seitenaufruf (vorher PageTracker in App.tsx)
+      track('pageview')
+      window.dataLayer?.push({ event: 'page_view', page_path: window.location.pathname })
+      initScrollTracking()
+
+      // CTA-Tracking per data-track (vorher onClick={() => track(...)})
+      document.addEventListener('click', event => {
+        const target = event.target as HTMLElement | null
+        const tracked = target?.closest<HTMLElement>('[data-track]')
+        if (tracked?.dataset.track) void track('cta_click', { element: tracked.dataset.track })
+        if (target?.closest('[data-consent-manager]')) openConsentManager()
+      })
+    </script>
+  </body>
+</html>

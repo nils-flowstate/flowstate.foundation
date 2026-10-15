@@ -1,0 +1,108 @@
+@import 'tailwindcss';
+
+/* ── Brand Tokens (vorher tailwind.config.ts) ───────────────────────────── */
+@theme {
+  --color-navy: #1A3C6E;
+  --color-ocean: #2E6FBF;
+  --color-orange: #F07020;
+  --color-fire: #E03515;
+  --color-green: #3DAA45;
+  --color-surface: #F7F8FA;
+  --color-hero-bg: #0B1E38;
+  --color-text: #111827;
+  --color-muted: #6B7280;
+
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'DM Sans', sans-serif;
+  --font-accent: cursive;
+
+  --animate-pulse-slow: pulse-slow 4s ease-in-out infinite;
+  --animate-wave: wave 8s ease-in-out infinite;
+  --animate-wave-slow: wave 12s ease-in-out infinite reverse;
+}
+
+/* Tailwind-3-Defaults beibehalten (v4 nutzt currentColor bzw. default-Cursor) */
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  input::placeholder, textarea::placeholder {
+    color: var(--color-gray-400);
+  }
+  button:not(:disabled), [role='button']:not(:disabled) {
+    cursor: pointer;
+  }
+
+  :root {
+    --navy:    #1A3C6E;
+    --ocean:   #2E6FBF;
+    --orange:  #F07020;
+    --fire:    #E03515;
+    --green:   #3DAA45;
+    --surface: #F7F8FA;
+    --text:    #111827;
+    --muted:   #6B7280;
+    --hero-bg: #0B1E38;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-text antialiased;
+  }
+
+  h1, h2, h3 {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+.animate-wave, .animate-wave-slow {
+  transform-origin: center bottom;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes wave {
+  0%, 100% { d: path("M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z"); }
+  50% { d: path("M0,80 C240,30 480,90 720,50 C960,20 1200,80 1440,40 L1440,120 L0,120 Z"); }
+}
+
+/* ── Reveal: Ersatz für Framer Motion fadeUp / stagger ─────────────────────
+   .reveal       → fadeUp beim Scrollen (einmalig), gesteuert von src/scripts/reveal.ts
+   [data-stagger] → Kinder mit .reveal nacheinander (--i × Stagger-Intervall)
+   .enter        → fadeUp direkt beim Laden (Hero), Verzögerung über --delay
+   Ohne JS (kein .js an <html>) bleibt alles sichtbar. */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(var(--y, 30px));
+  transition:
+    opacity var(--dur, 0.5s) ease-out,
+    transform var(--dur, 0.5s) ease-out;
+  transition-delay: calc(var(--i, 0) * var(--stagger, 0.1s));
+}
+.js .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+.enter {
+  animation: enter var(--dur, 0.6s) ease-out var(--delay, 0s) both;
+}
+@keyframes enter {
+  from { opacity: 0; transform: translateY(var(--y, 20px)) scale(var(--scale, 1)); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .enter { animation: none; }
+}

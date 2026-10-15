@@ -1,0 +1,7 @@
+[
+  {
+    "date": "2026-10-15",
+    "file": "BaseLayout.astro",
+    "description": "Neu: <head> aus index.html (SEO, OG, GTM-Consent-Defaults, Fonts) + hreflang, Header/Footer, Init von Consent, Klaro, Reveal, Pageview, Scroll-Tracking und data-track-CTA-Tracking"
+  }
+]

@@ -1,0 +1,54 @@
+---
+import { ArrowRight } from 'lucide-react'
+import WhatsAppButton from '../ui/WhatsAppButton.astro'
+import { localizePath, useTranslations, type Lang } from '../../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+<section class="bg-navy py-20 px-4">
+  <div data-stagger class="max-w-3xl mx-auto text-center">
+    <p class="reveal font-display text-xl sm:text-2xl md:text-3xl text-white leading-relaxed mb-6">
+      {t('motto.body1')}{' '}
+      <span class="text-orange font-bold">{t('motto.body2')}</span>{' '}
+      {t('motto.body3')}{' '}
+      <span class="text-orange font-bold">{t('motto.body4')}</span>{' '}
+      {t('motto.body5')}{' '}
+      <span class="text-orange font-bold">{t('motto.body6')}</span>{' '}
+      {t('motto.body7')}
+    </p>
+
+    <p class="reveal font-display text-3xl sm:text-4xl md:text-5xl font-bold text-orange mb-8">
+      {t('motto.cta')}
+    </p>
+
+    <p class="reveal font-sans text-base sm:text-lg text-white/60 italic mb-12">
+      {t('motto.sub')}
+    </p>
+
+    <div class="reveal flex flex-col items-center gap-6">
+      <WhatsAppButton
+        label={t('motto.waLabel')}
+        message="Ich habe Bock loszulegen. Wie fang ich direkt an?"
+        class="text-base sm:text-lg px-8 py-4"
+      />
+
+      <a
+        href={localizePath('about', lang)}
+        class="inline-flex items-center gap-2 font-sans font-semibold text-white/60 hover:text-white transition-colors group"
+      >
+        {t('motto.aboutLink')}
+        <span class="inline-flex group-hover:translate-x-1 transition-transform"><ArrowRight className="w-4 h-4" /></span>
+      </a>
+    </div>
+    <!-- Phone CTA -->
+    <!-- <div class="reveal max-w-md mx-auto space-y-3">
+      <p class="font-sans font-semibold text-white text-lg">{t('about.interest')}</p>
+      <PhoneInput source="cta" darkMode />
+    </div> -->
+  </div>
+</section>

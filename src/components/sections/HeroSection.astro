@@ -1,0 +1,76 @@
+---
+import { ChevronDown } from 'lucide-react'
+import Button from '../ui/Button.astro'
+import Bold from '../ui/Bold.astro'
+import { localizePath, useTranslations, type Lang } from '../../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+<section class="relative min-h-screen bg-hero-bg flex flex-col items-center justify-center overflow-hidden">
+  <!-- Noise texture overlay -->
+  <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJub2lzZSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9IjAuNjUiIG51bU9jdGF2ZXM9IjMiIHN0aXRjaFRpbGVzPSJzdGl0Y2giLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgZmlsdGVyPSJ1cmwoI25vaXNlKSIgb3BhY2l0eT0iMSIvPjwvc3ZnPg==')]"></div>
+
+  <!-- Green radial glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[60%] w-96 h-96 rounded-full bg-green/20 blur-3xl animate-pulse-slow pointer-events-none"></div>
+
+  <div class="relative z-10 flex flex-col items-center text-center px-4 max-w-3xl mx-auto pt-20">
+    <!-- Logo – circular, top -->
+    <div
+      class="enter mb-8"
+      style="--dur:0.7s; --delay:0.2s; --y:0px; --scale:0.85; filter: drop-shadow(0 0 32px rgba(61,170,69,0.5))"
+    >
+      <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-2 ring-white/10">
+        <img src="/assets/logo.webp" alt="Flowstate Foundation" class="w-full h-full object-cover" fetchpriority="high" />
+      </div>
+    </div>
+
+    <h1 class="enter font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-3" style="--delay:0.4s">
+      <Bold text={t('hero.headline1')} class="text-orange font-bold" lines />
+    </h1>
+
+    <p class="enter font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-3" style="--dur:0.5s; --delay:0.5s; --y:10px">
+      {t('hero.headerConnector')}
+    </p>
+
+    <h2 class="enter font-display text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight mb-6" style="--delay:0.55s">
+      <Bold text={t('hero.headline2')} class="text-orange font-bold" lines />
+    </h2>
+
+    <p class="enter font-sans text-lg sm:text-xl text-white/80 mb-6" style="--delay:0.55s; --y:10px">
+      {t('hero.headlineAccent')}
+    </p>
+
+    <div class="enter flex flex-row gap-2 mb-6" style="--delay:0.7s">
+      <Button href={localizePath('values', lang, t('hero.cta1Anchor'))} variant="primary" size="sm" track="hero_cta1">
+        {t('hero.cta1')}
+      </Button>
+      <Button href={localizePath('values', lang, t('hero.cta2Anchor'))} variant="outline" size="sm" track="hero_cta2">
+        {t('hero.cta2')}
+      </Button>
+    </div>
+
+    <p class="enter font-display italic text-lg sm:text-xl text-white/70 mb-4" style="--dur:0.8s; --delay:0.85s; --y:0px">
+      {t('hero.tagline')}
+    </p>
+
+    <p class="enter font-sans text-sm sm:text-base text-white/50 whitespace-pre-line leading-relaxed mb-5" style="--dur:0.8s; --delay:0.95s; --y:0px">
+      {t('hero.sub')}
+    </p>
+
+    <p class="enter font-sans text-xs text-white/30 tracking-widest uppercase mb-1" style="--dur:0.8s; --delay:1.05s; --y:0px">
+      {t('hero.service-sub')}
+    </p>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="enter absolute bottom-3 left-1/2 -translate-x-1/2 text-white/30" style="--delay:1.3s; --y:0px">
+    <div class="animate-bounce">
+      <ChevronDown className="w-6 h-6" />
+    </div>
+  </div>
+</section>

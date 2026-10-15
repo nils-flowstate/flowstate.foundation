@@ -1,7 +1,12 @@
 {
+  "meta": {
+    "title": "Flowstate Foundation – Digitale Präsenz für Herzensunternehmen",
+    "description": "Flowstate Foundation – Websites, Workflows und Social Media für Kreative, Coaches und purpose-driven Unternehmen. Dein Ausdruck verdient eine Bühne.",
+    "ogDescription": "Turn Your Love Into a Passion and Give it a solid digital Foundation."
+  },
   "nav": {
     "services": "Services",
-	    "about": "Über mich",
+    "about": "Über mich",
     "growTogether": "Grow Together",
     "home": "Startseite"
   },
@@ -16,7 +21,9 @@
     "cta2": "Dein Workflow",
     "tagline": "So individuell wie der Ausdruck deiner Seele",
     "service-sub": "Setup · Tools · Services",
-    "scrollHint": "Scroll"
+    "scrollHint": "Scroll",
+    "cta1Anchor": "website",
+    "cta2Anchor": "workflow"
   },
   "pain": {
     "headline": "Ich bringe dich in die technische Souveranität",
@@ -27,7 +34,10 @@
     "card2Desc": "Klare Prozesse, mehr Fokus, weniger Chaos.",
     "card3Title": "Social Media",
     "card3Desc": "Zeig dich in deinem authentischen Licht.",
-    "quote": "Erstrahle in dem Licht, in dem du erstrahlen möchtest – und teile deine Passion mit der Welt."
+    "quote": "Erstrahle in dem Licht, in dem du erstrahlen möchtest – und teile deine Passion mit der Welt.",
+    "card1Anchor": "website",
+    "card2Anchor": "workflow",
+    "card3Anchor": "social-media"
   },
   "motto": {
     "body1": "Lass Deine",
@@ -38,7 +48,9 @@
     "body6": "Verschmelzen",
     "body7": "und…",
     "cta": "Erreiche Deine Kundschaft",
-    "sub": "Lass Uns Gemeinsam Deine digitale Präsenz in einen Seelenspiegel Deines Ausdrucks Verwandeln"
+    "sub": "Lass Uns Gemeinsam Deine digitale Präsenz in einen Seelenspiegel Deines Ausdrucks Verwandeln",
+    "waLabel": "Lass uns gemeinsam durchstarten!",
+    "aboutLink": "Erfahre mehr über meine Passion"
   },
   "about": {
     "greeting": "Hey, ich bin Nils,",
@@ -134,7 +146,8 @@
       "p1": "Die **Natur** fließt durch unseren einzigartigen Ausdruck – durch jeden unserer Mitmenschen und allen Wesen.",
       "p2": "Lass andere Menschen den künstlerisch schönen Ausdruck deines **Herzens** spüren. Um diesen wunderschönen Planeten nicht nur zu schätzen, sondern zu **bewahren**.",
       "p3": "Lass uns gemeinsam **gefrorene Herzen** mit dem **Mitgefühl** unseres **Herzens** verzaubern – und unseren Mitmenschen mit **liebevoller Offenheit** begegnen."
-    }
+    },
+    "waLabel": "Wie möchtest du das erreichen?"
   },
   "cta": {
     "headline": "Bewahre den digitalen Durchblick",
@@ -153,7 +166,8 @@
     "sendButton": "Senden",
     "success": "Ich melde mich bei dir!",
     "alreadySubmitted": "Du hast dich bereits eingetragen. Bitte warte noch {{minutes}} Minuten.",
-    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuche es erneut."
+    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "consentHint": "Magst du mir kurz erlauben, dich zu kontaktieren? Tippe oben auf „Annehmen\" – dann fliegt deine Nummer direkt zu mir."
   },
   "events": {
     "title": "Events & Festivals",
@@ -168,7 +182,9 @@
     "filterFestival": "Festival",
     "filterArt": "Kunst",
     "locationPlaceholder": "Ort filtern...",
-    "meetMe": "Triff mich live auf einem der nächsten Events"
+    "meetMe": "Triff mich live auf einem der nächsten Events",
+    "filterBusiness": "Business",
+    "filterSport": "Sport"
   },
   "herzensprojekte": {
     "title": "Herzensprojekte",
@@ -181,7 +197,14 @@
     "spotifyPlaceholder": "Spotify Playlist folgt bald",
     "galleryTitle": "Galerie",
     "trackPreviewTitle": "Track Preview",
-    "spotifyArtist": "Zum Künstlerprofil"
+    "spotifyArtist": "Zum Künstlerprofil",
+    "galleryLabels": {
+      "open": "Bild öffnen",
+      "image": "Galerie",
+      "prev": "Vorheriges Bild",
+      "next": "Nächstes Bild",
+      "close": "Schließen"
+    }
   },
   "growTogether": {
     "title": "Grow Together",
@@ -233,5 +256,12 @@
     "q3author": "Unbekannt",
     "q4text": "Werde, der du bist.",
     "q4author": "Friedrich Nietzsche"
+  },
+  "welcome": {
+    "lines": [
+      "Ich freue mich auf Deine Einzigartigkeit.",
+      "Lass uns gemeinsam diesen Planeten ein fünkchen harmonischer gestalten.",
+      "Willkommen"
+    ]
   }
 }

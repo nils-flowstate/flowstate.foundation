@@ -1,0 +1,37 @@
+---
+import { MessageCircle } from 'lucide-react'
+import { getLangFromUrl, useTranslations } from '../../i18n/utils'
+
+type Variant = 'primary' | 'outline' | 'ghost'
+
+interface Props {
+  label?: string
+  variant?: Variant
+  class?: string
+  message?: string
+}
+
+const variantClasses: Record<Variant, string> = {
+  primary: 'bg-green text-white hover:bg-green/90',
+  outline: 'border-2 border-green text-green hover:bg-green/10',
+  ghost: 'text-green hover:bg-green/10',
+}
+
+const { label, variant = 'primary', class: className = '', message } = Astro.props
+const t = useTranslations(getLangFromUrl(Astro.url))
+const displayLabel = label || t('whatsapp.defaultLabel')
+
+const href = message
+  ? `https://wa.me/${import.meta.env.VITE_WA_PHONE}?text=${encodeURIComponent(message)}`
+  : import.meta.env.VITE_WA_URL
+---
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-track="whatsapp_button"
+  class={`inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-sans font-semibold transition duration-200 hover:scale-[1.02] active:scale-[0.98] ${variantClasses[variant]} ${className}`}
+>
+  <MessageCircle className="w-5 h-5" />
+  {displayLabel}
+</a>

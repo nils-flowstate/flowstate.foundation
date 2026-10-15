@@ -1,0 +1,52 @@
+[
+  {
+    "id": "gamescom-asus-2026",
+    "category": "business",
+    "title": { "de": "Gamescom", "en": "Gamescom" },
+    "role": { "de": "für ASUS", "en": "for ASUS" },
+    "location": "Koelnmesse, Congress-Centrum Nord, Köln",
+    "event_date": "2026-08-25",
+    "event_end_date": "2026-08-30",
+    "ticket_url": null
+  },
+  {
+    "id": "halbmarathon-koeln-2026",
+    "category": "sport",
+    "title": { "de": "Köln Halbmarathon", "en": "Cologne Half Marathon" },
+    "role": { "de": "Läufer", "en": "Runner" },
+    "location": "Köln",
+    "event_date": "2026-09-13",
+    "event_end_date": null,
+    "ticket_url": null
+  },
+  {
+    "id": "growth-marketer-summit-2026",
+    "category": "business",
+    "title": { "de": "GROWTH MARKETER Summit 2026", "en": "GROWTH MARKETER Summit 2026" },
+    "role": { "de": "Support-Team", "en": "Support team" },
+    "location": "Maritim Hotel Köln",
+    "event_date": "2026-09-19",
+    "event_end_date": "2026-09-20",
+    "ticket_url": null
+  },
+  {
+    "id": "tech-conference-berlin-2026",
+    "category": "business",
+    "title": { "de": "Tech Conference Berlin", "en": "Tech Conference Berlin" },
+    "role": { "de": "Teamlead für NVIDIA", "en": "Team lead for NVIDIA" },
+    "location": "Luckenwalder Str. 4-6, Berlin",
+    "event_date": "2026-10-20",
+    "event_end_date": "2026-10-22",
+    "ticket_url": null
+  },
+  {
+    "id": "volunteer-core-team-portugal-2026",
+    "category": "business",
+    "title": { "de": "Volunteer Core Team", "en": "Volunteer Core Team" },
+    "role": { "de": "Core Team", "en": "Core team" },
+    "location": "Luz, Portugal",
+    "event_date": "2026-11-23",
+    "event_end_date": "2026-12-01",
+    "ticket_url": null
+  }
+]

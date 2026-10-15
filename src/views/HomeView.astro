@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import HeroSection from '../components/sections/HeroSection.astro'
+import VisionSection from '../components/sections/VisionSection.astro'
+import PainSection from '../components/sections/PainSection.astro'
+import AboutPreviewSection from '../components/sections/AboutPreviewSection.astro'
+import ServicesPreviewSection from '../components/sections/ServicesPreviewSection.astro'
+import MottoSection from '../components/sections/MottoSection.astro'
+import type { Lang } from '../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+---
+<BaseLayout lang={lang}>
+  <HeroSection lang={lang} />
+  <VisionSection lang={lang} />
+  <PainSection lang={lang} />
+  <AboutPreviewSection lang={lang} />
+  <ServicesPreviewSection lang={lang} />
+  <MottoSection lang={lang} />
+  <!-- TODO Phase 2: ValuesSection -->
+  <!-- <CTASection /> -->
+</BaseLayout>

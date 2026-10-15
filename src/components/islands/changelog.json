@@ -1,0 +1,12 @@
+[
+  {
+    "date": "2026-10-15",
+    "file": "EventsList.tsx",
+    "description": "Kategorien business (ocean) und sport (green) ergänzt; Daten aus Content Collection statt Supabase-Stub; vergangen/kommend wird im Browser berechnet; Zeitraum + Rolle angezeigt; Datumsformat nach Sprache"
+  },
+  {
+    "date": "2026-10-15",
+    "file": "PhoneInput.tsx / AudioPlayer.tsx / GalleryLightbox.tsx / QuoteRotator.tsx",
+    "description": "React-Islands für die interaktiven Teile (aus PhoneInput.tsx und AboutUs.tsx). Klaro wird in PhoneInput lazy geladen (SSR)"
+  }
+]

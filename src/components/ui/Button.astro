@@ -1,0 +1,63 @@
+---
+import { Loader2 } from 'lucide-react'
+
+type Variant = 'primary' | 'secondary' | 'outline' | 'ghost'
+type Size = 'sm' | 'md' | 'lg'
+
+interface Props {
+  variant?: Variant
+  size?: Size
+  loading?: boolean
+  type?: 'button' | 'submit' | 'reset'
+  disabled?: boolean
+  class?: string
+  href?: string
+  target?: string
+  rel?: string
+  track?: string
+  [key: `data-${string}`]: string | undefined
+}
+
+const variantClasses: Record<Variant, string> = {
+  primary: 'bg-orange text-white hover:bg-orange/90',
+  secondary: 'bg-navy text-white hover:bg-navy/90',
+  outline: 'border-2 border-white text-white hover:bg-white/10',
+  ghost: 'text-navy hover:bg-navy/10',
+}
+
+const sizeClasses: Record<Size, string> = {
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg',
+}
+
+const {
+  variant = 'primary',
+  size = 'md',
+  loading = false,
+  type = 'button',
+  disabled = false,
+  class: className = '',
+  href,
+  target,
+  rel,
+  track,
+  ...rest
+} = Astro.props
+
+const inactive = disabled || loading
+const classes = `inline-flex items-center justify-center gap-2 rounded-xl font-sans font-semibold transition duration-200 ${
+  inactive ? 'opacity-60 cursor-not-allowed' : 'hover:scale-[1.02] active:scale-[0.98]'
+} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
+---
+{href ? (
+  <a href={href} target={target} rel={rel} class={classes} data-track={track} {...rest}>
+    {loading && <Loader2 className="w-4 h-4 animate-spin" />}
+    <slot />
+  </a>
+) : (
+  <button type={type} disabled={inactive} class={classes} data-track={track} {...rest}>
+    {loading && <Loader2 className="w-4 h-4 animate-spin" />}
+    <slot />
+  </button>
+)}

@@ -1,0 +1,45 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Button from '../components/ui/Button.astro'
+import { localizePath, useTranslations, type Lang } from '../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+<BaseLayout lang={lang} title="404" showHeader={false} showFooter={false} noindex>
+  <div class="min-h-screen bg-hero-bg flex flex-col items-center justify-center px-4 relative overflow-hidden">
+    <!-- Animated wave at bottom -->
+    <div class="absolute bottom-0 left-0 right-0 overflow-hidden">
+      <svg viewBox="0 0 1440 120" class="w-full" preserveAspectRatio="none" style="height: 80px">
+        <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" class="animate-wave" fill="rgba(46,111,191,0.3)" />
+        <path d="M0,80 C360,40 720,100 1080,60 C1260,40 1380,80 1440,70 L1440,120 L0,120 Z" class="animate-wave-slow" fill="rgba(240,112,32,0.2)" />
+        <path d="M0,90 C480,60 960,110 1440,80 L1440,120 L0,120 Z" fill="rgba(61,170,69,0.15)" />
+      </svg>
+    </div>
+
+    <div class="relative z-10 text-center space-y-6 max-w-lg">
+      <div class="enter" style="--dur:0.5s; --y:0px; --scale:0.8">
+        <img src="/assets/logo.webp" alt="Flowstate Foundation" class="h-16 w-auto mx-auto mb-8 brightness-0 invert" />
+      </div>
+
+      <p class="enter font-display text-8xl font-bold text-orange" style="--delay:0.2s">404</p>
+
+      <p class="enter font-sans text-lg text-white/70" style="--delay:0.3s">{t('404.title')}</p>
+
+      <div class="enter" style="--delay:0.4s">
+        <Button href={localizePath('home', lang)} variant="primary" size="lg">
+          {t('404.backHome')}
+        </Button>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
+
+<script>
+  import { track } from '../lib/analytics'
+  track('404', { page: window.location.pathname })
+</script>

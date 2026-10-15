@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-15",
+    "file": "Header.astro / Footer.astro",
+    "description": "Aus Header.tsx/Footer.tsx portiert. Sprach-Toggle verlinkt auf die Gegenstück-URL statt localStorage; Header-Hide per .header-hidden an <html>"
+  },
+  {
     "date": "2026-06-18",
     "file": "Footer.tsx",
     "description": "Cookie-Einstellungen-Link ergänzt (öffnet via openConsentManager() das Klaro-Modal erneut) – erfüllt Acceptance §207 (Consent-Re-Open im Footer)"

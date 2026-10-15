@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-15",
+    "file": "*.astro",
+    "description": "Alle Sections von React/Framer Motion nach Astro portiert; fadeUp/stagger jetzt über .reveal/[data-stagger] (CSS + IntersectionObserver). Links zeigen auf /werte#… statt /services#…"
+  },
+  {
     "date": "2026-05-26",
     "file": "HeroSection.tsx",
     "description": "headerConnector als eigenständiges Element zwischen headline1 und headline2 gerendert – kleiner gestylt (text-base sm:text-lg, italic, text-white/50) als Brücke zwischen den beiden Headlines; headline1 in <h1>, headline2 in <h2> getrennt"

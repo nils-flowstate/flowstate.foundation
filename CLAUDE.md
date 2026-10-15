@@ -125,30 +125,31 @@ MottoSection      → Emotionaler Abschluss (dark: navy) + CTA + About-Link
 Footer            → Logo + Nav + Legal
 ```
 
-**Routing:**
-- `/` → Home
-- `/about-us` → AboutUs
-- `/services` → Services
-- `/impressum` → Impressum
-- `/datenschutz` → Datenschutz
+**Routing (Astro, statisch – DE ohne Präfix, EN unter `/en`):**
+- `/` · `/en` → Home (`src/views/HomeView.astro`)
+- `/about-us` · `/en/about-us` → About inkl. Events (`AboutView.astro`)
+- `/werte` · `/en/values` → Werte-Seite (`ValuesView.astro`, `/services` leitet per nginx 301 dorthin)
+- `/impressum`, `/datenschutz`, `/welcome` (+ `/en/…`)
+- Seiten in `src/pages/*.astro` sind nur dünne Wrapper: `<View lang="de" />`
+- Routen-Tabelle für Links/Toggle: `routes` in `src/i18n/utils.ts` → `localizePath('values', lang, 'anker')`
 
 ---
 
 ## 🧩 Wichtige Komponenten
 
-### `WhatsAppButton` (`src/components/ui/WhatsAppButton.tsx`)
-```tsx
+### `WhatsAppButton` (`src/components/ui/WhatsAppButton.astro`)
+```astro
 <WhatsAppButton
   label="Button-Text"           // optional, fallback: t('whatsapp.defaultLabel')
   message="Vordefinierte Nachricht"  // optional, öffnet wa.me mit encodiertem Text
   variant="primary"             // 'primary' | 'outline' | 'ghost'
-  className=""                  // zusätzliche Tailwind-Klassen
+  class=""                      // zusätzliche Tailwind-Klassen
 />
 ```
 - **Primary** = grüner Hintergrund (`bg-green`)
 - **Outline** = grüner Rand, transparenter Hintergrund
 - **Ghost** = nur Text, kein Hintergrund
-- Trackt Analytics via `track('cta_click', { element: 'whatsapp_button' })`
+- Trackt Analytics via `data-track="whatsapp_button"` → globaler Click-Listener in `BaseLayout.astro` ruft `track('cta_click', …)`
 - Phone via `VITE_WA_PHONE`, Fallback-URL via `VITE_WA_URL`
 
 ### Aktuelle WhatsApp-Messages (wichtige Stellen)
@@ -161,18 +162,28 @@ Footer            → Logo + Nav + Legal
 | Services → Workflow | aus `whatsapp.workflowMessage` (i18n)                          |
 | Services → Social   | aus `whatsapp.socialMessage` (i18n)                            |
 
-### Animations-Pattern (Framer Motion)
-```tsx
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-}
-const stagger = {
-  visible: { transition: { staggerChildren: 0.1 } },
-}
-// Wrapper: variants={stagger} initial="hidden" whileInView="visible" viewport={{ once: true }}
-// Kinder:  variants={fadeUp}
+### Events (`src/content/events.json` → `EventsList`-Island auf der About-Seite)
+```json
+{ "id": "slug-jahr", "category": "business", "title": { "de": "…", "en": "…" },
+  "role": { "de": "…", "en": "…" }, "location": "…",
+  "event_date": "2026-10-20", "event_end_date": "2026-10-22", "ticket_url": null }
 ```
+- Kategorien: `business` · `sport` · `music` · `yoga` · `wellness` · `festival` · `art` · `other` (Schema: `src/content.config.ts`)
+- Vergangen/kommend entscheidet der Browser anhand des Datums – kein Rebuild nötig, nur für neue Events
+
+### Animations-Pattern (CSS + IntersectionObserver, kein Framer Motion mehr)
+```astro
+<!-- fadeUp beim Scrollen (einmalig): opacity 0→1, y 30→0, 0.5s ease-out -->
+<div data-stagger>                 <!-- stagger 0.1s; data-stagger="0.14" für eigenes Intervall -->
+  <h2 class="reveal">…</h2>        <!-- Kinder mit .reveal kommen nacheinander -->
+  <p class="reveal" style="--y:24px; --dur:0.65s">…</p>
+</div>
+
+<!-- Direkt beim Laden (Hero): -->
+<h1 class="enter" style="--delay:0.4s">…</h1>   <!-- --y, --dur, --scale optional -->
+```
+- Logik: `src/scripts/reveal.ts`, Styles: `src/styles/global.css`
+- Hover-Scale: `hover:scale-[1.02] active:scale-[0.98]` (nicht auf dasselbe Element wie `.reveal` legen)
 
 ---
 
@@ -180,7 +191,9 @@ const stagger = {
 
 - Alle UI-Texte in `src/i18n/de.json` (Primärsprache: Deutsch)
 - `src/i18n/en.json` vorhanden (aber sekundär)
-- Zugriff via `const { t } = useTranslation()` → `t('key.subkey')`
+- Zugriff in `.astro`: `const t = useTranslations(lang)` → `t('key.subkey')` (aus `src/i18n/utils.ts`)
+- React-Islands bekommen Texte als Props: `messages={getMessages(lang, 'events')}`
+- `**wort**` in Texten → `<Bold text={…} class="text-orange font-bold" />`
 - **Hardcoded** werden darf: Button-Labels und WhatsApp-Messages, die sehr spezifisch und emotional sind – diese ändern sich häufiger und müssen nicht übersetzt werden
 - Neue längere Texte besser in `de.json` eintragen
 
@@ -190,12 +203,13 @@ const stagger = {
 
 | Tool               | Verwendung                       |
 | ------------------ | -------------------------------- |
-| React + TypeScript | Frontend                         |
-| Vite               | Build-Tool                       |
-| Tailwind CSS       | Styling (Utility-First)          |
-| Framer Motion      | Animationen                      |
-| react-i18next      | Übersetzungen                    |
-| react-router-dom   | Routing                          |
+| Astro 7 (static)   | Framework, Routing, i18n, Build  |
+| React 19           | Nur Islands (Events, PhoneInput, Audio, Galerie, Zitate) |
+| TypeScript         | Überall                          |
+| Tailwind CSS 4     | Styling, Tokens als `@theme` in `src/styles/global.css` |
+| CSS + IO           | Animationen (`.reveal` / `.enter`) |
+| Content Collections| Events (`src/content/events.json`) |
+| Docker + nginx     | Hosting auf VPS (`deploy.sh`)    |
 | Supabase           | Backend (Phone-Leads, Analytics) |
 | Lucide React       | Icons                            |
 
@@ -254,4 +268,4 @@ Nach **jeder Codeänderung** muss eine `changelog.json` im **selben Ordner** wie
 ---
 
 *Brand Guideline: `/Users/nilstenkotte/Documents/-00_Brand-Flowstate-Foundation/Flowstate_Foundation_Brand_Guideline-05-2026-v1.pdf`*
-*Stand: Mai 2026 · v1.0*
+*Stand: Oktober 2026 · v1.1 (Astro-Migration)*

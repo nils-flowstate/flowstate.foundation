@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getMessages, localizePath, type Lang } from '../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const lines = getMessages<string[]>(lang, 'welcome.lines')
+---
+<BaseLayout lang={lang} showHeader={false} showFooter={false} noindex>
+  <section class="min-h-screen bg-navy flex items-center justify-center px-6">
+    <div
+      id="welcome"
+      data-home={localizePath('home', lang)}
+      class="enter text-center space-y-6 max-w-lg transition-[opacity,filter] duration-[800ms] [&.leaving]:opacity-0 [&.leaving]:blur-[24px]"
+      style="--y:0px"
+    >
+      {lines.map((line, i) => (
+        <p
+          class={`font-accent text-white leading-relaxed ${
+            i === lines.length - 1 ? 'text-4xl sm:text-5xl font-semibold mt-8' : 'text-2xl sm:text-3xl'
+          }`}
+        >
+          {line}
+        </p>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  import { track } from '../lib/analytics'
+
+  track('business_card_scan')
+  const welcome = document.getElementById('welcome')
+  setTimeout(() => {
+    welcome?.classList.add('leaving')
+    setTimeout(() => window.location.assign(welcome?.dataset.home ?? '/'), 800)
+  }, 4000)
+</script>

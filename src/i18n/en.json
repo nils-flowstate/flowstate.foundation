@@ -1,4 +1,9 @@
 {
+  "meta": {
+    "title": "Flowstate Foundation – Digital Presence for Heart-Led Businesses",
+    "description": "Flowstate Foundation – websites, workflows and social media for creatives, coaches and purpose-driven businesses. Your expression deserves a stage.",
+    "ogDescription": "Turn Your Love Into a Passion and Give it a solid digital Foundation."
+  },
   "nav": {
     "services": "Services",
     "about": "About",
@@ -16,7 +21,9 @@
     "cta2": "Your Workflow",
     "tagline": "As individual as the expression of your soul",
     "service-sub": "Setup · Tools · Services",
-    "scrollHint": "Scroll"
+    "scrollHint": "Scroll",
+    "cta1Anchor": "website",
+    "cta2Anchor": "workflow"
   },
   "pain": {
     "headline": "We are inundated with a flood of information.",
@@ -27,7 +34,10 @@
     "card2Desc": "Clear processes, more focus, less chaos.",
     "card3Title": "Social Media",
     "card3Desc": "Show yourself in your authentic light.",
-    "quote": "Shine in the light you wish to shine in – and share your passion with the world."
+    "quote": "Shine in the light you wish to shine in – and share your passion with the world.",
+    "card1Anchor": "website",
+    "card2Anchor": "workflow",
+    "card3Anchor": "social-media"
   },
   "motto": {
     "body1": "Let your",
@@ -38,7 +48,9 @@
     "body6": "together",
     "body7": "and…",
     "cta": "Reach Your Customers",
-    "sub": "Let us transform your digital presence into a mirror of your soul's expression"
+    "sub": "Let us transform your digital presence into a mirror of your soul's expression",
+    "waLabel": "Let's take off together!",
+    "aboutLink": "Discover more about my passion"
   },
   "about": {
     "greeting": "Hey, I'm Nils,",
@@ -134,7 +146,8 @@
       "p1": "**Nature** flows through our unique expression – through every fellow human being and all creatures.",
       "p2": "Let others feel the artistically beautiful expression of your **heart**. To not only cherish this wondrous planet, but to **preserve** it.",
       "p3": "Let us together enchant **frozen hearts** with the **compassion** of our **soul** – and meet our fellow human beings with **loving openness**."
-    }
+    },
+    "waLabel": "How do you want to get there?"
   },
   "cta": {
     "headline": "Stay clear in the digital world",
@@ -153,7 +166,8 @@
     "sendButton": "Send",
     "success": "I'll be in touch!",
     "alreadySubmitted": "You've already signed up. Please wait {{minutes}} more minutes.",
-    "errorGeneric": "Something went wrong. Please try again."
+    "errorGeneric": "Something went wrong. Please try again.",
+    "consentHint": "Would you allow me to contact you? Tap “Accept” above – and your number flies straight to me."
   },
   "events": {
     "title": "Events & Festivals",
@@ -168,7 +182,9 @@
     "filterFestival": "Festival",
     "filterArt": "Art",
     "locationPlaceholder": "Filter by location...",
-    "meetMe": "Meet me live at one of the next events"
+    "meetMe": "Meet me live at one of the next events",
+    "filterBusiness": "Business",
+    "filterSport": "Sport"
   },
   "herzensprojekte": {
     "title": "Passion Projects",
@@ -181,7 +197,14 @@
     "spotifyPlaceholder": "Spotify playlist coming soon",
     "galleryTitle": "Gallery",
     "trackPreviewTitle": "Track Preview",
-    "spotifyArtist": "Artist Profile"
+    "spotifyArtist": "Artist Profile",
+    "galleryLabels": {
+      "open": "Open image",
+      "image": "Gallery",
+      "prev": "Previous image",
+      "next": "Next image",
+      "close": "Close"
+    }
   },
   "growTogether": {
     "title": "Grow Together",
@@ -233,5 +256,12 @@
     "q3author": "Unknown",
     "q4text": "Become who you are.",
     "q4author": "Friedrich Nietzsche"
+  },
+  "welcome": {
+    "lines": [
+      "I look forward to your uniqueness.",
+      "Let's make this planet a little more harmonious together.",
+      "Welcome"
+    ]
   }
 }

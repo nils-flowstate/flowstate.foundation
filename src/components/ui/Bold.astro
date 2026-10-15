@@ -1,0 +1,23 @@
+---
+// Rendert „**wort**“-Markierungen aus i18n-Texten (ersetzt renderBold / renderGreen).
+// lines=true → jede Zeile (\n) als eigener Block-Span.
+import { splitBold } from '../../i18n/utils'
+
+interface Props {
+  text: string
+  class?: string
+  lines?: boolean
+}
+
+const { text, class: boldClass = 'font-bold', lines = false } = Astro.props
+const rows = lines ? text.split('\n') : [text]
+---
+{rows.map(row => (
+  lines ? (
+    <span class="block">
+      {splitBold(row).map(part => (part.bold ? <strong class={boldClass}>{part.text}</strong> : part.text))}
+    </span>
+  ) : (
+    splitBold(row).map(part => (part.bold ? <span class={boldClass}>{part.text}</span> : part.text))
+  )
+))}

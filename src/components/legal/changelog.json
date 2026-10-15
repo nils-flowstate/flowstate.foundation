@@ -1,0 +1,7 @@
+[
+  {
+    "date": "2026-10-15",
+    "file": "Datenschutz.tsx",
+    "description": "Aus src/pages verschoben, motion entfernt; wird serverseitig ohne Client-JS gerendert"
+  }
+]

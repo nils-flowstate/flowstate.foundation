@@ -6,7 +6,7 @@ VPS_IP="72.60.91.67"
 VPS_PATH="~/docker/website/flowstate/foundation"
 
 echo "📦 Syncing project to VPS..."
-rsync -avz --exclude node_modules --exclude dist --exclude .git \
+rsync -avz --exclude node_modules --exclude dist --exclude .astro --exclude .git \
   ./ $VPS_USER@$VPS_IP:$VPS_PATH/
 
 echo "🐳 Rebuilding and restarting container..."

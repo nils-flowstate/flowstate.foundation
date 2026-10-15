@@ -1,0 +1,171 @@
+---
+import { getCollection } from 'astro:content'
+import { Music2, ExternalLink } from 'lucide-react'
+import InstagramIcon from '../components/ui/InstagramIcon.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import WhatsAppButton from '../components/ui/WhatsAppButton.astro'
+import EventsList from '../components/islands/EventsList'
+import AudioPlayer from '../components/islands/AudioPlayer'
+import GalleryLightbox from '../components/islands/GalleryLightbox'
+import QuoteRotator from '../components/islands/QuoteRotator'
+import { getMessages, useTranslations, type Lang } from '../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+
+const quotes = [1, 2, 3, 4].map(n => ({ text: t(`quotes.q${n}text`), author: t(`quotes.q${n}author`) }))
+
+const igProfiles = [
+  { handle: 'nils.back.to.nature', url: 'https://instagram.com/nils.back.to.nature' },
+  { handle: 'Nils | Light.Child', url: 'https://instagram.com' },
+  { handle: 'flowstate.foundation', url: 'https://instagram.com/flowstate.foundation' },
+  // { handle: 'flowstate.express', url: 'https://instagram.com/flowstate.express' },
+]
+
+const playlists = [
+  { name: 'Radio Sigma', url: 'https://open.spotify.com/playlist/18lmDNZmx6KI0rgI6czS55?si=628c97b1d28744b2' },
+  { name: 'Manifesting High Energy', url: 'https://open.spotify.com/playlist/4Y0jmSHY0wJseCRXuFnR47?si=25fb48d765f84627' },
+  { name: 'Rave Sing Feel', url: 'https://open.spotify.com/playlist/5U1aAH34kLuqzDqx1qKBMM?si=2e4b34f95a974e09' },
+]
+
+const galleryImages = Array.from({ length: 9 }, (_, i) => `/assets/about-us/gallery/gal-0${i + 1}.webp`)
+
+const events = (await getCollection('events')).map(entry => ({ id: entry.id, ...entry.data }))
+---
+<BaseLayout lang={lang} title={t('about.whoAmI')}>
+  <!-- Hero -->
+  <section class="bg-navy pt-28 pb-16 px-4 text-center">
+    <h1 class="enter font-display text-3xl sm:text-4xl font-bold text-white">
+      {t('about.whoAmI')}
+    </h1>
+  </section>
+
+  <!-- Bio -->
+  <section class="bg-white py-20 px-4">
+    <div data-stagger class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <div class="reveal">
+        <img
+          src="/assets/nils.webp"
+          alt="Nils Tenkotte"
+          class="w-full max-w-sm mx-auto rounded-2xl shadow-lg object-cover aspect-[3/4]"
+          loading="lazy"
+        />
+      </div>
+      <div class="space-y-4 pt-4">
+        <h2 class="reveal font-display text-2xl font-bold text-navy">
+          {t('about.greeting')}
+        </h2>
+        {['fullBio1', 'fullBio2', 'fullBio3', 'fullBio4'].map(key => (
+          <p class="reveal font-sans text-text leading-relaxed">
+            {t(`about.${key}`)}
+          </p>
+        ))}
+        <div class="reveal pt-4 space-y-3">
+          <p class="font-sans font-semibold text-navy">{t('about.interest')}</p>
+          <WhatsAppButton class="w-full sm:w-auto" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rotating quotes -->
+  <section class="bg-surface py-16 px-4">
+    <div class="max-w-2xl mx-auto text-center min-h-[120px] flex flex-col justify-center">
+      <QuoteRotator client:visible quotes={quotes} />
+    </div>
+  </section>
+
+  <!-- Herzensprojekte -->
+  <section class="bg-surface py-20 px-4">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="reveal font-display text-2xl sm:text-3xl font-bold text-navy text-center mb-12">
+        {t('herzensprojekte.title')}
+      </h2>
+
+      <!-- Music Preview -->
+      <div class="reveal bg-white rounded-2xl p-6 shadow-xs mb-8">
+        <p class="font-sans text-xs font-semibold uppercase tracking-widest text-muted mb-4">
+          {t('herzensprojekte.trackPreviewTitle')}
+        </p>
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-14 h-14 bg-navy rounded-xl flex items-center justify-center shrink-0">
+            <Music2 className="w-6 h-6 text-white" />
+          </div>
+          <div>
+            <p class="font-sans font-semibold text-navy leading-snug">Nordic Thunder (Original Mix)</p>
+            <p class="font-sans text-sm text-muted">W4mBo</p>
+          </div>
+        </div>
+
+        <AudioPlayer client:visible src="/assets/about-us/audio/nordic-thunder.mp3" />
+
+        <a
+          href="https://open.spotify.com/intl-de/artist/1lS5n7US8saqwJGqJW89Ke?si=DkNDHlehSVGlvCMyVOwz6A"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#1DB954] text-white text-sm font-medium hover:opacity-90 transition-opacity"
+        >
+          <ExternalLink className="w-3.5 h-3.5" />
+          {t('herzensprojekte.spotifyArtist')}
+        </a>
+      </div>
+
+      <!-- Gallery 3×3 -->
+      <div class="reveal mb-8">
+        <h3 class="font-sans font-semibold text-navy mb-4">{t('herzensprojekte.galleryTitle')}</h3>
+        <GalleryLightbox client:visible images={galleryImages} labels={getMessages(lang, 'herzensprojekte.galleryLabels')} />
+      </div>
+
+      <!-- Row 1: Playlists + Instagram -->
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div class="reveal bg-white rounded-2xl p-6 shadow-xs">
+          <h3 class="font-sans font-semibold text-navy mb-1">{t('herzensprojekte.musicTitle')}</h3>
+          <p class="font-sans text-sm text-muted mb-5">{t('herzensprojekte.musicDesc')}</p>
+          <div class="space-y-3">
+            {playlists.map(p => (
+              <a
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface hover:bg-[#1DB954]/10 text-text hover:text-[#1DB954] transition-colors group"
+              >
+                <Music2 className="w-4 h-4 shrink-0 text-[#1DB954]" />
+                <span class="font-sans text-sm font-medium">{p.name}</span>
+                <span class="ml-auto opacity-0 group-hover:opacity-100 transition-opacity"><ExternalLink className="w-3.5 h-3.5" /></span>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div class="reveal bg-white rounded-2xl p-6 shadow-xs">
+          <h3 class="font-sans font-semibold text-navy mb-5">{t('herzensprojekte.socialTitle')}</h3>
+          <div class="space-y-3">
+            {igProfiles.map(profile => (
+              <a
+                href={profile.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 font-sans text-sm text-ocean hover:text-navy transition-colors"
+              >
+                <InstagramIcon class="w-4 h-4 shrink-0" />
+                @{profile.handle}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Events -->
+      <div class="reveal" id="events">
+        <h3 class="font-display text-2xl font-bold text-navy text-center mb-10">
+          {t('events.title')}
+        </h3>
+        <EventsList client:visible events={events} lang={lang} messages={getMessages(lang, 'events')} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

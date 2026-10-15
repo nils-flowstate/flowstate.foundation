@@ -1,0 +1,63 @@
+---
+import { alternatePath, localizePath, useTranslations, type Lang } from '../../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+const current = Astro.url.pathname.replace(/\/$/, '') || '/'
+const otherLang: Lang = lang === 'de' ? 'en' : 'de'
+
+const navLinks = [
+  { to: localizePath('values', lang), label: t('nav.services') },
+  { to: localizePath('about', lang), label: t('nav.about') },
+]
+---
+<header
+  id="site-header"
+  class="fixed top-0 left-0 right-0 z-50 bg-white shadow-xs transition-transform duration-300 [.header-hidden_&]:-translate-y-full"
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href={localizePath('home', lang)} class="flex items-center">
+      <img src="/assets/Flowstate-Logo.webp" alt="Flowstate Foundation" class="h-9 w-auto" />
+    </a>
+
+    <nav class="flex items-center gap-4">
+      {navLinks.map(link => (
+        <a
+          href={link.to}
+          class={`font-sans font-medium text-sm text-text transition-opacity hover:opacity-100 ${
+            current === link.to ? 'opacity-100 font-semibold' : 'opacity-60'
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+
+      <a
+        href={alternatePath(Astro.url.pathname, otherLang)}
+        hreflang={otherLang}
+        class="font-sans text-sm font-medium px-2.5 py-1 rounded-lg border border-gray-200 text-text hover:bg-surface transition-colors"
+        aria-label={lang === 'de' ? 'Switch to English' : 'Auf Deutsch wechseln'}
+      >
+        {lang === 'de' ? '🇩🇪 DE' : '🇬🇧 EN'}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Header beim Runterscrollen ausblenden. Die Klasse an <html> nutzt auch die Sticky-Subnav der Werte-Seite.
+  let lastScrollY = 0
+  window.addEventListener(
+    'scroll',
+    () => {
+      const currentY = window.scrollY
+      document.documentElement.classList.toggle('header-hidden', currentY > lastScrollY && currentY > 80)
+      lastScrollY = currentY
+    },
+    { passive: true }
+  )
+</script>

@@ -1,0 +1,66 @@
+---
+import { ShieldCheck } from 'lucide-react'
+import { localizePath, useTranslations, type Lang } from '../../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+const tagline = t('footer.tagline')
+---
+<footer class="bg-navy text-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+    <div class="flex flex-col items-center gap-8">
+      <!-- Logo – circular, top -->
+      <div
+        class="enter mb-8"
+        style="--dur:0.7s; --delay:0.2s; --y:0px; --scale:0.85; filter: drop-shadow(0 0 32px rgba(61,170,69,0.5))"
+      >
+        <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-2 ring-white/10">
+          <img src="/assets/logo.webp" alt="Flowstate Foundation" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+      </div>
+
+      <nav class="flex flex-wrap justify-center gap-6">
+        <a href={localizePath('home', lang)} class="font-sans text-sm text-white/70 hover:text-white transition-colors">
+          {t('nav.home')}
+        </a>
+        <a href={localizePath('about', lang)} class="font-sans text-sm text-white/70 hover:text-white transition-colors">
+          {t('nav.about')}
+        </a>
+        <a href={localizePath('values', lang)} class="font-sans text-sm text-white/70 hover:text-white transition-colors">
+          {t('nav.services')}
+        </a>
+      </nav>
+
+      {tagline && (
+        <div class="flex items-center gap-2 text-white/50 text-sm font-sans text-center max-w-xs">
+          <ShieldCheck className="w-4 h-4 shrink-0 text-green" />
+          <span>{tagline}</span>
+        </div>
+      )}
+
+      <div class="border-t border-white/10 w-full pt-6 flex flex-col items-center gap-2">
+        <nav class="flex gap-6">
+          <a href={localizePath('impressum', lang)} class="font-sans text-xs text-white/40 hover:text-white/70 transition-colors">
+            {t('footer.impressum')}
+          </a>
+          <a href={localizePath('datenschutz', lang)} class="font-sans text-xs text-white/40 hover:text-white/70 transition-colors">
+            {t('footer.datenschutz')}
+          </a>
+          <button
+            type="button"
+            data-consent-manager
+            class="font-sans text-xs text-white/40 hover:text-white/70 transition-colors"
+          >
+            {t('footer.cookieSettings')}
+          </button>
+        </nav>
+        <p class="font-sans text-xs text-white/40">{t('footer.copyright')}</p>
+        <p class="font-sans text-xs text-white/30">{t('footer.madeWith')}</p>
+      </div>
+    </div>
+  </div>
+</footer>

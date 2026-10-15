@@ -1,0 +1,78 @@
+---
+import { Globe, Workflow, Video } from 'lucide-react'
+import { localizePath, useTranslations, type Lang } from '../../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+
+const cards = [
+  {
+    Icon: Globe,
+    iconClass: 'w-10 h-10 text-navy',
+    title: t('pain.card1Title'),
+    desc: t('pain.card1Desc'),
+    href: localizePath('values', lang, t('pain.card1Anchor')),
+    borderColor: 'border-navy/20 hover:border-navy/40',
+    gradientStyle: 'linear-gradient(135deg, rgba(26,60,110,0.07) 0%, transparent 65%)',
+  },
+  {
+    Icon: Workflow,
+    iconClass: 'w-10 h-10 text-orange',
+    title: t('pain.card2Title'),
+    desc: t('pain.card2Desc'),
+    href: localizePath('values', lang, t('pain.card2Anchor')),
+    borderColor: 'border-navy/20 hover:border-orange/40',
+    gradientStyle: 'linear-gradient(135deg, rgba(240,112,32,0.08) 0%, transparent 65%)',
+  },
+  {
+    Icon: Video,
+    iconClass: 'w-10 h-10 text-fire',
+    title: t('pain.card3Title'),
+    desc: t('pain.card3Desc'),
+    href: localizePath('values', lang, t('pain.card3Anchor')),
+    borderColor: 'border-navy/20 hover:border-fire/40',
+    gradientStyle: 'linear-gradient(135deg, rgba(224,53,21,0.08) 0%, transparent 65%)',
+  },
+]
+---
+<section class="bg-surface py-20 px-4">
+  <div class="max-w-5xl mx-auto">
+    <div data-stagger class="text-center mb-14">
+      <h2 class="reveal font-display text-2xl sm:text-3xl font-bold text-navy mb-4">
+        {t('pain.headline')}
+      </h2>
+      <p class="reveal font-sans text-lg text-muted">
+        {t('pain.body')}
+      </p>
+    </div>
+
+    <div data-stagger class="grid sm:grid-cols-3 gap-6 mb-14">
+      {cards.map(card => (
+        <div class="reveal">
+          <div class="group h-full transition-[scale] duration-200 hover:scale-[1.01]">
+          <a
+            href={card.href}
+            class={`relative block overflow-hidden bg-white rounded-2xl p-6 border-2 transition-all duration-300 cursor-pointer h-full ${card.borderColor}`}
+          >
+            <div
+              class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl pointer-events-none"
+              style={`background: ${card.gradientStyle}`}
+            ></div>
+            <div class="relative mb-4"><card.Icon className={card.iconClass} /></div>
+            <h3 class="relative font-sans font-semibold text-lg text-text mb-2">{card.title}</h3>
+            <p class="relative font-sans text-muted text-sm leading-relaxed">{card.desc}</p>
+          </a>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <blockquote class="reveal text-center italic font-display text-navy text-lg sm:text-xl max-w-2xl mx-auto">
+      "{t('pain.quote')}"
+    </blockquote>
+  </div>
+</section>

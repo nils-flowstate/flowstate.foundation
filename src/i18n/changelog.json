@@ -1,5 +1,10 @@
 [
   {
+    "date": "2026-10-15",
+    "file": "de.json / en.json / utils.ts",
+    "description": "Neue Keys: meta.*, *Anchor, vision.waLabel, motto.waLabel/aboutLink, forms.consentHint, events.filterBusiness/filterSport, herzensprojekte.galleryLabels, welcome.lines. utils.ts ersetzt i18n.ts (t(), Routen, alternatePath, splitBold)"
+  },
+  {
     "date": "2026-06-18",
     "file": "de.json / en.json",
     "description": "footer.cookieSettings ergänzt ('Cookie-Einstellungen' / 'Cookie Settings') für den neuen Consent-Manager-Link im Footer (Klaro, Acceptance §207)"

@@ -1,0 +1,7 @@
+[
+  {
+    "date": "2026-10-15",
+    "file": "*View.astro",
+    "description": "Neu: eine View pro Seite mit Prop lang – genutzt von src/pages (de) und src/pages/en (en). ValuesView ist die frühere Services-Seite unter /werte"
+  }
+]

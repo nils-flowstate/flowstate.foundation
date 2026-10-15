@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://flowstate.foundation/sitemap.xml
+Sitemap: https://flowstate.foundation/sitemap-index.xml

@@ -1,0 +1,7 @@
+[
+  {
+    "date": "2026-10-15",
+    "file": "Button.astro / WhatsAppButton.astro / Bold.astro / InstagramIcon.astro",
+    "description": "Neu als Astro-Komponenten (0 KB JS). WhatsAppButton jetzt als <a> mit data-track statt window.open. InstagramIcon ersetzt das aus lucide entfernte Marken-Icon"
+  }
+]
