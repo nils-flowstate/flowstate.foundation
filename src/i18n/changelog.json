@@ -2,6 +2,11 @@
   {
     "date": "2026-10-17",
     "file": "de.json",
+    "description": "values.standTitle „Wofür ich stehe“ ergänzt (de + en)"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "de.json",
     "description": "values.offers/offersTitle entfernt; Wording ohne Business-/Website-/Workflow-Bezug auf Verbindung ausgerichtet (Meta, Hero, Pain, About, Werte, Motto, WhatsApp, Event-Filter „Messe & Kongress“)"
   },
   {

@@ -2,6 +2,11 @@
   {
     "date": "2026-10-17",
     "file": "HomeView.astro",
+    "description": "PortraitSection („Wofür ich stehe“) vor die Events verschoben"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "HomeView.astro",
     "description": "PortraitSection nach den Events eingefügt"
   },
   {

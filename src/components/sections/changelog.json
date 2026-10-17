@@ -2,6 +2,11 @@
   {
     "date": "2026-10-17",
     "file": "PortraitSection.astro",
+    "description": "Headline „Wofür ich stehe“ ergänzt, Hintergrund surface für Wechsel zu Events (weiß)"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "PortraitSection.astro",
     "description": "Neu: Portrait von Nils mit den drei Wert-Icons zentriert darunter, verlinkt auf /werte#…"
   },
   {
