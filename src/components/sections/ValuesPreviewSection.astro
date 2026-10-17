@@ -1,0 +1,51 @@
+---
+import Button from '../ui/Button.astro'
+import { localizePath, useTranslations, type Lang } from '../../i18n/utils'
+import { VALUES } from '../../i18n/values'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+<section class="bg-surface py-20 px-4">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="reveal font-display text-2xl sm:text-3xl font-bold text-navy text-center mb-12">
+      {t('values.previewTitle')}
+    </h2>
+
+    <div data-stagger class="grid sm:grid-cols-3 gap-6">
+      {VALUES.map(value => {
+        const k = `values.items.${value.key}`
+        return (
+          <div class="reveal flex">
+            <div class={`bg-white rounded-2xl p-6 border-2 border-transparent transition duration-200 hover:scale-[1.01] ${value.hoverBorder} flex flex-col w-full`}>
+              <div class="mb-4"><value.Icon className={`w-10 h-10 ${value.iconColor}`} /></div>
+              <h3 class="font-sans font-bold text-lg text-text mb-3">{t(`${k}.title`)}</h3>
+              <ul class="space-y-1 mb-3">
+                {[1, 2, 3].map(s => (
+                  <li class="flex items-center gap-2 font-sans text-sm text-muted">
+                    <span class="w-1.5 h-1.5 rounded-full bg-muted/40 shrink-0"></span>
+                    {t(`${k}.sub${s}`)}
+                  </li>
+                ))}
+              </ul>
+              <p class="font-sans font-semibold text-sm text-navy mb-2">{t(`${k}.tagline`)}</p>
+              <p class="font-sans text-sm text-muted leading-relaxed mb-5 flex-1">{t(`${k}.desc`)}</p>
+              <Button
+                href={localizePath('values', lang, t(`${k}.anchor`))}
+                variant="ghost"
+                size="sm"
+                class="w-full border border-gray-200 text-navy hover:bg-surface"
+              >
+                {t('values.learnMore')}
+              </Button>
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  </div>
+</section>

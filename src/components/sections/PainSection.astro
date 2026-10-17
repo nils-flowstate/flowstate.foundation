@@ -1,5 +1,5 @@
 ---
-import { Globe, Workflow, Video } from 'lucide-react'
+import { HeartHandshake, Gem, Flame } from 'lucide-react'
 import { localizePath, useTranslations, type Lang } from '../../i18n/utils'
 
 interface Props {
@@ -11,7 +11,7 @@ const t = useTranslations(lang)
 
 const cards = [
   {
-    Icon: Globe,
+    Icon: HeartHandshake,
     iconClass: 'w-10 h-10 text-navy',
     title: t('pain.card1Title'),
     desc: t('pain.card1Desc'),
@@ -20,7 +20,7 @@ const cards = [
     gradientStyle: 'linear-gradient(135deg, rgba(26,60,110,0.07) 0%, transparent 65%)',
   },
   {
-    Icon: Workflow,
+    Icon: Gem,
     iconClass: 'w-10 h-10 text-orange',
     title: t('pain.card2Title'),
     desc: t('pain.card2Desc'),
@@ -29,7 +29,7 @@ const cards = [
     gradientStyle: 'linear-gradient(135deg, rgba(240,112,32,0.08) 0%, transparent 65%)',
   },
   {
-    Icon: Video,
+    Icon: Flame,
     iconClass: 'w-10 h-10 text-fire',
     title: t('pain.card3Title'),
     desc: t('pain.card3Desc'),

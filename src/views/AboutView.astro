@@ -1,10 +1,8 @@
 ---
-import { getCollection } from 'astro:content'
 import { Music2, ExternalLink } from 'lucide-react'
 import InstagramIcon from '../components/ui/InstagramIcon.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import WhatsAppButton from '../components/ui/WhatsAppButton.astro'
-import EventsList from '../components/islands/EventsList'
 import AudioPlayer from '../components/islands/AudioPlayer'
 import GalleryLightbox from '../components/islands/GalleryLightbox'
 import QuoteRotator from '../components/islands/QuoteRotator'
@@ -33,8 +31,6 @@ const playlists = [
 ]
 
 const galleryImages = Array.from({ length: 9 }, (_, i) => `/assets/about-us/gallery/gal-0${i + 1}.webp`)
-
-const events = (await getCollection('events')).map(entry => ({ id: entry.id, ...entry.data }))
 ---
 <BaseLayout lang={lang} title={t('about.whoAmI')}>
   <!-- Hero -->
@@ -157,14 +153,6 @@ const events = (await getCollection('events')).map(entry => ({ id: entry.id, ...
             ))}
           </div>
         </div>
-      </div>
-
-      <!-- Events -->
-      <div class="reveal" id="events">
-        <h3 class="font-display text-2xl font-bold text-navy text-center mb-10">
-          {t('events.title')}
-        </h3>
-        <EventsList client:visible events={events} lang={lang} messages={getMessages(lang, 'events')} />
       </div>
     </div>
   </section>

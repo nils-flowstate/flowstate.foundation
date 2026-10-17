@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content'
+import EventsList from '../islands/EventsList'
+import { getMessages, useTranslations, type Lang } from '../../i18n/utils'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+
+const events = (await getCollection('events')).map(entry => ({ id: entry.id, ...entry.data }))
+---
+<section id="events" class="bg-white py-20 px-4 scroll-mt-20">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="reveal font-display text-2xl sm:text-3xl font-bold text-navy text-center mb-10">
+      {t('events.title')}
+    </h2>
+    <div class="reveal">
+      <EventsList client:visible events={events} lang={lang} messages={getMessages(lang, 'events')} />
+    </div>
+  </div>
+</section>

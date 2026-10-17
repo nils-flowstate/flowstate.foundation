@@ -1,9 +1,10 @@
 ---
-import { Globe, Workflow, Video, ArrowLeft } from 'lucide-react'
+import { ArrowLeft } from 'lucide-react'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import WhatsAppButton from '../components/ui/WhatsAppButton.astro'
 import Button from '../components/ui/Button.astro'
 import { localizePath, useTranslations, type Lang } from '../i18n/utils'
+import { VALUES } from '../i18n/values'
 
 interface Props {
   lang: Lang
@@ -12,18 +13,22 @@ interface Props {
 const { lang } = Astro.props
 const t = useTranslations(lang)
 
-const navItems = [
-  { id: 'website', label: t('services.websitePageTitle'), Icon: Globe },
-  { id: 'workflow', label: t('services.workflowPageTitle'), Icon: Workflow },
-  { id: 'social-media', label: t('services.socialPageTitle'), Icon: Video },
-]
+const sections = VALUES.map((value, i) => ({
+  ...value,
+  k: `values.items.${value.key}`,
+  id: t(`values.items.${value.key}.anchor`),
+  bg: i % 2 === 1 ? 'bg-surface' : 'bg-white',
+}))
 ---
-<BaseLayout lang={lang} title={t('services.pageIntro')}>
+<BaseLayout lang={lang} title={t('values.pageIntro')} description={t('values.pageSub')}>
   <!-- Hero -->
   <section class="bg-navy pt-28 pb-16 px-4 text-center">
     <h1 class="enter font-display text-3xl sm:text-4xl font-bold text-white mb-4">
-      {t('services.pageIntro')}
+      {t('values.pageIntro')}
     </h1>
+    <p class="enter font-display italic text-lg sm:text-xl text-white/70" style="--delay:0.15s">
+      {t('values.pageSub')}
+    </p>
   </section>
 
   <!-- Sticky subnav -->
@@ -37,110 +42,48 @@ const navItems = [
         <span class="hidden sm:inline">{t('nav.home')}</span>
       </a>
       <div class="w-px h-5 bg-gray-200 mr-1"></div>
-      {navItems.map((item, i) => (
+      {sections.map((section, i) => (
         <a
-          href={`#${item.id}`}
-          data-subnav={item.id}
+          href={`#${section.id}`}
+          data-subnav={section.id}
           aria-current={i === 0 ? 'true' : undefined}
+          aria-label={t(`${section.k}.nav`)}
           class="flex items-center gap-2 px-4 py-2 rounded-xl font-sans text-sm font-medium transition-colors text-muted hover:bg-surface hover:text-text aria-[current=true]:bg-navy aria-[current=true]:text-white aria-[current=true]:hover:bg-navy aria-[current=true]:hover:text-white"
         >
-          <item.Icon className="w-4 h-4" />
-          <span class="hidden sm:inline">{item.label}</span>
+          <section.Icon className="w-4 h-4" />
+          <span class="hidden sm:inline">{t(`${section.k}.nav`)}</span>
         </a>
       ))}
     </div>
   </div>
 
-  <!-- Website -->
-  <section id="website" data-section class="py-20 px-4 bg-white scroll-mt-32">
-    <div data-stagger class="max-w-3xl mx-auto">
-      <div class="reveal flex items-center gap-3 mb-6">
-        <Globe className="w-10 h-10 text-green" />
-        <h2 class="font-display text-2xl sm:text-3xl font-bold text-navy">
-          {t('services.websitePageTitle')}
-        </h2>
-      </div>
-      <p class="reveal font-sans font-semibold text-navy text-lg mb-2">{t('services.card1Tagline')}</p>
-      <p class="reveal font-sans text-text leading-relaxed mb-6">{t('services.websiteDrawer.body')}</p>
-      <div class="reveal bg-surface rounded-2xl p-6 mb-6">
-        <p class="font-sans font-semibold text-navy text-sm uppercase tracking-wide mb-3">
-          {t('services.websiteDrawer.process')}
-        </p>
-        <ul class="space-y-2">
-          {['step1', 'step2', 'step3'].map(step => (
-            <li class="flex items-start gap-2 font-sans text-text">
-              <span class="text-orange mt-1 shrink-0">→</span>
-              {t(`services.websiteDrawer.${step}`)}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <p class="reveal font-sans text-muted italic mb-8">{t('services.websiteDrawer.pricing')}</p>
-      <p class="reveal font-sans font-bold text-navy leading-relaxed ml-1 mb-6">{t('services.websitePrice')}</p>
-      <div class="reveal flex flex-col sm:flex-row gap-3">
-        <WhatsAppButton label={t('services.websiteDrawer.ctaLabel')} message={t('whatsapp.websiteMessage')} />
-      </div>
-    </div>
-  </section>
+  {sections.map(section => (
+    <section id={section.id} data-section class={`py-20 px-4 scroll-mt-32 ${section.bg}`}>
+      <div data-stagger class="max-w-3xl mx-auto">
+        <div class="reveal flex items-center gap-3 mb-6">
+          <section.Icon className={`w-10 h-10 shrink-0 ${section.iconColor}`} />
+          <h2 class="font-display text-2xl sm:text-3xl font-bold text-navy">{t(`${section.k}.title`)}</h2>
+        </div>
+        <p class="reveal font-sans font-semibold text-navy text-lg mb-2">{t(`${section.k}.tagline`)}</p>
+        {t(`${section.k}.body`).split('\n').map(paragraph => (
+          <p class="reveal font-sans text-text leading-relaxed mb-4">{paragraph}</p>
+        ))}
 
-  <!-- Workflow -->
-  <section id="workflow" data-section class="py-20 px-4 bg-surface scroll-mt-32">
-    <div data-stagger class="max-w-3xl mx-auto">
-      <div class="reveal flex items-center gap-3 mb-6">
-        <Workflow className="w-10 h-10 text-navy" />
-        <h2 class="font-display text-2xl sm:text-3xl font-bold text-navy">
-          {t('services.workflowPageTitle')}
-        </h2>
-      </div>
-      <p class="reveal font-sans font-semibold text-navy text-lg mb-2">{t('services.card2Tagline')}</p>
-      <p class="reveal font-sans text-text leading-relaxed mb-4">{t('services.workflowDrawer.body')}</p>
-      <p class="reveal font-sans text-text leading-relaxed mb-2 whitespace-pre-line">{t('services.card2Desc')}</p>
-      <p class="reveal font-sans font-bold text-navy leading-relaxed ml-1 mb-6">{t('services.workflowPrice')}</p>
-      <div class="reveal flex flex-col sm:flex-row gap-3">
-        <WhatsAppButton label={t('services.workflowDrawer.ctaLabel')} message={t('whatsapp.workflowMessage')} />
-      </div>
-    </div>
-  </section>
-
-  <!-- Social Media -->
-  <section id="social-media" data-section class="py-20 px-4 bg-white scroll-mt-32">
-    <div data-stagger class="max-w-3xl mx-auto">
-      <div class="reveal flex items-center gap-3 mb-6">
-        <Video className="w-10 h-10 text-fire" />
-        <h2 class="font-display text-2xl sm:text-3xl font-bold text-navy">
-          {t('services.socialPageTitle')}
-        </h2>
-      </div>
-      <p class="reveal font-sans font-semibold text-navy text-lg mb-2">{t('services.card3Tagline')}</p>
-      <p class="reveal font-sans text-text leading-relaxed mb-6">{t('services.card3Desc')}</p>
-      <div class="reveal grid sm:grid-cols-2 gap-4 mb-6">
-        <div class="bg-surface rounded-2xl p-5">
-          <p class="font-sans font-semibold text-navy text-sm uppercase tracking-wide mb-3">{t('services.socialDrawer.cutOnly')}</p>
-          <p class="font-sans text-text">{t('services.socialDrawer.cut5')}</p>
-          <p class="font-sans text-text">{t('services.socialDrawer.cut10')}</p>
-        </div>
-        <div class="bg-surface rounded-2xl p-5">
-          <p class="font-sans font-semibold text-navy text-sm uppercase tracking-wide mb-3">{t('services.socialDrawer.full')}</p>
-          <p class="font-sans text-text">{t('services.socialDrawer.full5')}</p>
-          <p class="font-sans text-text">{t('services.socialDrawer.full10')}</p>
+        <div class="reveal border-t border-gray-100 pt-6 mt-8 flex flex-col sm:flex-row gap-3">
+          <WhatsAppButton label={t(`${section.k}.ctaLabel`)} message={t(`whatsapp.${section.key}Message`)} />
+          {section.key === 'empowerment' && (
+            <Button href={localizePath('about', lang)} variant="ghost" class="text-navy border border-gray-200">
+              {t('about.moreLink')}
+            </Button>
+          )}
         </div>
       </div>
-      <p class="reveal font-sans text-ocean font-semibold mb-1">{t('services.socialDrawer.promise')}</p>
-      <p class="reveal font-sans text-muted text-sm mb-8">{t('services.socialDrawer.free')}</p>
-      <div class="reveal border-t border-gray-100 pt-6 space-y-4">
-        <div class="flex flex-col sm:flex-row gap-3">
-          <WhatsAppButton label={t('about.waButton')} message={t('whatsapp.socialMessage')} />
-          <Button href={localizePath('about', lang)} variant="ghost" class="text-navy border border-navy-400 hover-border:bg-navy">
-            {t('about.moreLink')}
-          </Button>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  ))}
 </BaseLayout>
 
 <script>
-  // Aktiver Subnav-Tab folgt der sichtbaren Section (vorher IntersectionObserver in Services.tsx)
+  // Aktiver Subnav-Tab folgt der sichtbaren Section
   const links = document.querySelectorAll<HTMLAnchorElement>('[data-subnav]')
   const setActive = (id: string) =>
     links.forEach(link =>

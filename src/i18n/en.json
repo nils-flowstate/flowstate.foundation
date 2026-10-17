@@ -1,203 +1,167 @@
 {
   "meta": {
-    "title": "Flowstate Foundation – Digital Presence for Heart-Led Businesses",
-    "description": "Flowstate Foundation – websites, workflows and social media for creatives, coaches and purpose-driven businesses. Your expression deserves a stage.",
-    "ogDescription": "Turn Your Love Into a Passion and Give it a solid digital Foundation."
+    "title": "Flowstate Foundation – Connecting People, Quality Experiences, Empowerment",
+    "description": "Flowstate Foundation by Nils Tenkotte, Cologne: I bring people together, create quality experiences and empower people to step into their power – heart to heart.",
+    "ogDescription": "Connect people. Feel quality. Step into your own power."
   },
   "nav": {
-    "services": "Services",
-    "about": "About",
+    "values": "Values",
+    "about": "About me",
     "growTogether": "Grow Together",
     "home": "Home"
   },
   "hero": {
-    "headline1": "Let your Digital Processes **Flow**",
-    "headerConnector": "But...",
-    "headline2": "Do You have a **Foundation** to Grow?",
-    "headlineAccent": "Let Your Online Presence Shine",
-    "headlineEnd": "Create Your Foundation to Grow",
-    "sub": "Your Creation deserves a stage\nYour Stage. Your Standards.",
-    "cta1": "Your Website",
-    "cta2": "Your Workflow",
-    "tagline": "As individual as the expression of your soul",
-    "service-sub": "Setup · Tools · Services",
-    "scrollHint": "Scroll",
-    "cta1Anchor": "website",
-    "cta2Anchor": "workflow"
+    "headline1": "Your vision wants to **Flow**",
+    "headerConnector": "But…",
+    "headline2": "does it stand on a **Foundation** that carries it?",
+    "headlineAccent": "Connecting people. Making quality felt. Empowering you.",
+    "cta1": "My values",
+    "cta1Anchor": "connection",
+    "cta2": "What carries me",
+    "cta2Anchor": "quality",
+    "tagline": "As unique as the expression of your soul",
+    "sub": "Your vision deserves a stage.\nAnd people who feel it.",
+    "service-sub": "Connection · Quality · Empowerment",
+    "scrollHint": "Scroll"
+  },
+  "vision": {
+    "label": "My vision",
+    "s1a": "I give everything to",
+    "s1bold1": "bring people together",
+    "s1b": "and to",
+    "s1bold2": "spark shared experience",
+    "connector": "and so",
+    "s2a": "to open spaces where",
+    "s2bold1": "quality can be felt",
+    "s2b": "and every person",
+    "s2bold2": "finds their power",
+    "s2c": "",
+    "waLabel": "How do you want to get there?",
+    "manifest": {
+      "hook": "My **heart's wish**: that the **nature** of every single **soul** begins to **shine**.",
+      "p1": "**Nature** flows through our expression – through every person, through every being.",
+      "p2": "When others feel the expression of your **heart**, something starts to grow. Something that doesn't just cherish this planet, but **protects** it.",
+      "p3": "Let's warm **frozen hearts** with **compassion** – and meet each other with **loving openness**."
+    }
   },
   "pain": {
-    "headline": "We are inundated with a flood of information.",
-    "body": "I give you a foundation of digital clarity.",
-    "card1Title": "Website",
-    "card1Desc": "Your digital stage – individual, authentic, impactful.",
-    "card2Title": "Workflow Structure",
-    "card2Desc": "Clear processes, more focus, less chaos.",
-    "card3Title": "Social Media",
-    "card3Desc": "Show yourself in your authentic light.",
-    "quote": "Shine in the light you wish to shine in – and share your passion with the world.",
-    "card1Anchor": "website",
-    "card2Anchor": "workflow",
-    "card3Anchor": "social-media"
-  },
-  "motto": {
-    "body1": "Let your",
-    "body2": "Idea",
-    "body3": "and your",
-    "body4": "Digital Identity",
-    "body5": "merge",
-    "body6": "together",
-    "body7": "and…",
-    "cta": "Reach Your Customers",
-    "sub": "Let us transform your digital presence into a mirror of your soul's expression",
-    "waLabel": "Let's take off together!",
-    "aboutLink": "Discover more about my passion"
+    "headline": "Sound familiar?",
+    "body": "Your vision burns inside you. And yet something is still holding it back.",
+    "card1Title": "You carry it alone",
+    "card1Desc": "Your idea is waiting for people to carry it with you. But where are they?",
+    "card1Anchor": "connection",
+    "card2Title": "Encounters stay on the surface",
+    "card2Desc": "Small talk, scrolling, fleeting contacts. None of it touches who you really are.",
+    "card2Anchor": "quality",
+    "card3Title": "You lack the space for your power",
+    "card3Desc": "You feel what's inside you. But on your own, it's hard to live it.",
+    "card3Anchor": "empowerment",
+    "quote": "When you show up as you are, the people who need you will find you."
   },
   "about": {
     "greeting": "Hey, I'm Nils,",
-    "subhead1": "Present Yourself",
-    "line1": "I help individuals and businesses showcase their true selves and their unique brand identities online.",
-    "subhead2": "Focus on Your Business",
-    "line2": "With my comapany, you can focus on what actually benefits You moving forward and what your customers love and appreciate about You.",
-    "subhead3": "Stay in Control",
-    "line3": "I keep you clear in the digital jungle. Together, we'll find the path that's right for You — tailored to Your needs.",
-    "interest": "Interested?",
+    "subhead1": "I bring people together.",
+    "line1": "I connect people with a vision to those who long to feel it – online and in person, heart to heart.",
+    "subhead2": "I stand for quality.",
+    "line2": "Real encounter deserves no compromise. I shape moments so people feel them in their bones.",
+    "subhead3": "I empower you.",
+    "line3": "I hold the space for you to step into your power. So you're free – and can carry your love out into the world.",
+    "interest": "Let's connect",
     "orDivider": "or",
-    "waButton": "Write me directly",
+    "waButton": "A portion of love",
     "moreLink": "More about me",
     "whoAmI": "Who am I?",
-    "fullBio1": "My name is Nils Tenkotte – founder of the Flowstate Foundation. I live and breathe expression. I love making music, dancing the night away or taking photos in the great outdoors.",
-    "fullBio2": "My mission: To pave the way for people who pursue their vision with just as much passion and drive, so they can share their unique passion with others.",
-    "fullBio3": "I firmly believe that your digital presence should be as unique as you are. In this age of artificial intelligence, we need free spirits more than ever—people who, through their authentic expression and vision, create value that brings society closer together.",
-    "fullBio4": "I’d stake my life on it that I’ll give it my all. \nEverything!"
+    "fullBio1": "I'm Nils Tenkotte – founder of Flowstate Foundation, at home in Cologne. I fell in love with the many sides of being human: making music, writing poems, dancing wildly, capturing moments in nature, running until my lungs burn.",
+    "fullBio2": "Three values carry everything I do. Bringing people together. Making quality something you experience. Empowering people to walk their own path.",
+    "fullBio3": "Especially in times of artificial intelligence, we need free spirits who create something real – something that brings us closer together. I've got their back – with my whole heart.",
+    "fullBio4": "I'd put my hand in the fire for it. Everything!"
   },
-  "services": {
-    "previewTitle": "What I do for you",
-    "learnMore": "Learn More",
-    "card1Title": "Website",
-    "card1Sub1": "Consulting",
-    "card1Sub2": "Concept",
-    "card1Sub3": "Development",
-    "card1Tagline": "Let your clients feel your vision",
-    "card1Desc": "I accompany you through the entire lifecycle from your idea to the first domain to your individual website that embodies your vision.",
-    "websitePrice": "starting at 800 €",
-    "card2Title": "Workflow Structure",
-    "card2Sub1": "Clarity",
-    "card2Sub2": "Processes",
-    "card2Sub3": "Structure",
-    "card2Tagline": "Focus on your core competency",
-    "card2Desc": "Together, we’ll find the perfect workflow for you. \nConsistent processes and systems aren’t just important for your team—they’re essential for effective communication with your customers.",
-    "workflowPrice": "starting at 300 €",
-    "card3Title": "Social Media",
-    "card3Sub1": "Consulting",
-    "card3Sub2": "Concept",
-    "card3Sub3": "Production",
-    "card3Tagline": "Show yourself as authentically as you are",
-    "card3Desc": "Understand how social media really works. Learn to position yourself clearly and stand out from the crowd – without pretending to be someone else. Reach the people who truly fit you, build trust instead of just reach. Clear content instead of aimless posting. Social media with strategy instead of chance.",
-    "drawerClose": "Close",
-    "websiteDrawer": {
-      "title": "Website",
-      "body": "End to end – I accompany you through the entire lifecycle from your idea to the first domain to your individual website.",
-      "process": "Process:",
-      "step1": "Prototype → Feedback",
-      "step2": "50% upfront",
-      "step3": "50% after satisfaction in 3 months",
-      "pricing": "Price depends on scope – tell me your budget.",
-      "ctaLabel": "Get in touch"
-    },
-    "workflowDrawer": {
-      "title": "Workflow Structure",
-      "body": "I bring clarity to your digital processes",
-      "body2": "No duplicate files, no chaos – just clarity and overview",
-      "comingSoon": "Coming Soon",
-      "ctaLabel": "Interested? Write me"
-    },
-    "socialDrawer": {
-      "title": "Social Media",
-      "cutOnly": "Editing only:",
-      "cut5": "5 videos – €120",
-      "cut10": "10 videos – €200",
-      "full": "Full program (Scripting → Reel):",
-      "full5": "5 videos – €300",
-      "full10": "10 videos – €500",
-      "promise": "Watch first, then pay.",
-      "free": "First consultation + 1 edit free",
-      "ctaLabel": "Get in touch"
-    },
-    "websitePageTitle": "Website",
-    "workflowPageTitle": "Workflow Structure",
-    "socialPageTitle": "Social Media",
-    "pageIntro": "All services at a glance",
-    "mailLabel": "Let's connect"
+  "values": {
+    "previewTitle": "Three values that carry me",
+    "learnMore": "Learn more",
+    "pageIntro": "My values",
+    "pageSub": "Everything I do grows from these three roots.",
+    "items": {
+      "connection": {
+        "anchor": "connection",
+        "nav": "Connection",
+        "title": "Bringing people together",
+        "sub1": "Encounter",
+        "sub2": "Community",
+        "sub3": "Stage",
+        "tagline": "Together we feel more",
+        "desc": "I bring together people who need each other – online and in person. Your vision finds the ones who'll carry it with you.",
+        "body": "A vision on its own is a spark. Only when others feel it does it become a fire.\nI build bridges between you and the people looking for you. At events, in real conversations, heart to heart.",
+        "ctaLabel": "Let's connect"
+      },
+      "quality": {
+        "anchor": "quality",
+        "nav": "Quality",
+        "title": "Creating quality experiences",
+        "sub1": "Devotion",
+        "sub2": "Detail",
+        "sub3": "Depth",
+        "tagline": "Quality is what matters most",
+        "desc": "No surface, no compromise. Encounters that land in the body – built to the highest standard, so people feel them.",
+        "body": "Quality isn't an extra. It's how you honour a person and their vision.\nEvery detail carries weight – so encounters feel real and set something in motion within you.",
+        "ctaLabel": "Let's talk"
+      },
+      "empowerment": {
+        "anchor": "empowerment",
+        "nav": "Empowerment",
+        "title": "Empowering people",
+        "sub1": "Courage",
+        "sub2": "Support",
+        "sub3": "Freedom",
+        "tagline": "There's nothing to fear",
+        "desc": "I hold the space for you to step into your power – so you're free to create.",
+        "body": "True freedom grows where the foundation holds.\nI've got your back and believe in what burns inside you – so you walk your own path and take others with you.",
+        "ctaLabel": "Tell me what burns in you"
+      }
+    }
   },
-  "vision": {
-    "label": "My Vision",
-    "s1a": "Dedicating everything to",
-    "s1bold1": "strengthen",
-    "s1b": "communal",
-    "s1bold2": "cohesion",
-    "connector": "and thus",
-    "s2a": "Through my service, clearing paths for",
-    "s2bold1": "spaces",
-    "s2b": "of appreciative",
-    "s2bold2": "experience",
-    "s2c": "",
-    "manifest": {
-      "hook": "My deepest **wish** is to let the **nature** of each and every **soul** **radiate**.",
-      "p1": "**Nature** flows through our unique expression – through every fellow human being and all creatures.",
-      "p2": "Let others feel the artistically beautiful expression of your **heart**. To not only cherish this wondrous planet, but to **preserve** it.",
-      "p3": "Let us together enchant **frozen hearts** with the **compassion** of our **soul** – and meet our fellow human beings with **loving openness**."
-    },
-    "waLabel": "How do you want to get there?"
-  },
-  "cta": {
-    "headline": "Stay clear in the digital world",
-    "body": "Sign up and I'll get back to you"
-  },
-  "footer": {
-    "tagline": "",
-    "copyright": "© 2026 Nils Tenkotte – Flowstate Foundation",
-    "madeWith": "Made with ♥ in Cologne",
-    "impressum": "Legal Notice",
-    "datenschutz": "Privacy Policy",
-    "cookieSettings": "Cookie Settings"
-  },
-  "forms": {
-    "phonePlaceholder": "+49 ...",
-    "sendButton": "Send",
-    "success": "I'll be in touch!",
-    "alreadySubmitted": "You've already signed up. Please wait {{minutes}} more minutes.",
-    "errorGeneric": "Something went wrong. Please try again.",
-    "consentHint": "Would you allow me to contact you? Tap “Accept” above – and your number flies straight to me."
+  "motto": {
+    "body1": "Let your",
+    "body2": "vision",
+    "body3": "and your",
+    "body4": "people",
+    "body5": "",
+    "body6": "find each other",
+    "body7": "and…",
+    "cta": "Be felt",
+    "sub": "Let's open a space together where your soul becomes tangible.",
+    "waLabel": "Let's take off together!",
+    "aboutLink": "Discover more about my passion"
   },
   "events": {
-    "title": "Events & Festivals",
-    "upcomingTab": "Upcoming Events",
-    "pastTab": "Past Events",
-    "emptyState": "You'll find me at festivals soon – check back later 🌿",
+    "title": "Where you'll find me",
+    "upcomingTab": "Upcoming events",
+    "pastTab": "Past events",
+    "emptyState": "Nothing planned right now – but soon you'll find me out there again. Let's connect in person 🌿",
     "ticketButton": "Tickets",
     "filterAll": "All",
+    "filterBusiness": "Fairs & congresses",
+    "filterSport": "Sport",
     "filterMusic": "Music",
     "filterYoga": "Yoga",
     "filterWellness": "Wellness",
     "filterFestival": "Festival",
     "filterArt": "Art",
     "locationPlaceholder": "Filter by location...",
-    "meetMe": "Meet me live at one of the next events",
-    "filterBusiness": "Business",
-    "filterSport": "Sport"
+    "meetMe": "Meet me live at one of the next events"
   },
   "herzensprojekte": {
-    "title": "Passion Projects",
-    "musicTitle": "My Playlists",
-    "musicDesc": "Sounds I love – directly on Spotify.",
-    "socialTitle": "Social Media",
+    "title": "Heart projects",
+    "musicTitle": "My playlists",
+    "musicDesc": "Sounds that move me – straight on Spotify.",
+    "socialTitle": "Social media",
     "photoTitle": "Moments",
     "photoDesc": "Glimpses into my world.",
     "poemTitle": "Words",
     "spotifyPlaceholder": "Spotify playlist coming soon",
     "galleryTitle": "Gallery",
-    "trackPreviewTitle": "Track Preview",
-    "spotifyArtist": "Artist Profile",
+    "trackPreviewTitle": "Track preview",
+    "spotifyArtist": "Artist profile",
     "galleryLabels": {
       "open": "Open image",
       "image": "Gallery",
@@ -205,6 +169,53 @@
       "next": "Next image",
       "close": "Close"
     }
+  },
+  "footer": {
+    "tagline": "",
+    "copyright": "© 2026 Nils Tenkotte – Flowstate Foundation",
+    "madeWith": "Made with ♥ in Cologne",
+    "impressum": "Legal notice",
+    "datenschutz": "Privacy policy",
+    "cookieSettings": "Cookie settings"
+  },
+  "forms": {
+    "phonePlaceholder": "+49 ...",
+    "sendButton": "Send",
+    "success": "I'll get back to you!",
+    "alreadySubmitted": "Your number is already with me. Give me {{minutes}} more minutes.",
+    "errorGeneric": "Something went wrong. Would you try again?",
+    "consentHint": "Would you allow me to contact you? Tap “Accept all” above – and your number flies straight to me."
+  },
+  "whatsapp": {
+    "defaultLabel": "Message me on WhatsApp",
+    "connectionMessage": "Hey Nils, I want to reach people who feel my vision. Let's connect!",
+    "qualityMessage": "Hey Nils, I long for encounters that go truly deep. Tell me how we start.",
+    "empowermentMessage": "Hey Nils, I want to step into my power. Where do we begin?"
+  },
+  "welcome": {
+    "lines": [
+      "I look forward to your uniqueness.",
+      "Let's make this planet a little more harmonious together.",
+      "Welcome"
+    ]
+  },
+  "404": {
+    "title": "This page hasn't grown yet – maybe soon 🌱",
+    "backHome": "Back to the start"
+  },
+  "quotes": {
+    "q1text": "Let your heart be a mirror of the soul in the world.",
+    "q1author": "Rumi",
+    "q2text": "The only way to do great work is to love what you do.",
+    "q2author": "Steve Jobs",
+    "q3text": "Within you is the strength you seek.",
+    "q3author": "Unknown",
+    "q4text": "Become who you are.",
+    "q4author": "Friedrich Nietzsche"
+  },
+  "cta": {
+    "headline": "Stay clear in the digital world",
+    "body": "Sign up and I'll get back to you"
   },
   "growTogether": {
     "title": "Grow Together",
@@ -236,32 +247,5 @@
   "datenschutz": {
     "title": "Privacy Policy",
     "lastUpdated": "As of: May 2025"
-  },
-  "404": {
-    "title": "This page doesn't exist yet – but maybe soon 🌱",
-    "backHome": "Back to Home"
-  },
-  "whatsapp": {
-    "defaultLabel": "Write me on WhatsApp",
-    "websiteMessage": "Hey, great to meet you Nils. I'd love to hear more about creating my individual website. Looking forward to connecting with you.",
-    "workflowMessage": "Hey, great to meet you Nils. I'd love to hear more about your workflow automation. Looking forward to connecting with you.",
-    "socialMessage": "Hey, great to meet you Nils. I'd love to hear more about your social media offer. Looking forward to connecting with you."
-  },
-  "quotes": {
-    "q1text": "Let your heart be a mirror of the soul in the world.",
-    "q1author": "Rumi",
-    "q2text": "The only way to do great work is to love what you do.",
-    "q2author": "Steve Jobs",
-    "q3text": "Within you is the strength you seek.",
-    "q3author": "Unknown",
-    "q4text": "Become who you are.",
-    "q4author": "Friedrich Nietzsche"
-  },
-  "welcome": {
-    "lines": [
-      "I look forward to your uniqueness.",
-      "Let's make this planet a little more harmonious together.",
-      "Welcome"
-    ]
   }
 }

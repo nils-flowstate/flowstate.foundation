@@ -1,5 +1,30 @@
 [
   {
+    "date": "2026-10-17",
+    "file": "HomeView.astro",
+    "description": "PortraitSection nach den Events eingefügt"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "ValuesView.astro",
+    "description": "Angebote (Social Media, Website, Workflow inkl. Preise) und „So zeigt sich das“ komplett entfernt – Seite zeigt nur noch Werte und Vision"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "AboutView.astro",
+    "description": "Events-Block entfernt (ist jetzt auf der Startseite direkt nach der Vision)"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "HomeView.astro",
+    "description": "EventsSection direkt nach VisionSection eingefügt"
+  },
+  {
+    "date": "2026-10-15",
+    "file": "ValuesView.astro",
+    "description": "Werte-Seite: drei Sections (Verbindung, Qualität, Empowerment), je mit „So zeigt sich das“ – Social Media + Events, Website, Workflow inkl. Preise"
+  },
+  {
     "date": "2026-10-15",
     "file": "*View.astro",
     "description": "Neu: eine View pro Seite mit Prop lang – genutzt von src/pages (de) und src/pages/en (en). ValuesView ist die frühere Services-Seite unter /werte"

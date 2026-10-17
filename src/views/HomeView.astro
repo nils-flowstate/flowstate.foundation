@@ -2,9 +2,11 @@
 import BaseLayout from '../layouts/BaseLayout.astro'
 import HeroSection from '../components/sections/HeroSection.astro'
 import VisionSection from '../components/sections/VisionSection.astro'
+import EventsSection from '../components/sections/EventsSection.astro'
+import PortraitSection from '../components/sections/PortraitSection.astro'
 import PainSection from '../components/sections/PainSection.astro'
 import AboutPreviewSection from '../components/sections/AboutPreviewSection.astro'
-import ServicesPreviewSection from '../components/sections/ServicesPreviewSection.astro'
+import ValuesPreviewSection from '../components/sections/ValuesPreviewSection.astro'
 import MottoSection from '../components/sections/MottoSection.astro'
 import type { Lang } from '../i18n/utils'
 
@@ -17,9 +19,11 @@ const { lang } = Astro.props
 <BaseLayout lang={lang}>
   <HeroSection lang={lang} />
   <VisionSection lang={lang} />
+  <EventsSection lang={lang} />
+  <PortraitSection lang={lang} />
   <PainSection lang={lang} />
   <AboutPreviewSection lang={lang} />
-  <ServicesPreviewSection lang={lang} />
+  <ValuesPreviewSection lang={lang} />
   <MottoSection lang={lang} />
   <!-- TODO Phase 2: ValuesSection -->
   <!-- <CTASection /> -->

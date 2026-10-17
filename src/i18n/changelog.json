@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-17",
+    "file": "de.json",
+    "description": "values.offers/offersTitle entfernt; Wording ohne Business-/Website-/Workflow-Bezug auf Verbindung ausgerichtet (Meta, Hero, Pain, About, Werte, Motto, WhatsApp, Event-Filter „Messe & Kongress“)"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "en.json",
+    "description": "values.offers/offersTitle entfernt; Wording analog zu de.json ohne Business-Bezug auf Verbindung ausgerichtet"
+  },
+  {
+    "date": "2026-10-15",
+    "file": "values.ts",
+    "description": "Neu: Reihenfolge, Icon und Farbe der drei Werte (HeartHandshake/navy, Gem/orange, Flame/fire)"
+  },
+  {
+    "date": "2026-10-15",
+    "file": "de.json / en.json",
+    "description": "Alle Texte neu (DE + eigene EN-Übertragung) entlang der drei Werte Menschen zusammenbringen · Qualitätserlebnisse · Empowerment. services.* → values.* (items + offers), nav.services → nav.values, WhatsApp-Messages connection/quality/empowerment. Unverändert: impressum, datenschutz, quotes, Phase-2-Keys"
+  },
+  {
     "date": "2026-10-15",
     "file": "de.json / en.json / utils.ts",
     "description": "Neue Keys: meta.*, *Anchor, vision.waLabel, motto.waLabel/aboutLink, forms.consentHint, events.filterBusiness/filterSport, herzensprojekte.galleryLabels, welcome.lines. utils.ts ersetzt i18n.ts (t(), Routen, alternatePath, splitBold)"

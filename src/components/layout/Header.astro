@@ -11,7 +11,7 @@ const current = Astro.url.pathname.replace(/\/$/, '') || '/'
 const otherLang: Lang = lang === 'de' ? 'en' : 'de'
 
 const navLinks = [
-  { to: localizePath('values', lang), label: t('nav.services') },
+  { to: localizePath('values', lang), label: t('nav.values') },
   { to: localizePath('about', lang), label: t('nav.about') },
 ]
 ---

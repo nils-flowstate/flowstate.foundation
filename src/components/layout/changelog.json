@@ -2,6 +2,11 @@
   {
     "date": "2026-10-15",
     "file": "Header.astro / Footer.astro",
+    "description": "Nav-Label „Services“ → „Werte“ / „Values“"
+  },
+  {
+    "date": "2026-10-15",
+    "file": "Header.astro / Footer.astro",
     "description": "Aus Header.tsx/Footer.tsx portiert. Sprach-Toggle verlinkt auf die Gegenstück-URL statt localStorage; Header-Hide per .header-hidden an <html>"
   },
   {

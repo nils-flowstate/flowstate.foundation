@@ -1,200 +1,164 @@
 {
   "meta": {
-    "title": "Flowstate Foundation – Digitale Präsenz für Herzensunternehmen",
-    "description": "Flowstate Foundation – Websites, Workflows und Social Media für Kreative, Coaches und purpose-driven Unternehmen. Dein Ausdruck verdient eine Bühne.",
-    "ogDescription": "Turn Your Love Into a Passion and Give it a solid digital Foundation."
+    "title": "Flowstate Foundation – Menschen verbinden, Qualität erleben, Empowerment",
+    "description": "Flowstate Foundation von Nils Tenkotte aus Köln: Ich bringe Menschen zusammen, schaffe Qualitätserlebnisse und ermächtige Menschen, in ihre Kraft zu kommen – von Herz zu Herz.",
+    "ogDescription": "Menschen verbinden. Qualität spüren. In die eigene Kraft kommen."
   },
   "nav": {
-    "services": "Services",
+    "values": "Werte",
     "about": "Über mich",
     "growTogether": "Grow Together",
     "home": "Startseite"
   },
   "hero": {
-    "headline1": "Let your Digital Processes **Flow**",
-    "headerConnector": "But...",
-    "headline2": "Do You have a **Foundation** to Grow...",
-    "headlineAccent": "Bring Deine Online Präsenz zum Strahlen",
-    "headlineEnd": "Erschaffe Dir Dein Fundament zu wachsen",
-    "sub": "Deine Kreation verdient eine Bühne \nDeine Bühne nach Deinen Maßstäben",
-    "cta1": "Deine Website",
-    "cta2": "Dein Workflow",
-    "tagline": "So individuell wie der Ausdruck deiner Seele",
-    "service-sub": "Setup · Tools · Services",
-    "scrollHint": "Scroll",
-    "cta1Anchor": "website",
-    "cta2Anchor": "workflow"
+    "headline1": "Deine Vision will in den **Flow**",
+    "headerConnector": "Doch…",
+    "headline2": "steht sie auf einer **Foundation**, die trägt?",
+    "headlineAccent": "Menschen verbinden. Qualität spürbar machen. Dich ermächtigen.",
+    "cta1": "Meine Werte",
+    "cta1Anchor": "verbindung",
+    "cta2": "Was mich trägt",
+    "cta2Anchor": "qualitaet",
+    "tagline": "So einzigartig wie der Ausdruck deiner Seele",
+    "sub": "Deine Vision verdient eine Bühne.\nUnd Menschen, die sie spüren.",
+    "service-sub": "Verbindung · Qualität · Empowerment",
+    "scrollHint": "Scroll"
+  },
+  "vision": {
+    "label": "Meine Vision",
+    "s1a": "Ich gebe alles, um",
+    "s1bold1": "Menschen zusammenzubringen",
+    "s1b": "und gemeinsames Erleben zu",
+    "s1bold2": "entfachen",
+    "connector": "und so",
+    "s2a": "Räume zu öffnen, in denen",
+    "s2bold1": "Qualität spürbar",
+    "s2b": "wird und jeder Mensch",
+    "s2bold2": "in seine Kraft",
+    "s2c": "findet.",
+    "waLabel": "Wie möchtest du das erreichen?",
+    "manifest": {
+      "hook": "Mein **Herzenswunsch**: dass die **Natur** jeder einzelnen **Seele** zum **Strahlen** kommt.",
+      "p1": "Die **Natur** fließt durch unseren Ausdruck – durch jeden Menschen, durch jedes Wesen.",
+      "p2": "Wenn andere den Ausdruck deines **Herzens** spüren, beginnt etwas zu wachsen. Etwas, das diesen Planeten nicht nur schätzt, sondern **bewahrt**.",
+      "p3": "Lass uns **gefrorene Herzen** mit **Mitgefühl** wärmen – und einander in **liebevoller Offenheit** begegnen."
+    }
   },
   "pain": {
-    "headline": "Ich bringe dich in die technische Souveranität",
-    "body": "Ich halte dir den Rücken frei, dass du mit Klarheit deine Passion in die Welt tragen kannst.",
-    "card1Title": "Website",
-    "card1Desc": "Deine digitale Bühne – individuell, authentisch, wirkungsvoll.",
-    "card2Title": "Workflow Automatisierung",
-    "card2Desc": "Klare Prozesse, mehr Fokus, weniger Chaos.",
-    "card3Title": "Social Media",
-    "card3Desc": "Zeig dich in deinem authentischen Licht.",
-    "quote": "Erstrahle in dem Licht, in dem du erstrahlen möchtest – und teile deine Passion mit der Welt.",
-    "card1Anchor": "website",
-    "card2Anchor": "workflow",
-    "card3Anchor": "social-media"
-  },
-  "motto": {
-    "body1": "Lass Deine",
-    "body2": "Idee",
-    "body3": "und Deine",
-    "body4": "Digitale Identität",
-    "body5": "miteinander",
-    "body6": "Verschmelzen",
-    "body7": "und…",
-    "cta": "Erreiche Deine Kundschaft",
-    "sub": "Lass Uns Gemeinsam Deine digitale Präsenz in einen Seelenspiegel Deines Ausdrucks Verwandeln",
-    "waLabel": "Lass uns gemeinsam durchstarten!",
-    "aboutLink": "Erfahre mehr über meine Passion"
+    "headline": "Kennst du das?",
+    "body": "Deine Vision brennt in dir. Und trotzdem hält sie noch etwas zurück.",
+    "card1Title": "Du trägst sie allein",
+    "card1Desc": "Deine Idee wartet auf Menschen, die sie mittragen. Nur – wo sind sie?",
+    "card1Anchor": "verbindung",
+    "card2Title": "Begegnungen bleiben an der Oberfläche",
+    "card2Desc": "Smalltalk, Scrollen, flüchtige Kontakte. Nichts davon berührt, wer du wirklich bist.",
+    "card2Anchor": "qualitaet",
+    "card3Title": "Dir fehlt der Raum für deine Kraft",
+    "card3Desc": "Du spürst, was in dir steckt. Doch allein fällt es schwer, es zu leben.",
+    "card3Anchor": "empowerment",
+    "quote": "Wenn du dich zeigst, wie du bist, finden dich die Menschen, die dich brauchen."
   },
   "about": {
     "greeting": "Hey, ich bin Nils,",
-    "subhead1": "lass andere Menschen Deine Einzigartigkeit spüren.",
-    "line1": "Ich mache es Menschen und Unternehmen möglich, Ihre wahre Seelenmission mit der digitalen Welt verschmelzen zu lassen",
-    "subhead2": "Fokussiere dich auf Dein Business",
-    "line2": "Durch mich kannst du dich auf das fokussieren, was deine Kunden an dir lieben.",
-    "subhead3": "Behalte den Durchblick",
-    "line3": "Mit mir behältst du den Durchblick im digitalen Dschungel. Gemeinsam automatisieren wir deine Arbeit, sodass du deine Liebe in die Welt tragen kannst.",
+    "subhead1": "ich bringe Menschen zusammen.",
+    "line1": "Ich verbinde Menschen mit Vision mit denen, die sie spüren wollen – online und live, von Herz zu Herz.",
+    "subhead2": "Ich stehe für Qualität.",
+    "line2": "Echte Begegnung verdient keinen Kompromiss. Ich gestalte Momente so, dass man sie im Körper spürt.",
+    "subhead3": "Ich ermächtige dich.",
+    "line3": "Ich halte dir den Raum, in deine Kraft zu kommen. Damit du frei bist – und deine Liebe in die Welt tragen kannst.",
     "interest": "Lass uns verbinden",
     "orDivider": "oder",
     "waButton": "Eine Portion Liebe",
     "moreLink": "Mehr über mich",
     "whoAmI": "Wer bin ich?",
-    "fullBio1": "Ich bin Nils Tenkotte – Gründer von Flowstate Foundation. \nIch habe mich in die Vielseitigkeit der menschlichen Erfahrung verliebt. \nSei es zu musizieren, Gedichte zu schreiben, ausgelassen zu tanzen oder in der Natur Fotos zu knipsen.",
-    "fullBio2": "Meine Mission ist es, Menschen, die ihre Vision mit ebenso viel Leidenschaft und Feuer angehen, den Weg frei zu machen, ihre einzigartige Vision mit anderen zu teilen.",
-    "fullBio3": "Ich bin der festen Überzeugung, dass dein digitaler Auftritt genauso einzigartig sein sollte wie du selbst. Gerade in Zeiten von künstlicher Intelligenz brauchen wir umso mehr Freigeister, die durch ihren echten Ausdruck – ihre Vision – einen Mehrwert schaffen, der die Gesellschaft näher zusammenbringt.",
-    "fullBio4": "Dafür lege ich meine Hand ins Feuer dass ich alles dafür geben werde. \nAlles!"
+    "fullBio1": "Ich bin Nils Tenkotte – Gründer von Flowstate Foundation, zuhause in Köln. Ich habe mich in die Vielfalt menschlicher Erfahrung verliebt: Musik machen, Gedichte schreiben, ausgelassen tanzen, Momente in der Natur festhalten, laufen, bis die Lunge brennt.",
+    "fullBio2": "Drei Werte tragen alles, was ich tue. Menschen zusammenbringen. Qualität erlebbar machen. Menschen ermächtigen, ihren eigenen Weg zu gehen.",
+    "fullBio3": "Gerade in Zeiten künstlicher Intelligenz brauchen wir Freigeister, die mit echtem Ausdruck etwas erschaffen, das uns näher zusammenbringt. Ihnen halte ich den Rücken frei – mit ganzem Herzen.",
+    "fullBio4": "Dafür lege ich meine Hand ins Feuer. Alles!"
   },
-  "services": {
-    "previewTitle": "Was ich für dich tue",
-    "learnMore": "Erfahre Mehr",
-    "card1Title": "Website",
-    "card1Sub1": "Beratung",
-    "card1Sub2": "Konzeptionierung",
-    "card1Sub3": "Umsetzung",
-    "card1Tagline": "Lass Deine Kunden Deine Vision Spüren",
-    "card1Desc": "Ich begleite dich im gesamten Lebenszyklusprozess von Deiner Brand-Identity über die erste Domain bis hin zu Deiner individuellen Website, die deine Vision verkörpert.",
-    "websitePrice": "ab 820 €",
-    "card2Title": "Workflow Automatisierung",
-    "card2Sub1": "Klarheit",
-    "card2Sub2": "Prozesse",
-    "card2Sub3": "Struktur",
-    "card2Tagline": "Fokussiere Dich auf Deine Wertschöpfung",
-    "card2Desc": "Gemeinsam automatisieren wir deine Zeit und Freude killer. \nSo kannst du dich voll auf deine Kernkompetenz fokussieren. \nKein stundenlanges Suchen, keine doppelten Dateien, kein Chaos. \nNur Klarheit, Effizienz und Durchblick.",
-    "workflowPrice": "mtl. 540 €",
-    "card3Title": "Social Media",
-    "card3Sub1": "Beratung",
-    "card3Sub2": "Konzeption",
-    "card3Sub3": "Produktion",
-    "card3Tagline": "Zeige Dich so authentisch wie Du bist",
-    "card3Desc": "Verstehe, wie Social Media wirklich funktioniert. Lerne, Dich klar zu positionieren und aus der Masse herauszustechen – ohne Dich zu verstellen. Erreiche die Menschen, die wirklich zu Dir passen, baue Vertrauen statt nur Reichweite auf. Klare Inhalte statt planlosem Posten. Social Media mit Strategie statt Zufall.",
-    "drawerClose": "Schließen",
-    "websiteDrawer": {
-      "title": "Website",
-      "body": "Nach deinen individuellen Wünschen gestalten wir gemeinsam deine Website von der Brand Identity. Gemeinsam können wir schauen welche Prozesse sich auf deiner Website automatisieren lassen, sodass keine Zeit für Pflege draufgeht und trotzdem alles immer aktuell ist.",
-      "process": "Ablauf:",
-      "step1": "Prototyp → Feedback",
-      "step2": "50% upfront",
-      "step3": "50% nach Zufriedenheit in 3 Monaten",
-      "pricing": "Preis je nach Umfang – Gib an was du ausgeben willst.",
-      "ctaLabel": "Jetzt anfragen"
-    },
-    "workflowDrawer": {
-      "title": "Workflow Automatisierung",
-      "body": "Ich bring Klarheit in deine digitalen Prozesse",
-      "body2": "Keine doppelten Dateien, kein Chaos – nur Klarheit und Durchblick",
-      "comingSoon": "Coming Soon",
-      "ctaLabel": "Lass uns Verbinden"
-    },
-    "socialDrawer": {
-      "title": "Social Media",
-      "cutOnly": "Nur schneiden:",
-      "cut5": "5 Videos – 120€",
-      "cut10": "10 Videos – 200€",
-      "full": "Komplettprogramm (Scripting → Reel):",
-      "full5": "5 Videos – 300€",
-      "full10": "10 Videos – 500€",
-      "promise": "Erst anschauen, dann zahlen.",
-      "free": "Erstberatung + 1 Edit kostenfrei",
-      "ctaLabel": "Jetzt anfragen"
-    },
-    "websitePageTitle": "Website",
-    "workflowPageTitle": "Workflow Automatisierung",
-    "socialPageTitle": "Social Media",
-    "pageIntro": "Alle Services auf einen Blick",
-    "mailLabel": "Lass uns quatschen"
+  "values": {
+    "previewTitle": "Drei Werte, die mich tragen",
+    "learnMore": "Erfahre mehr",
+    "pageIntro": "Meine Werte",
+    "pageSub": "Alles, was ich tue, wächst aus diesen drei Wurzeln.",
+    "items": {
+      "connection": {
+        "anchor": "verbindung",
+        "nav": "Verbindung",
+        "title": "Menschen zusammenbringen",
+        "sub1": "Begegnung",
+        "sub2": "Gemeinschaft",
+        "sub3": "Bühne",
+        "tagline": "Gemeinsam spürt man mehr",
+        "desc": "Ich bringe Menschen zusammen, die einander brauchen – online und live. Deine Vision findet die, die sie mittragen.",
+        "body": "Eine Vision allein ist ein Funke. Erst wenn andere sie spüren, wird sie zum Feuer.\nIch baue Brücken zwischen dir und den Menschen, die dich suchen. Auf Events, in echten Gesprächen, von Herz zu Herz.",
+        "ctaLabel": "Lass uns verbinden"
+      },
+      "quality": {
+        "anchor": "qualitaet",
+        "nav": "Qualität",
+        "title": "Qualitätserlebnisse schaffen",
+        "sub1": "Hingabe",
+        "sub2": "Detail",
+        "sub3": "Tiefe",
+        "tagline": "Qualität ist das wichtigste Gut",
+        "desc": "Keine Oberfläche, kein Kompromiss. Begegnungen, die in den Körper gehen – in höchster Qualität, damit man sie spürt.",
+        "body": "Qualität ist kein Extra. Sie ist die Art, wie man einem Menschen und seiner Vision die Ehre erweist.\nJedes Detail trägt – damit sich Begegnungen echt anfühlen und etwas in dir auslösen.",
+        "ctaLabel": "Lass uns sprechen"
+      },
+      "empowerment": {
+        "anchor": "empowerment",
+        "nav": "Empowerment",
+        "title": "Menschen ermächtigen",
+        "sub1": "Mut",
+        "sub2": "Halt",
+        "sub3": "Freiheit",
+        "tagline": "Du musst nichts fürchten",
+        "desc": "Ich halte dir den Raum, in deine Kraft zu kommen – damit du frei gestalten kannst.",
+        "body": "Wahre Freiheit wächst dort, wo das Fundament trägt.\nIch halte dir den Rücken frei und glaube an das, was in dir brennt – damit du deinen eigenen Weg gehst und andere dabei mitnimmst.",
+        "ctaLabel": "Erzähl mir, was in dir brennt"
+      }
+    }
   },
-  "vision": {
-    "label": "Meine Vision",
-    "s1a": "Alles dafür zu geben",
-    "s1bold1": "gemeinschaftliches Erleben und Spüren",
-    "s1b": "zu",
-    "s1bold2": "befeuern",
-    "connector": "und somit",
-    "s2a": "Mit meiner Arbeit Wege für",
-    "s2bold1": "Räume des Fühlens",
-    "s2b": "und",
-    "s2bold2": "wertschätzendes Miteinander",
-    "s2c": "frei zu machen",
-    "manifest": {
-      "hook": "Mein **Herzenswunsch** ist es, die **Natur** jeder individuellen **Seelen** zum **Strahlen** zu bringen.",
-      "p1": "Die **Natur** fließt durch unseren einzigartigen Ausdruck – durch jeden unserer Mitmenschen und allen Wesen.",
-      "p2": "Lass andere Menschen den künstlerisch schönen Ausdruck deines **Herzens** spüren. Um diesen wunderschönen Planeten nicht nur zu schätzen, sondern zu **bewahren**.",
-      "p3": "Lass uns gemeinsam **gefrorene Herzen** mit dem **Mitgefühl** unseres **Herzens** verzaubern – und unseren Mitmenschen mit **liebevoller Offenheit** begegnen."
-    },
-    "waLabel": "Wie möchtest du das erreichen?"
-  },
-  "cta": {
-    "headline": "Bewahre den digitalen Durchblick",
-    "body": "Trag dich ein und ich melde mich bei dir"
-  },
-  "footer": {
-    "tagline": "",
-    "copyright": "© 2026 Nils Tenkotte – Flowstate Foundation",
-    "madeWith": "Made with ♥ in Köln",
-    "impressum": "Impressum",
-    "datenschutz": "Datenschutz",
-    "cookieSettings": "Cookie-Einstellungen"
-  },
-  "forms": {
-    "phonePlaceholder": "+49 ...",
-    "sendButton": "Senden",
-    "success": "Ich melde mich bei dir!",
-    "alreadySubmitted": "Du hast dich bereits eingetragen. Bitte warte noch {{minutes}} Minuten.",
-    "errorGeneric": "Etwas ist schiefgelaufen. Bitte versuche es erneut.",
-    "consentHint": "Magst du mir kurz erlauben, dich zu kontaktieren? Tippe oben auf „Annehmen\" – dann fliegt deine Nummer direkt zu mir."
+  "motto": {
+    "body1": "Lass deine",
+    "body2": "Vision",
+    "body3": "und deine",
+    "body4": "Menschen",
+    "body5": "zueinander",
+    "body6": "finden",
+    "body7": "und…",
+    "cta": "Werde spürbar",
+    "sub": "Lass uns gemeinsam einen Raum öffnen, in dem deine Seele spürbar wird.",
+    "waLabel": "Lass uns gemeinsam durchstarten!",
+    "aboutLink": "Erfahre mehr über meine Passion"
   },
   "events": {
-    "title": "Events & Festivals",
+    "title": "Wo du mich triffst",
     "upcomingTab": "Kommende Events",
     "pastTab": "Vergangene Events",
-    "emptyState": "Bald findet man mich auf folgenden Veranstaltungen – lass uns doch dort persönlich connecten 🌿",
+    "emptyState": "Gerade steht nichts an – bald findest du mich wieder irgendwo da draußen. Lass uns dort persönlich verbinden 🌿",
     "ticketButton": "Tickets",
     "filterAll": "Alle",
+    "filterBusiness": "Messe & Kongress",
+    "filterSport": "Sport",
     "filterMusic": "Musik",
     "filterYoga": "Yoga",
     "filterWellness": "Wellness",
     "filterFestival": "Festival",
     "filterArt": "Kunst",
     "locationPlaceholder": "Ort filtern...",
-    "meetMe": "Triff mich live auf einem der nächsten Events",
-    "filterBusiness": "Business",
-    "filterSport": "Sport"
+    "meetMe": "Triff mich live auf einem der nächsten Events"
   },
   "herzensprojekte": {
     "title": "Herzensprojekte",
     "musicTitle": "Meine Playlists",
-    "musicDesc": "Sounds die ich liebe – direkt auf Spotify.",
+    "musicDesc": "Klänge, die mich bewegen – direkt auf Spotify.",
     "socialTitle": "Social Media",
     "photoTitle": "Momente",
     "photoDesc": "Einblicke in meine Welt.",
     "poemTitle": "Worte",
-    "spotifyPlaceholder": "Spotify Playlist folgt bald",
+    "spotifyPlaceholder": "Spotify-Playlist folgt bald",
     "galleryTitle": "Galerie",
     "trackPreviewTitle": "Track Preview",
     "spotifyArtist": "Zum Künstlerprofil",
@@ -205,6 +169,53 @@
       "next": "Nächstes Bild",
       "close": "Schließen"
     }
+  },
+  "footer": {
+    "tagline": "",
+    "copyright": "© 2026 Nils Tenkotte – Flowstate Foundation",
+    "madeWith": "Mit ♥ gemacht in Köln",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "cookieSettings": "Cookie-Einstellungen"
+  },
+  "forms": {
+    "phonePlaceholder": "+49 ...",
+    "sendButton": "Senden",
+    "success": "Ich melde mich bei dir!",
+    "alreadySubmitted": "Deine Nummer ist schon bei mir. Gib mir noch {{minutes}} Minuten.",
+    "errorGeneric": "Da ist etwas schiefgelaufen. Magst du es nochmal versuchen?",
+    "consentHint": "Magst du mir kurz erlauben, dich zu kontaktieren? Tippe oben auf „Alles annehmen“ – dann fliegt deine Nummer direkt zu mir."
+  },
+  "whatsapp": {
+    "defaultLabel": "Schreib mir auf WhatsApp",
+    "connectionMessage": "Hey Nils, ich möchte Menschen erreichen, die meine Vision spüren. Lass uns verbinden!",
+    "qualityMessage": "Hey Nils, ich wünsche mir Begegnungen, die wirklich tief gehen. Erzähl mir, wie wir starten.",
+    "empowermentMessage": "Hey Nils, ich will in meine Kraft kommen. Wo fangen wir an?"
+  },
+  "welcome": {
+    "lines": [
+      "Ich freue mich auf deine Einzigartigkeit.",
+      "Lass uns diesen Planeten gemeinsam ein Fünkchen harmonischer gestalten.",
+      "Willkommen"
+    ]
+  },
+  "404": {
+    "title": "Diese Seite ist noch nicht gewachsen – vielleicht bald 🌱",
+    "backHome": "Zurück zum Anfang"
+  },
+  "quotes": {
+    "q1text": "Lass dein Herz auf der Welt ein Spiegel der Seele sein.",
+    "q1author": "Rumi",
+    "q2text": "Der einzige Weg, großartige Arbeit zu leisten, ist, zu lieben was du tust.",
+    "q2author": "Steve Jobs",
+    "q3text": "In dir ist die Kraft, die du suchst.",
+    "q3author": "Unbekannt",
+    "q4text": "Werde, der du bist.",
+    "q4author": "Friedrich Nietzsche"
+  },
+  "cta": {
+    "headline": "Bewahre den digitalen Durchblick",
+    "body": "Trag dich ein und ich melde mich bei dir"
   },
   "growTogether": {
     "title": "Grow Together",
@@ -236,32 +247,5 @@
   "datenschutz": {
     "title": "Datenschutzerklärung",
     "lastUpdated": "Stand: Mai 2025"
-  },
-  "404": {
-    "title": "Diese Seite existiert noch nicht – aber vielleicht bald 🌱",
-    "backHome": "Zurück zur Startseite"
-  },
-  "whatsapp": {
-    "defaultLabel": "Schreib mir auf WhatsApp",
-    "websiteMessage": "Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über das Erstellen meiner individuellen Website. Freue mich mit dir zu connecten.",
-    "workflowMessage": "Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über Workflow-Automatisierung, die du dir erträumst. Freue mich mit dir zu connecten.",
-    "socialMessage": "Hey, freut mich dich kennenzulernen Nils. Erzähl mir gern mehr über dein Social Media Angebot. Freue mich mit dir zu connecten."
-  },
-  "quotes": {
-    "q1text": "Lass dein Herz auf der Welt ein Spiegel der Seele sein.",
-    "q1author": "Rumi",
-    "q2text": "Der einzige Weg, großartige Arbeit zu leisten, ist, zu lieben was du tust.",
-    "q2author": "Steve Jobs",
-    "q3text": "In dir ist die Kraft, die du suchst.",
-    "q3author": "Unbekannt",
-    "q4text": "Werde, der du bist.",
-    "q4author": "Friedrich Nietzsche"
-  },
-  "welcome": {
-    "lines": [
-      "Ich freue mich auf Deine Einzigartigkeit.",
-      "Lass uns gemeinsam diesen Planeten ein fünkchen harmonischer gestalten.",
-      "Willkommen"
-    ]
   }
 }

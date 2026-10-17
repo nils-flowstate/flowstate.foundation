@@ -38,6 +38,18 @@ Alles ist bildhaft. Der Ton hüpft, singt, atmet. Er ist lebendig wie ein Kind, 
 
 ---
 
+## 🌱 Die drei Werte (ersetzen die alten Pillars Website · Workflow · Social Media)
+
+| Key (`values.items.*`) | DE / Anker                          | EN / Anchor                        | Icon · Farbe            | Zeigt sich in                |
+| ---------------------- | ----------------------------------- | ---------------------------------- | ----------------------- | ---------------------------- |
+| `connection`           | Menschen zusammenbringen · `#verbindung` | Bringing people together · `#connection` | HeartHandshake · navy | Social Media, Events         |
+| `quality`              | Qualitätserlebnisse schaffen · `#qualitaet` | Creating quality experiences · `#quality` | Gem · orange       | Website als Seelenspiegel    |
+| `empowerment`          | Menschen ermächtigen · `#empowerment` | Empowering people · `#empowerment` | Flame · fire            | Workflow & Automatisierung   |
+
+Reihenfolge, Icons und Farben: `src/i18n/values.ts`. Angebote/Preise: `values.offers.*`.
+
+---
+
 ## 🎨 Color System
 
 | Token     | HEX       | Semantische Bedeutung                    |
@@ -118,9 +130,9 @@ Alles ist bildhaft. Der Ton hüpft, singt, atmet. Er ist lebendig wie ein Kind, 
 ```
 HeroSection       → Erster Eindruck, Headline + CTA
 VisionSection     → Nils' Vision (dark: hero-bg), jetzt mit WhatsApp-Button
-PainSection       → Problem der Zielgruppe + Services-Überblick
+PainSection       → „Kennst du das?“ – drei Schmerzpunkte, je verlinkt auf einen Wert
 AboutPreviewSection → Nils persönlich vorstellen (light: white)
-ServicesPreviewSection → Website / Workflow / Social Media (Cards)
+ValuesPreviewSection → Die drei Werte (Cards) → /werte#…
 MottoSection      → Emotionaler Abschluss (dark: navy) + CTA + About-Link
 Footer            → Logo + Nav + Legal
 ```
@@ -158,9 +170,9 @@ Footer            → Logo + Nav + Legal
 | VisionSection       | „Ich fühle deine Mission, aber wie möchtest du das erreichen?" |
 | AboutPreviewSection | „Liebe in den Äther <3"                                        |
 | MottoSection        | „Ich habe Bock loszulegen. Wie fang ich direkt an?"            |
-| Services → Website  | aus `whatsapp.websiteMessage` (i18n)                           |
-| Services → Workflow | aus `whatsapp.workflowMessage` (i18n)                          |
-| Services → Social   | aus `whatsapp.socialMessage` (i18n)                            |
+| Werte → Verbindung  | aus `whatsapp.connectionMessage` (i18n)                        |
+| Werte → Qualität    | aus `whatsapp.qualityMessage` (i18n)                           |
+| Werte → Empowerment | aus `whatsapp.empowermentMessage` (i18n)                       |
 
 ### Events (`src/content/events.json` → `EventsList`-Island auf der About-Seite)
 ```json

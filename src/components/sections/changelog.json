@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-17",
+    "file": "PortraitSection.astro",
+    "description": "Neu: Portrait von Nils mit den drei Wert-Icons zentriert darunter, verlinkt auf /werte#…"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "EventsSection.astro",
+    "description": "Neu: Events-Section (weiß) auf der Startseite, lädt Events aus der Content Collection, Anker #events"
+  },
+  {
+    "date": "2026-10-15",
+    "file": "PainSection.astro",
+    "description": "Cards zeigen jetzt drei Schmerzpunkte mit Werte-Icons und verlinken auf /werte#verbindung|qualitaet|empowerment"
+  },
+  {
+    "date": "2026-10-15",
+    "file": "ValuesPreviewSection.astro",
+    "description": "Ersetzt ServicesPreviewSection: drei Werte-Cards statt Website/Workflow/Social Media"
+  },
+  {
     "date": "2026-10-15",
     "file": "*.astro",
     "description": "Alle Sections von React/Framer Motion nach Astro portiert; fadeUp/stagger jetzt über .reveal/[data-stagger] (CSS + IntersectionObserver). Links zeigen auf /werte#… statt /services#…"

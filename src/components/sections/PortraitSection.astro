@@ -1,0 +1,36 @@
+---
+import { localizePath, useTranslations, type Lang } from '../../i18n/utils'
+import { VALUES } from '../../i18n/values'
+
+interface Props {
+  lang: Lang
+}
+
+const { lang } = Astro.props
+const t = useTranslations(lang)
+---
+<section class="bg-white pb-20 px-4">
+  <div data-stagger class="max-w-3xl mx-auto flex flex-col items-center">
+    <img
+      src="/assets/nils.webp"
+      alt="Nils Tenkotte – Flowstate Foundation"
+      class="reveal w-full max-w-sm rounded-2xl shadow-lg object-cover aspect-[3/4] mb-12"
+      loading="lazy"
+    />
+
+    <div class="reveal flex items-start justify-center gap-8 sm:gap-14">
+      {VALUES.map(value => {
+        const k = `values.items.${value.key}`
+        return (
+          <a
+            href={localizePath('values', lang, t(`${k}.anchor`))}
+            class="group flex flex-col items-center gap-3 text-center transition-transform duration-200 hover:scale-[1.05] active:scale-[0.97]"
+          >
+            <value.Icon className={`w-12 h-12 sm:w-14 sm:h-14 ${value.iconColor}`} />
+            <span class="font-sans text-sm font-medium text-navy group-hover:text-orange transition-colors">{t(`${k}.nav`)}</span>
+          </a>
+        )
+      })}
+    </div>
+  </div>
+</section>
