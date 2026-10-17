@@ -1,7 +1,8 @@
-version: "3.8"
-
+# flowstate.foundation (Astro) – hinter dem zentralen Caddy (/home/nils/caddy).
+# Kein veröffentlichter Port: Caddy erreicht den Container über das proxy-Netz
+# (reverse_proxy flowstate-foundation-web:3001).
 services:
-  flowstate-foundation:
+  flowstate-foundation-web:
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,13 +14,25 @@ services:
         VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY}
         VITE_SUPABASE_FN_URL: ${VITE_SUPABASE_FN_URL}
         VITE_FLOWSTATE_APP: ${VITE_FLOWSTATE_APP:-foundation}
-    container_name: flowstate-foundation
+    image: flowstate-foundation-web:latest
+    container_name: flowstate-foundation-web
     restart: unless-stopped
-    ports:
-      - "6666:80"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
     healthcheck:
-      test: ["CMD", "wget", "-qO-", "http://localhost:80"]
+      test: ["CMD", "wget", "--spider", "-q", "http://127.0.0.1:3001/"]
       interval: 30s
       timeout: 5s
       retries: 3
       start_period: 10s
+
+networks:
+  proxy:
+    external: true
