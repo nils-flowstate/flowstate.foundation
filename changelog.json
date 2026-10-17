@@ -1,5 +1,20 @@
 [
   {
+    "date": "2026-10-17",
+    "file": "Dockerfile",
+    "description": "Neu für Astro (statisch) hinter dem zentralen Caddy: node:22-alpine-Build, nginx-unprivileged auf Port 3001, Healthcheck, nur öffentliche VITE_*-Werte als Build-Args"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "docker-compose.yml",
+    "description": "Neu: Service flowstate-foundation-web im externen Netz proxy, kein Host-Port, read_only, cap_drop ALL, no-new-privileges – passt zu reverse_proxy flowstate-foundation-web:3001"
+  },
+  {
+    "date": "2026-10-17",
+    "file": "nginx.conf",
+    "description": "Listen-Port von 80 auf 3001 (unprivilegierter nginx, Caddy-Upstream); HSTS bleibt beim zentralen Caddy"
+  },
+  {
     "date": "2026-10-15",
     "file": "index.html / vite.config.ts / tailwind.config.ts / postcss.config.js",
     "description": "Gelöscht – ersetzt durch src/layouts/BaseLayout.astro, astro.config.mjs und @theme in src/styles/global.css"
